@@ -82,7 +82,7 @@ loadjs.ready(['core'], function () {
 	loadjs([ '//cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/components/sidebar.min.js'
 		,'//cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
 		//,'//cdn.jsdelivr.net/npm/intersection-observer@0.5.0/intersection-observer.js'
-		,'/router/meta-router.js'
+		,'/router/pwa-router.js'
 	], 'cssJs', {
 		async: false //required due to loadjs bug with bundles
 	})
@@ -107,7 +107,7 @@ loadjs.ready(['css', 'cssJs', 'site'], function () {
 loadjs.ready(['style'], function () { //load large css
 	setTimeout(function(){
 		loadjs([ '/assets/css/semantic2.css'
-			,'//unpkg.com/ionicons@4.0.0/dist/css/ionicons.min.css' // http://ionicons.com/usage
+			,'//unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css' // http://ionicons.com/usage
 		], 'css2', {
 			async: false //required due to loadjs bug with bundles
 		})
