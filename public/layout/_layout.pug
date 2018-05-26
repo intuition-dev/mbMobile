@@ -1,0 +1,43 @@
+doctype html
+html
+	head
+		script.
+			let _start=Date.now()
+		include _header
+		script(src='//cdn.jsdelivr.net/npm/loadjs@3.5.4/dist/loadjs.min.js')
+
+		block head
+		style.
+			html { opacity: 0.01; }
+
+	body
+		script(src='/assets/js/setup.js')
+
+		//- side menu shell
+		include _top
+
+		//- container
+		#routerFx
+		.pusher#router
+
+			//- pushed
+			block main
+
+		script.
+			log.log('layout')
+
+			loadjs.ready('style', function() {
+				//show a bit
+				document.getElementsByTagName('html')[0].style.opacity = .03
+			})
+
+			loadjs.ready('css2', function() {
+				setTimeout(function(){
+					document.getElementsByTagName('html')[0].style.opacity = 1
+				},1000/30)
+
+				$('.ui.sidebar').sidebar('attach events', '.toc.item')
+
+			})//ready
+		link(rel='stylesheet', href='/assets/css/semantic1.css', onload='cssLoaded()')
+

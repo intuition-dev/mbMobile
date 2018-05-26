@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.appthings.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Camera">
+        <param name="browser-package" value="Camera" />
+    </feature>
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <name>appThings</name>
+    <description>
+       Topseed app that accesses Android APIs and web resources
+    </description>
+    <author email="team@appthings.io" href="https://m.appthings.io/en/team/index.html">
+        appThings Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-navigation href="https://m.appthings.io/*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="permissions" value="none" />
+    <preference name="SplashScreen" value="img/logo_appthings.png" />
+    <preference name="SplashScreenBackgroundColor" value="#464646" />
+    <preference name="ShowSplashScreen" value="true" />
+</widget>

@@ -1,0 +1,10 @@
+{
+  "name": "appThings app",
+  "description": "A Phonegap app that uses cordova.InAppBrowser",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/logo_appthings.png"
+  },
+  "default_locale": "en",
+  "type": "privileged"
+}
