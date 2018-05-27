@@ -1,7 +1,7 @@
 // ts router generic //////////////////////////////////////////////////////////////////////////////
 loadjs.ready('site', function () {
 
-	log.log('ts router', "v3.05.27")
+	log.log('ts router', "v3.05.28")
 
 	$(window).on('popstate', function(e) {//back/forward button
 		log.log('tsrouter popstate'+e.originalEvent.state)
