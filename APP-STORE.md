@@ -1,12 +1,12 @@
 
 ## Part II Cordova.
 
-0. You must have a PWA/SPA app in the cloud before this step.
+0. You must have a PWA/SPA web app in the cloud before this step.
 
 1.
-You'll need a build machine in the cloud. A few places that offer OSX hosting: http://macminicolo.net , http://macstadium.com , http://macincloud.com but there are others.
+You'll need a build machine in the cloud. A few places that offer OSX hosting: http://macstadium.com , http://macincloud.com but there are others.
 OSX is required for IOS (due to dev keys) and easier to do Andorid with Genymotion emulator.
-Install Xcode with IOS emaulator, Andorid SDK, Genymotion.
+Install Xcode with IOS emulator, Andorid SDK, Genymotion.
 
 
 		npm i -g cordova
