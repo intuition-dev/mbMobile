@@ -1,6 +1,7 @@
 
 ## Part II Cordova.
 
+0. You must have a PWA/SPA app in the cloud before this step.
 
 1.
 You'll need a build machine in the cloud. A few places that offer OSX hosting: http://macminicolo.net , http://macstadium.com , http://macincloud.com but there are others.
