@@ -6,6 +6,7 @@ Games are done like this 'hybrid cross platform'.
 
 Here we have a .js router, similar to crossroads.js, called PWA-router.
 http://github.com/metabake/PWA-router/blob/master/public/router/pwa-router.js
+If you don't like that router, we also support Framework7, SmoothSate or other similar SPA approaches.
 
 
 You'll have to know some 'app shell' basics.
