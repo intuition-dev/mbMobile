@@ -19,7 +19,7 @@ http://github.com/metabake/PWA-router/tree/master/public
 
 Before starting App store:
 
-PWA is harder and requires a build dev on team to deal w/ Cordova builds.
+PWA is harder and requires a build dev on team to deal w/ phonegap builds.
 
 a) make sure your regular web app looks good in mobile size, for example in Google Chrome Dev Tools.
 

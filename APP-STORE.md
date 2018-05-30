@@ -1,5 +1,5 @@
 
-## Part II Cordova.
+## Part II phonegap.
 
 0. You must have a PWA/SPA web app in the cloud before this step.
 
@@ -9,7 +9,7 @@ OSX is required for IOS (due to dev keys) and easier to do Andorid with Genymoti
 Install Xcode with IOS emulator, Andorid SDK, Genymotion.
 
 
-		npm i -g cordova
+		npm i -g phonegap
 
 
 2.
@@ -24,6 +24,6 @@ In www/js index to go to deployed PWA app url in the cloud from README1.
 
 4.
 
-In theory 'build.phonegap.com' can supplement your Cordova build.
+In theory 'build.phonegap.com' can supplement your phonegap build.
 Check:
 - http://youtube.com/watch?v=ZgUAT7CIhsY
