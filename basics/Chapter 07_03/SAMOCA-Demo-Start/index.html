@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>San Angelico Museum of Contemporary Art</title>
+  <link rel="stylesheet" href="css/jquery.mobile.min.css">
+  <style>
+    #homeBanner {
+      width: 100%;
+    }
+    
+    .center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .banner {
+      display: block;
+      width: 100%;
+    }
+    
+    #qrcode {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    #map2 {
+      margin-left: auto;
+      margin-right: auto;
+      width: 320px;
+      height: 320px;
+    }
+  </style>
+  <link rel="stylesheet" href="css/leaflet.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/jquery.mobile.min.js"></script>
+  <script src="js/leaflet.js"></script>
+  <script src="js/app.js"></script>
+  <script src="phonegap.js"></script>
+  <script src="barcodescanner.js"></script>
+
+</head>
+
+<body>
+  <div id="homeScreen" data-role="page">
+    <img src="imgs/SAMOCA_banner_1.png" class="banner" />
+    <div data-role="content">
+      <ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
+        <li><a href="#currentExhibits">Current Exhibits</a></li>
+        <li><a href="#pastExhibits">Past Exhibits</a></li>
+        <li><a href="">Calendar of Events</a></li>
+        <li><a href="#discoverScreen">[ Discover ]</a></li>
+
+      </ul>
+      <div class="ui-grid-a center">
+        <div class="ui-block-a">
+          <a href="#aboutScreen" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-inline ui-nodisc-icon ui-alt-icon">Info</a>
+        </div>
+        <div class="ui-block-b">
+          <a href="#mapScreen" class="ui-btn ui-corner-all ui-icon-location ui-btn-icon-notext ui-btn-inline ui-nodisc-icon ui-alt-icon">Map</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="currentExhibits" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>SAMOCA</h1>
+      <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <h1 class="center">Current Exhibits</h1>
+      <ul data-role="listview" data-inset="false" class="ui-nodisc-icon ui-alt-icon">
+        <li>
+          <a href="#"><img src="imgs/Westhoff_thumb.png">
+            <h2>Siobhan Westhoff</h2>
+            <p>Final Weeks</p>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="imgs/101733188_thumb.png">
+            <h2>RED</h2>
+            <p>Eleanor Friosh</p>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="imgs/106588354_thumb.png">
+            <h2>Imbalanced</h2>
+            <p>Simone Best, Sheldon Crane, and Elizabeth Moore</p>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="imgs/924520721_thumb.png">
+            <h2>Morten Rand-Hendriksen</h2>
+            <p>The Untitled Collection</p>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="imgs/Vision_thumb.png">
+            <h2>VISION</h2>
+            <p>New Works from the SAMOCA Permanent Collection</p>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="imgs/Watching_thumb.png">
+            <h2>Paul Shellmont: Bird Watching</h2>
+            <p>Upcoming Exhibition</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="pastExhibits" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>SAMOCA</h1>
+      <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <h1 class="center">Past Exhibits</h1>
+      <ul data-role="listview" data-inset="false" class="ui-nodisc-icon ui-alt-icon">
+        <li>
+          <a href="#"><img src="imgs/GroundSwell_thumb.png">
+            <h2>Groundswell: Design Series II</h2>
+            <p> </p>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="imgs/Buildings_thumb.png">
+            <h2>Reflections on Architecture: Imagining Buildings</h2>
+            <p> </p>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <div id="mapScreen" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>SAMOCA</h1>
+      <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <h2 class="center">San Angelico Museum of Contemporary Art</h2>
+      <p class="center">123 Main Street Ventura, CA 12345
+        <br>(800)555-1212</p>
+      <div id="map2"><img src="imgs/map.png" /></div>
+    </div>
+  </div>
+
+  <div id="discoverScreen" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>SAMOCA</h1>
+      <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <img id="qrcode" src="imgs/qr.png" />
+      <h3 class="center">Discover More Exciting Stories</h3>
+      <p class="center">Any time you see this QR code, scan it using the Discover button to see additional content from SAMOCA.</p>
+      <a id="qrScanBtn" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Discover</a>
+    </div>
+  </div>
+
+  <div id="aboutScreen" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>SAMOCA</h1>
+      <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <h2 class="center">San Angelico Museum of Contemporary Art</h2>
+      <h3 class="center">Celebrating the Best of Modern Art</h3>
+      <img class="center banner" src="imgs/Museum.png" />
+      <p>SAMOCA (San Angelico Museum of Contemporary Art) is an art museum with a focus on modern art from the last 75 years. Since its inception in 1973, the museum has been the leader of modern contemporary design. SAMOCA is located in the heart of Ventura, ninety miles north of Los Angeles in Southern California.</p>
+
+      <p>SAMOCA was established to promote the celebration of modern art in many forms including visual and performing arts, music, and crafts – with collections that are suitable for the entire family. The museum focuses on the unique talents and accomplishments of up-and-coming artists found within the forward-thinking California community and beyond.</p>
+
+      <p>Our collections are designed to highlight the importance of contemporary art within modern society. Important influences, such as pop, cinema, and current events, permeate our halls. Through our diverse collections, events, and with the support of our patrons and volunteers, the museum helps to promote the importance of modern art around the world.</p>
+      <p class="center">123 Main Street Ventura, CA 12345 (800) 555-1212</p>
+    </div>
+  </div>
+  <!--
+	Admission
+	Directions
+	Parking
+	Hours
+	Volunteer
+	-->
+</body>
+
+</html>
