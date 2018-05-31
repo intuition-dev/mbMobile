@@ -50,7 +50,7 @@ let tsrouter = {
 	}
 
 	, loadHtml: function(toHref, fromHref, back) { //triggered, but function can be called directly also
-		log.log('loaded', toHref)
+		log.log('loaded', toHref) 
 		if (!back) {
 			history.pushState({url: toHref}, '', toHref)
 		}

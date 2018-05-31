@@ -1,6 +1,6 @@
 # PWA-router
 
-SPA/PWA is good for native/hybrid/cross platform app store, Apple and Android.
+SPA/spa is good for native/hybrid/cross platform app store, Apple and Android.
 Games are done like this 'hybrid cross platform'.
 
 
@@ -19,7 +19,7 @@ http://github.com/metabake/PWA-router/tree/master/public
 
 Before starting App store:
 
-PWA is harder and requires a build dev on team to deal w/ phonegap builds.
+spa is harder and requires a build dev on team to deal w/ phonegap builds.
 
 a) make sure your regular web app looks good in mobile size, for example in Google Chrome Dev Tools.
 

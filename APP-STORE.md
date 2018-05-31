@@ -19,7 +19,7 @@ For IOS app store you need to register with Apple as a developer (~$99/year) and
 
 3.
 
-In www/js index to go to deployed PWA app url in the cloud from README1.
+In www/js index to go to deployed spa app url in the cloud from README1.
 
 
 4.
