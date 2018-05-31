@@ -7,4 +7,6 @@
 
 * Custom tag to black box.
 
+* Use tags for binding or DSL
 
+* Reusing a tag will not give ROI
