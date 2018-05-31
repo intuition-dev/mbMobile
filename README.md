@@ -1,4 +1,4 @@
-# PWA-router
+# SPA-router
 
 SPA/spa is good for native/hybrid/cross platform app store, Apple and Android.
 Games are done like this 'hybrid cross platform'.
