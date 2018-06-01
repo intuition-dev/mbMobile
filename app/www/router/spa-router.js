@@ -1,7 +1,7 @@
 // ts router generic //////////////////////////////////////////////////////////////////////////////
 loadjs.ready('site', function () {
 
-	log.log('ts router', "v3.06.01")
+	log.log('ts router', "v3.06.01a")
 
 	$(window).on('popstate', function(e) {//back/forward button
 		log.log('tsrouter popstate'+e.originalEvent.state)
@@ -31,7 +31,9 @@ loadjs.ready('site', function () {
 	})
 
 	let pg = window.location.href
-	history.pushState({url: pg}, '', pg)
+	try {
+		history.pushState({url: pg}, '', pg)
+	} catch(err) {log.log(err)}
 	localStorage.setItem('oldUrl', pg)
 })
 
@@ -49,7 +51,10 @@ let tsrouter = {
 	, loadHtml: function(toHref, fromHref, back) { //triggered, but function can be called directly also
 		log.log('loaded', toHref)
 		if (!back) {
-			history.pushState({url: toHref}, '', toHref)
+			try{
+				history.pushState({url: toHref}, '', toHref)
+			} catch(err) {log.log(err)}
+
 		}
 
 		//fire NAV event
@@ -88,7 +93,9 @@ let tsrouter = {
 		let firstSeparator = (url.indexOf('?')==-1 ? '?' : '&')
 		let queryStringParts = new Array()
 		for(let key in queryVars) {
-			queryStringParts.push(key + '=' + queryVars[key])
+			try{
+				queryStringParts.push(key + '=' + queryVars[key])
+			} catch(err) {log.log(err)}
 		}
 		let queryString = queryStringParts.join('&')
 		return url + firstSeparator + queryString;
