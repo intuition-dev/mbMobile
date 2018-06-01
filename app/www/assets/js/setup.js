@@ -86,6 +86,7 @@ loadjs.ready(['core'], function () {
 		,'https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
 		//,'//cdn.jsdelivr.net/npm/intersection-observer@0.5.0/intersection-observer.js'
 		,'https://rawgit.com/metabake/SPA/master/app/www/router/spa-router.js'
+		
 	], 'cssJs', {
 		async: false //required due to loadjs bug with bundles
 	})
