@@ -3,15 +3,15 @@
 loadjs.ready(['site','split'], function(){
 	log.log('SPLIT override')
 
-	tsrouter.onNavigate(function(evt) {
-		if (evt.type == tsrouter.NAV)  { //start
+	SPArouter.onNavigate(function(evt) {
+		if (evt.type == SPArouter.NAV)  { //start
 			log.log('XXX XXX XXX NAV')
 			pgSplit($('#router'), 350 )
 			//$('#router').fadeTo(100,.2)
 		}
-		else if (evt.type == tsrouter.PAGE)  {
+		else if (evt.type == SPArouter.PAGE)  {
 			log.log('XXX XXX XXX PAGE')
-			$(tsrouter.zone).html(evt.newContent)
+			$(SPArouter.zone).html(evt.newContent)
 			//$('#router').fadeTo(100,1)
 			window.scrollTo(0, 0)
 		}
@@ -36,12 +36,12 @@ function pgSplit($cont_, speed) {
 
 	// compute endpoints math to split screen
 	var haf = $(window).width() / 2
-	var he  = $(window).height() + 'px, ' //
-	var doub = ' ' +haf*2 + 'px, ' //
-	var lft = '-' +haf + 'px '
+	var he = $(window).height() + 'px, ' //
+	var doub = ' ' + haf * 2 + 'px, ' //
+	var lft = '-' + haf + 'px '
 	haf = haf + 'px'
-	var fr = 'rect(0px, ' +haf+', ' +he +' 0px)'
-	var cr = 'rect(0px, ' +doub  +he +haf+')'
+	var fr = 'rect(0px, ' + haf + ', ' + he + ' 0px)'
+	var cr = 'rect(0px, ' + doub + he + haf + ')'
 
 	//clone, wrap and re-attach
 	var $firstSl = $cont_.children()
@@ -60,24 +60,24 @@ function pgSplit($cont_, speed) {
 	// =============================================================
 	//css clip computed
 	$('#firstSl').css('clip', fr) // clip it
-	$('#firstSl').css('position','absolute')
-	$('#firstSl').css('z-index',8)
+	$('#firstSl').css('position', 'absolute')
+	$('#firstSl').css('z-index', 8)
 	$('#firstSl').css('top', '45px')
 	$('#firstSl').css('min-height', he)
 	$('#firstSl *').css('min-height', he)
-	$('#firstSl').css('background','gray')
+	$('#firstSl').css('background', 'gray')
 
 	$('#cloneSl').css('clip', cr)
-	$('#cloneSl').css('position','absolute')
-	$('#cloneSl').css('z-index',9)
+	$('#cloneSl').css('position', 'absolute')
+	$('#cloneSl').css('z-index', 9)
 	$('#cloneSl').css('top', '45px')
-	$('#cloneSl').css('min-height',he)
-	$('#cloneSl *').css('min-height',he)
-	$('#cloneSl').css('background','gray')
+	$('#cloneSl').css('min-height', he)
+	$('#cloneSl *').css('min-height', he)
+	$('#cloneSl').css('background', 'gray')
 
-	$('#firstSl').transition({x: lft, easing: 'linear', duration: speed})
-	$('#cloneSl').transition({x: haf, easing: 'linear', duration: speed})
-	setTimeout(function(){
+	$('#firstSl').transition({ x: lft, easing: 'linear', duration: speed })
+	$('#cloneSl').transition({ x: haf, easing: 'linear', duration: speed })
+	setTimeout(function () {
 		log.log(':cleanup')
 		$('#routerFx').empty()
 	}, speed)
