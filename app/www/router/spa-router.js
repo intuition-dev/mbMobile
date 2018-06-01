@@ -1,7 +1,7 @@
 // ts router generic //////////////////////////////////////////////////////////////////////////////
 loadjs.ready('site', function () {
 
-	log.log('ts router', "v3.05.28")
+	log.log('ts router', "v3.06.01")
 
 	$(window).on('popstate', function(e) {//back/forward button
 		log.log('tsrouter popstate'+e.originalEvent.state)
@@ -22,9 +22,6 @@ loadjs.ready('site', function () {
 		}
 		if (anchor.is('.norouter'))
 			return
-		if (tsrouter.isExternal(href)) {
-			return
-		}
 
 		//else:
 		e.preventDefault()
@@ -50,7 +47,7 @@ let tsrouter = {
 	}
 
 	, loadHtml: function(toHref, fromHref, back) { //triggered, but function can be called directly also
-		log.log('loaded', toHref) 
+		log.log('loaded', toHref)
 		if (!back) {
 			history.pushState({url: toHref}, '', toHref)
 		}
@@ -85,20 +82,6 @@ let tsrouter = {
 				log.log(er)
 				tsrouter.navigated.dispatch({type:tsrouter.ERR, err:er})
 		})
-	}
-
-	, isExternal: function(url) {// copied from original SS
-		let match = url.match(/^([^:\/?#]+:)?(?:\/\/([^\/?#]*))?([^?#]+)?(\?[^#]*)?(#.*)?/)
-		if (typeof match[1] === 'string' && match[1].length > 0 && match[1].toLowerCase() !== window.location.protocol) {
-			return true
-		}
-		if (typeof match[2] === 'string' &&
-			match[2].length > 0 &&
-			match[2].replace(new RegExp(':(' + {'http:': 80, 'https:': 443}[window.location.protocol] +
-			')?$'), '') !== window.location.host) {
-			return true
-		}
-		return false
 	}
 
 	, appendQueryString:function (url, queryVars) {
