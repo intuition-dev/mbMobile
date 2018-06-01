@@ -1,10 +1,10 @@
 // ts router generic //////////////////////////////////////////////////////////////////////////////
 loadjs.ready('site', function () {
 
-	log.log('ts router', "v3.06.01a")
+	log.log('spa router', "v3.06.01a")
 
 	$(window).on('popstate', function(e) {//back/forward button
-		log.log('tsrouter popstate'+e.originalEvent.state)
+		log.log(' popstate'+e.originalEvent.state)
 		let state = e.originalEvent.state
 		if (state !== null) {
 			e.preventDefault()
