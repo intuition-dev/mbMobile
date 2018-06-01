@@ -33,7 +33,12 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+		  app.receivedEvent('deviceready');
+
+		  window.open = cordova.InAppBrowser.open;
+			console.log('remapped window.open');
+			window.open('https://m.appthings.io/en/home/index.html', '_blank', 'location=no');
+			console.log('opened web app');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

@@ -1,0 +1,78 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover')
+
+		script(src='/assets/jsLibs/Logger.js')
+		script(src='/ts/initLog.js')
+
+		title Fr7 Mobi
+		script(src='//cdn.jsdelivr.net/npm/loadjs@3.5.2/dist/loadjs.js')
+		script.
+			  loadjs('/assets/fr7/framework7.css' )
+		link( href='/assets/fonts/framework7-icons.css', rel='stylesheet' )
+		link( href='/assets/fonts/material-icons.css', rel='stylesheet' )
+
+		script(src='//cdn.jsdelivr.net/npm/bowser@1.9.1/bowser.js')
+
+	body
+		script(src='//cdn.jsdelivr.net/npm/riot@3.8.1/riot.js')
+
+		#app
+			//right
+			.panel.panel-right.panel-cover
+					.view
+						.page 
+							p right
+
+			.view
+				.page
+
+					//fixed header
+					.navbar
+						.navbar-inner
+							.left
+							.title.sliding Fr7 Mobi
+
+					// fixed footer
+					.toolbar.toolbar-bottom-md
+						.toolbar-inner
+							.block Fr7 Mobi
+
+					// fixed main view .page-content 
+					.view-main.ios-edges
+						//route's main, .page-content if you want scroll
+						.page
+							p 
+								.block main
+
+
+		script.
+			loadjs(['//cdn.jsdelivr.net/npm/framework7@2.0.6/dist/js/framework7.js'
+				], 'deps')
+
+			loadjs.ready('deps', {
+				success: function() { 
+					onReady() 
+					},
+				error: function(depsNotFound) { Logger.log('could not load', depsNotFound ) }
+			})
+
+			function onReady() {
+				$$ = Dom7
+				app = new Framework7({
+					root: '#app',
+					on: {
+						init: function () {
+							Logger.log('app')
+						}//init
+					}//on
+				})//app
+
+			}
+
+		style.
+			.panel {
+				width: 100%;
+			}
