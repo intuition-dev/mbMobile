@@ -3,6 +3,11 @@
 
 0. You must have a PWA/SPA web app in the cloud before this step.
 
+
+In your browser, open the file, don't use http server!!!!
+    /www/index.html
+
+
 1.
 You'll need a build machine in the cloud. A few places that offer OSX hosting: http://macstadium.com , http://macincloud.com but there are others.
 OSX is required for IOS (due to dev keys) and easier to do Andorid with Genymotion emulator.
