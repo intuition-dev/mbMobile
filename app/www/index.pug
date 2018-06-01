@@ -1,7 +1,10 @@
 extends /layout/_layout
 //- App Shell
 
+
 block head
+	script(type='text/javascript', src='cordova.js')
+
 	//static binding ex:
 	title #{title}
 
@@ -9,7 +12,7 @@ block main
 	p
 	.ui.text.container
 		include _pinc
-	
+
 	script.
 		loadjs.ready('style', function () {
 			log.log('page 1 script here')
