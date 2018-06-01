@@ -1,0 +1,86 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		script(src='assets/jsLibs/Logger.js')
+		script(src='ts/initLog.js')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover')
+
+		title Fr7 Mobi
+		link(rel='stylesheet', href='assets/fr7/framework7.css')
+		link(rel='stylesheet', href='assets/fonts/framework7-icons.css')
+		link(rel='stylesheet', href='assets/fonts/material-icons.css')
+
+		script(src='//cdn.jsdelivr.net/npm/bowser@1.9.1/bowser.js')
+		script(src='//cdn.jsdelivr.net/npm/loadjs@3.5.2/dist/loadjs.js')
+		script(src='//cdn.jsdelivr.net/npm/riot@3.8.1/riot.js')
+		script(src='//cdn.jsdelivr.net/npm/fluxify@0.2.3/build/fluxify.js')
+
+	body
+		script(src='//cdn.jsdelivr.net/npm/promise-polyfill@7/dist/polyfill.min.js')
+
+		script(src='comps/swiper.js')
+		script(src='comps/car-swipe.js')
+		script(src='comps/r-pan.js')
+
+		style(type='riot')
+
+		#app
+			//right
+			.panel.panel-right.panel-cover
+					.view
+						.page 
+							r-pan
+
+			.view
+				.page
+					//fixed header
+					.navbar
+						.navbar-inner
+							.left
+							.title.sliding Fr7 Mobi
+					// fixed footer
+					.toolbar.toolbar-bottom-md
+						.toolbar-inner
+							.block Fr7 Mobi
+					// fixed main view .page-content 
+					.view-main.ios-edges
+						//route's main, .page-content if you want scroll
+						.page
+							swiper
+
+		script(src='ts/model.js')
+
+		script.
+			loadjs(['//cdn.jsdelivr.net/npm/framework7@2.0.6/dist/js/framework7.js'
+				, '//cdn.jsdelivr.net/npm/rss-parser@3.0.1/dist/rss-parser.js'], 'deps')
+
+			loadjs.ready('deps', {
+				success: function() { onReady() },
+				error: function(depsNotFound) { Logger.log('could not load', depsNotFound ) }
+			})
+
+			function onReady() {
+				$$ = Dom7
+				app = new Framework7({
+					root: '#app',
+					on: {
+						init: function () {
+							Logger.log('app')
+							initSwiperComp()
+						}//init
+					}//on
+				})//app
+
+				riot.mount('r-pan')
+			}
+
+			function initSwiperComp() {
+				modelInit()
+				riot.mount('swiper')
+			}
+
+		style.
+			.panel {
+				width: 100%;
+			}
