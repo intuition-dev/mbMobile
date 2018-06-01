@@ -1,8 +1,8 @@
 <?xmlversion='1.0'encoding='utf-8'?>
-<widgetid="XXX"version="1.0.0"xmlns="http://www.w3.org/ns/widgets"xmlns:gap="http://phonegap.com/ns/1.0">
-	<name>blankname</name>
+<widgetid="XXX" version="1.0.0" xmlns="http://www.w3.org/ns/widgets"xmlns:gap="http://phonegap.com/ns/1.0">
+	<name>Web App 1</name>
 	<description>
-		AblankPhoneGapapp.
+		Web App 1.
 	</description>
 	<authoremail="support@phonegap.com"href="http://phonegap.com">
 		PhoneGapTeam

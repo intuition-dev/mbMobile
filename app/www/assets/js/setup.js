@@ -1,3 +1,4 @@
+
 // http://github.com/logzio/logzio-js
 (function(window) {
 	const LogzioLogger = function(apiKey, sendConsoleJsErrors) {
@@ -27,14 +28,16 @@
 		 } catch (ex) {
 			if (window && window.console && typeof window.log.log == 'function')
 				log.log("Failed to send log because of exception:\n" + ex)
-		 }
+				console.log(ex)
+			}
 	}
 	window.LogzioLogger = LogzioLogger
 })(window)
 
 window.log = new LogzioLogger('JQMYDEDILZCNAlWPIbiSyyWaroBvfKSa')
 
-log.log('Hello, this is just a test')
+log.log('Hello, this is just a test: 601')
+
 log.log({hello: 'there',
 			test: 'hello world'
 })
@@ -55,14 +58,14 @@ log.log({hello: 'there',
 // polyfills
 if (!window.Promise) {
 	/* load bundle 'promise' */
-	loadjs(['//cdn.jsdelivr.net/es6-promise-polyfill/1.2.0/promise.min.js'], 'promise', {
+	loadjs(['https://cdn.jsdelivr.net/es6-promise-polyfill/1.2.0/promise.min.js'], 'promise', {
 		async: false //required due to loadjs bug with bundles
 	})
 }
 else loadjs.done('promise') /* we already have it */
 
 if (!window.fetch) {
-	loadjs(['//cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js'], 'fetch', {
+	loadjs(['https://cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js'], 'fetch', {
 		async: false //required due to loadjs bug with bundles
 	})
 }
@@ -73,16 +76,16 @@ else loadjs.done('fetch')
 loadjs.ready(['promise','fetch'], function () {
 	/* load bundle 'core' */
 	loadjs([
-		'//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js'
+		'https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js'
 	], 'core', { // bundle ID
 			async: false //required due to loadjs bug with bundles
 	})
 })
 loadjs.ready(['core'], function () {
-	loadjs([ '//cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/components/sidebar.min.js'
-		,'//cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
+	loadjs([ 'https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/components/sidebar.min.js'
+		,'https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
 		//,'//cdn.jsdelivr.net/npm/intersection-observer@0.5.0/intersection-observer.js'
-		,'/router/spa-router.js'
+		,'https://rawgit.com/metabake/SPA/master/app/www/router/spa-router.js'
 	], 'cssJs', {
 		async: false //required due to loadjs bug with bundles
 	})
@@ -106,8 +109,8 @@ loadjs.ready(['css', 'cssJs', 'site'], function () {
 
 loadjs.ready(['style'], function () { //load large css
 	setTimeout(function(){
-		loadjs([ '/assets/css/semantic2.css'
-			,'//unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css' // http://ionicons.com/usage
+		loadjs([ // '/assets/css/semantic2.css'
+			,'https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css' // http://ionicons.com/usage
 		], 'css2', {
 			async: false //required due to loadjs bug with bundles
 		})
@@ -124,7 +127,7 @@ loadjs.ready(['site'], function () {// do nav, signal is ready, but not style
 loadjs.ready(['style'], function () {// 'show' page, ex: unhide
 	log.log('style done', Date.now()-_start)
 
-	/*
+	/* SPA Lab
 	loadjs('/assets/js/main.js',
 		'mainjs', {
 		async: false //required due to loadjs bug with bundles

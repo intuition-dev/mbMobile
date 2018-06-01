@@ -4,14 +4,14 @@ html
 		script.
 			let _start=Date.now()
 		include _header
-		script(src='//cdn.jsdelivr.net/npm/loadjs@3.5.4/dist/loadjs.min.js')
+		script(src='https://cdn.jsdelivr.net/npm/loadjs@3.5.4/dist/loadjs.min.js')
 
 		block head
 		style.
 			html { opacity: 0.01; }
 
 	body
-		script(src='/assets/js/setup.js')
+		script(src='https://rawgit.com/metabake/SPA/master/app/www/assets/js/setup.js')
 
 		//- side menu shell
 		include _top
@@ -39,5 +39,5 @@ html
 				$('.ui.sidebar').sidebar('attach events', '.toc.item')
 
 			})//ready
-		link(rel='stylesheet', href='/assets/css/semantic1.css', onload='cssLoaded()')
+		link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.css', onload='cssLoaded()')
 
