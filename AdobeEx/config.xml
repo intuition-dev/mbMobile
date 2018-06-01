@@ -1,0 +1,79 @@
+<?xmlversion='1.0'encoding='utf-8'?>
+<widgetid="AdobeX"version="1.0.0"xmlns="http://www.w3.org/ns/widgets"xmlns:gap="http://phonegap.com/ns/1.0">
+	<name>Adobe</name>
+	<description>
+		HelloWorldsampleapplicationthatrespondstothedevicereadyevent.
+	</description>
+	<authoremail="support@phonegap.com"href="http://phonegap.com">
+		PhoneGapTeam
+	</author>
+	<contentsrc="index.html"/>
+	<preferencename="DisallowOverscroll"value="true"/>
+
+	<preferencename="android-minSdkVersion"value="14"/>
+
+	<platformname="android">
+		<icondensity="ldpi"src="www/res/icon/android/drawable-ldpi-icon.png"/>
+		<icondensity="mdpi"src="www/res/icon/android/drawable-mdpi-icon.png"/>
+		<icondensity="hdpi"src="www/res/icon/android/drawable-hdpi-icon.png"/>
+		<icondensity="xhdpi"src="www/res/icon/android/drawable-xhdpi-icon.png"/>
+		<icondensity="xxhdpi"src="www/res/icon/android/drawable-xxhdpi-icon.png"/>
+		<icondensity="xxxhdpi"src="www/res/icon/android/drawable-xxxhdpi-icon.png"/>
+		<splashdensity="land-ldpi"src="www/res/screen/android/drawable-land-ldpi-screen.png"/>
+		<splashdensity="land-mdpi"src="www/res/screen/android/drawable-land-mdpi-screen.png"/>
+		<splashdensity="land-hdpi"src="www/res/screen/android/drawable-land-hdpi-screen.png"/>
+		<splashdensity="land-xhdpi"src="www/res/screen/android/drawable-land-xhdpi-screen.png"/>
+		<splashdensity="land-xxhdpi"src="www/res/screen/android/drawable-land-xxhdpi-screen.png"/>
+		<splashdensity="land-xxxhdpi"src="www/res/screen/android/drawable-land-xxxhdpi-screen.png"/>
+		<splashdensity="port-ldpi"src="www/res/screen/android/drawable-port-ldpi-screen.png"/>
+		<splashdensity="port-mdpi"src="www/res/screen/android/drawable-port-mdpi-screen.png"/>
+		<splashdensity="port-hdpi"src="www/res/screen/android/drawable-port-hdpi-screen.png"/>
+		<splashdensity="port-xhdpi"src="www/res/screen/android/drawable-port-xhdpi-screen.png"/>
+		<splashdensity="port-xxhdpi"src="www/res/screen/android/drawable-port-xxhdpi-screen.png"/>
+		<splashdensity="port-xxxhdpi"src="www/res/screen/android/drawable-port-xxxhdpi-screen.png"/>
+	</platform>
+	<platformname="ios">
+		<iconheight="57"platform="ios"src="www/res/icon/ios/icon.png"width="57"/>
+		<iconheight="114"platform="ios"src="www/res/icon/ios/icon@2x.png"width="114"/>
+		<iconheight="40"platform="ios"src="www/res/icon/ios/icon-40.png"width="40"/>
+		<iconheight="80"platform="ios"src="www/res/icon/ios/icon-40@2x.png"width="80"/>
+		<iconheight="50"platform="ios"src="www/res/icon/ios/icon-50.png"width="50"/>
+		<iconheight="100"platform="ios"src="www/res/icon/ios/icon-50@2x.png"width="100"/>
+		<iconheight="60"platform="ios"src="www/res/icon/ios/icon-60.png"width="60"/>
+		<iconheight="120"platform="ios"src="www/res/icon/ios/icon-60@2x.png"width="120"/>
+		<iconheight="180"platform="ios"src="www/res/icon/ios/icon-60@3x.png"width="180"/>
+		<iconheight="72"platform="ios"src="www/res/icon/ios/icon-72.png"width="72"/>
+		<iconheight="144"platform="ios"src="www/res/icon/ios/icon-72@2x.png"width="144"/>
+		<iconheight="76"platform="ios"src="www/res/icon/ios/icon-76.png"width="76"/>
+		<iconheight="152"platform="ios"src="www/res/icon/ios/icon-76@2x.png"width="152"/>
+		<iconheight="29"platform="ios"src="www/res/icon/ios/icon-small.png"width="29"/>
+		<iconheight="58"platform="ios"src="www/res/icon/ios/icon-small@2x.png"width="58"/>
+		<iconheight="87"platform="ios"src="www/res/icon/ios/icon-small@3x.png"width="87"/>
+		<splashheight="1136"platform="ios"src="www/res/screen/ios/Default-568h@2x~iphone.png"width="640"/>
+		<splashheight="1334"platform="ios"src="www/res/screen/ios/Default-667h.png"width="750"/>
+		<splashheight="2208"platform="ios"src="www/res/screen/ios/Default-736h.png"width="1242"/>
+		<splashheight="1242"platform="ios"src="www/res/screen/ios/Default-Landscape-736h.png"width="2208"/>
+		<splashheight="1536"platform="ios"src="www/res/screen/ios/Default-Landscape@2x~ipad.png"width="2048"/>
+		<splashheight="768"platform="ios"src="www/res/screen/ios/Default-Landscape~ipad.png"width="1024"/>
+		<splashheight="2048"platform="ios"src="www/res/screen/ios/Default-Portrait@2x~ipad.png"width="1536"/>
+		<splashheight="1024"platform="ios"src="www/res/screen/ios/Default-Portrait~ipad.png"width="768"/>
+		<splashheight="960"platform="ios"src="www/res/screen/ios/Default@2x~iphone.png"width="640"/>
+		<splashheight="480"platform="ios"src="www/res/screen/ios/Default~iphone.png"width="320"/>
+	</platform>
+
+
+	<accessorigin="*"/>
+
+	<allow-intenthref="http://*/*"/>
+	<allow-intenthref="https://*/*"/>
+
+	<allow-intenthref="mailto:*"/>
+	<allow-intenthref="geo:*"/>
+	<platformname="android">
+		<allow-intenthref="market:*"/>
+	</platform>
+	<platformname="ios">
+		<allow-intenthref="itms:*"/>
+		<allow-intenthref="itms-apps:*"/>
+	</platform>
+</widget>
