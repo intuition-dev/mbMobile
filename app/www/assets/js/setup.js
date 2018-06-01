@@ -110,7 +110,7 @@ loadjs.ready(['css', 'cssJs', 'site'], function () {
 loadjs.ready(['style'], function () { //load large css
 	setTimeout(function(){
 		loadjs([ // '/assets/css/semantic2.css'
-			,'https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css' // http://ionicons.com/usage
+			'https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css' // http://ionicons.com/usage
 		], 'css2', {
 			async: false //required due to loadjs bug with bundles
 		})
