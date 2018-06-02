@@ -1,0 +1,70 @@
+doctype html
+html
+	head
+		//
+			Customize this policy to fit your own app's needs. For more guidance, see:
+			https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+			Some notes:
+			* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+			* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+			* Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+			* Enable inline JS: add 'unsafe-inline' to default-src
+		meta(http-equiv='Content-Security-Policy', content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *")
+		// Required meta tags
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui')
+		meta(name='apple-mobile-web-app-capable', content='yes')
+		meta(name='apple-mobile-web-app-status-bar-style', content='black')
+		meta(name='format-detection', content='telephone=no')
+		meta(name='msapplication-tap-highlight', content='no')
+		// Your app title
+		title My App
+		//
+			This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+			http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+		link(rel='stylesheet', href='lib/framework7/css/framework7.ios.min.css')
+		link(rel='stylesheet', href='lib/framework7/css/framework7.ios.colors.min.css')
+		link(rel='stylesheet', href='css/styles.css')
+	body
+		// Status bar overlay for full screen mode (PhoneGap)
+		.statusbar-overlay
+		// Panels overlay
+		.panel-overlay
+		// Left panel with reveal effect
+		.panel.panel-left.panel-reveal
+			.content-block
+				p Left panel content goes here
+		// Views
+		.views
+			// Your main view, should have "view-main" class
+			.view.view-main
+				// Top Navbar
+				.navbar
+					.navbar-inner
+						// We need cool sliding animation on title element, so we have additional "sliding" class
+						.center.sliding Awesome App
+						.right
+							//
+								Right link contains only icon - additional "icon-only" class
+								Additional "open-panel" class tells app to open panel when we click on this link
+							a.link.icon-only.open-panel(href='#')
+								i.icon.icon-bars
+				// Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes
+				.pages.navbar-through.toolbar-through
+					// Page, "data-page" contains page name
+					.page(data-page='index')
+						// Scrollable page content
+						.page-content
+							.content-block
+								p Page content goes here
+								// Link to another page
+								a(href='about.html') About app
+				// Bottom Toolbar
+				.toolbar
+					.toolbar-inner
+						// Toolbar links
+						a.link(href='#') Link 1
+						a.link(href='#') Link 2
+		script(type='text/javascript', src='cordova.js')
+		script(type='text/javascript', src='lib/framework7/js/framework7.min.js')
+		script(type='text/javascript', src='js/my-app.js')
