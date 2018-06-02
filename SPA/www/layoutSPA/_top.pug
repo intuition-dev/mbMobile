@@ -1,0 +1,40 @@
+
+//side
+.ui.fixed.vertical.inverted.sidebar.menu
+	a.active.item(href='https://rawgit.com/metabake/SPA/master/app/www/pg/one/index.html')
+		i.left.icon.star
+		| One
+	a.item(href='https://rawgit.com/metabake/SPA/master/app/www/pg/two/index.html')
+		i.left.icon.book
+		| Two
+
+//top
+.ui.fixed.inverted.menu
+	.ui.container
+		a.toc.item
+			i.sidebar.icon
+		.item MySite
+
+		a.item(href='https://rawgit.com/metabake/SPA/master/app/www/pg/one/index.html') One
+		a.item(href='https://rawgit.com/metabake/SPA/master/app/www/pg/two/index.html') Two
+	.right.menu
+		a.item(href='http://METAbake.org') Git
+
+style.
+	* {
+		letter-spacing: .02em !important;
+	}
+
+	.ui.menu {
+		height: 1.5em !important;
+	}
+
+	.pusher {
+		margin-top: 1.5em;
+	}
+
+	@media only screen and (min-width: 1281px) {
+		.toc.item {
+			display: none !important;
+		}
+	}
