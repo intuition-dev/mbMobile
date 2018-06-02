@@ -83,17 +83,20 @@
 		<splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
 	</platform>
 
-		<platform name="browser">
-			<preference name="SplashScreen" value="img/logo_appthings.png" /> <!-- defaults to "img/logo.png" -->
-			<preference name="SplashScreenBackgroundColor" value="#464646" /> <!-- defaults to "#464646" -->
-			<preference name="ShowSplashScreen" value="true" /> <!-- defaults to "true" -->
-	 </platform>
+	<platform name="browser">
+		<preference name="SplashScreen" value="img/logo_appthings.png" /> <!-- defaults to "img/logo.png" -->
+		<preference name="SplashScreenBackgroundColor" value="#464646" /> <!-- defaults to "#464646" -->
+		<preference name="ShowSplashScreen" value="true" /> <!-- defaults to "true" -->
+	</platform>
 
-	<access origin="*" />
-	<allow-navigation href="https://m.appthings.io/*" />
+	<access origin="http://*" />
+	<access origin="https://*" />
+	<allow-navigation href="*" />
+	<allow-navigation href="data:*" />
 
 	<allow-intent href="http://*/*" />
 	<allow-intent href="https://*/*" />
+
 	<allow-intent href="tel:*" />
 	<allow-intent href="sms:*" />
 	<allow-intent href="mailto:*" />
