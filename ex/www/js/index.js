@@ -45,16 +45,19 @@ function initLog() {
 				test: 'hello world'
 	})
 }
-
-
 /////////////////////////////////////////////////////////////////
 
 document.addEventListener('deviceready', onDeviceReady, false)
 
+function cssLoaded() {// called by the style sheet in layout
+
+}
+
 function onDeviceReady() { // nothing will work before this
-
 	function initLog() // do a test log
-
+	loadjs('//cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/components/sidebar.min.js', function() {
+		log.log('load js')
+	})
 }
 
 $(document).ready(function() {
@@ -64,10 +67,11 @@ $(document).ready(function() {
 		 && document.URL.indexOf("https://") === -1) {
 		 window.isphone = true
 	}
-
-	if( window.isphone ) {
+	if( window.isphone ) { // //file is a browser
 		 document.addEventListener("deviceready", onDeviceReady, false)
 	} else {
 		 onDeviceReady()
 	}
 })
+
+// real code ///////////////////////////////////////////////////////////////
