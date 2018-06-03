@@ -30,9 +30,9 @@ loadjs.ready(['site', 'pfx'], function () {
 	})//onNav
 })//ready
 
-loadjs(['//cdn.jsdelivr.net/npm/zingtouch@1.0.6/dist/zingtouch.js'
-	, '//cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/components/transition.min.js'
-	, '//cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/components/transition.css'
+loadjs(['https://cdn.jsdelivr.net/npm/zingtouch@1.0.6/dist/zingtouch.js'
+	, 'https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/components/transition.min.js'
+	, 'https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/components/transition.css'
 ], 'pfx', {
 		async: false //required due to loadjs bug with bundles
 	})
