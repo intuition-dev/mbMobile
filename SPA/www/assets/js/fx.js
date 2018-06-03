@@ -1,21 +1,21 @@
 
 loadjs.ready(['site', 'pfx'], function () {
-	log.log('gesture')
+	console.log('gesture')
 	const guest = new ZingTouch.Region(document.body)
 	guest.bind(document.body, 'swipe', function (e) {
 		let angle = e.detail.data[0].currentDirection
-		log.log(angle)
+		console.log(angle)
 		if (angle < 45 || angle > 360 - 45)
-			log.log('swiped right')
+			console.log('swiped right')
 		if (angle > 180 - 45 && angle < 180 + 45)
-			log.log('swiped left')
+			console.log('swiped left')
 	})
 })//ready
 
 loadjs.ready(['site', 'pfx'], function () {
 	SPArouter.onNavigate(function (evt) {
 		if (evt.type == SPArouter.PAGE) {
-			log.log('PAGE')
+			console.log('PAGE')
 			$(SPArouter.zone).transition({
 				animation: 'fade', duration: '0.2s',
 				onComplete: function () {

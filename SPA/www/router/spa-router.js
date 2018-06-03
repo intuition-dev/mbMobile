@@ -1,10 +1,10 @@
 // ts router generic //////////////////////////////////////////////////////////////////////////////
 loadjs.ready('site', function () {
 
-	log.log('spa router', "v3.06.01b")
+	console.log('spa router', "v3.06.01b")
 
 	$(window).on('popstate', function (e) {//back/forward button
-		log.log(' popstate' + e.originalEvent.state)
+		console.log(' popstate' + e.originalEvent.state)
 		let state = e.originalEvent.state
 		if (state !== null) {
 			e.preventDefault()
@@ -33,7 +33,7 @@ loadjs.ready('site', function () {
 	let pg = window.location.href
 	try {
 		history.pushState({ url: pg }, '', pg)
-	} catch (err) { log.log(err) }
+	} catch (err) { console.log(err) }
 	localStorage.setItem('oldUrl', pg)
 })
 
@@ -49,11 +49,11 @@ let SPArouter = {
 	}
 
 	, loadHtml: function (toHref, fromHref, back) { //triggered, but function can be called directly also
-		log.log('loaded', toHref)
+		console.log('loaded', toHref)
 		if (!back) {
 			try {
 				history.pushState({ url: toHref }, '', toHref)
-			} catch (err) { log.log(err) }
+			} catch (err) { console.log(err) }
 
 		}
 
@@ -61,14 +61,14 @@ let SPArouter = {
 		SPArouter.navigated.dispatch({ type: SPArouter.NAV, toHref: toHref, fromHref: fromHref, back: back })
 
 		let url = SPArouter.appendQueryString(toHref, { 'SPArouter': "\"" + SPArouter.zone + "\"" })
-		log.log(url)
+		console.log(url)
 		fetch(url, {
 			method: 'get',
 			credentials: 'same-origin'
 		}).then(function (response) {
 			if (!response.ok) {
-				log.log('not ok')
-				log.log(response)
+				console.log('not ok')
+				console.log(response)
 				throw Error(response.statusText)
 			}
 			return response.text()
@@ -78,13 +78,13 @@ let SPArouter = {
 			document.title = title
 
 			let newContent = $html.find(SPArouter.zone).html()
-			//log.log(newContent)
+			//console.log(newContent)
 
 			//fire new PAGE received event
 			SPArouter.navigated.dispatch({ type: SPArouter.PAGE, toHref: toHref, fromHref: fromHref, newContent: newContent, $html: $html, back: back })
 
 		}).catch(function (er) {
-			log.log(er)
+			console.log(er)
 			SPArouter.navigated.dispatch({ type: SPArouter.ERR, err: er })
 		})
 	}
@@ -95,7 +95,7 @@ let SPArouter = {
 		for (let key in queryVars) {
 			try {
 				queryStringParts.push(key + '=' + queryVars[key])
-			} catch (err) { log.log(err) }
+			} catch (err) { console.log(err) }
 		}
 		let queryString = queryStringParts.join('&')
 		return url + firstSeparator + queryString;
@@ -106,14 +106,14 @@ let SPArouter = {
 
 // use / override:
 loadjs.ready('site', function () {
-	log.log('setup tsr')
+	console.log('setup tsr')
 	SPArouter.onNavigate(function (evt) {
 		if (evt.type == SPArouter.NAV) { //start
-			log.log('router NAV')
+			console.log('router NAV')
 			//$('#router').fadeTo(100,.2)
 		}
 		else if (evt.type == SPArouter.PAGE) {
-			log.log('router PAGE')
+			console.log('router PAGE')
 			$(SPArouter.zone).html(evt.newContent)
 			//$('#router').fadeTo(100,1)
 			window.scrollTo(0, 0)

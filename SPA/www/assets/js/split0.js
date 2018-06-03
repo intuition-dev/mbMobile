@@ -1,16 +1,16 @@
 
 /*
 loadjs.ready(['site','split'], function(){
-	log.log('SPLIT override')
+	console.log('SPLIT override')
 
 	SPArouter.onNavigate(function(evt) {
 		if (evt.type == SPArouter.NAV)  { //start
-			log.log('XXX XXX XXX NAV')
+			console.log('XXX XXX XXX NAV')
 			pgSplit($('#router'), 350 )
 			//$('#router').fadeTo(100,.2)
 		}
 		else if (evt.type == SPArouter.PAGE)  {
-			log.log('XXX XXX XXX PAGE')
+			console.log('XXX XXX XXX PAGE')
 			$(SPArouter.zone).html(evt.newContent)
 			//$('#router').fadeTo(100,1)
 			window.scrollTo(0, 0)
@@ -29,10 +29,10 @@ loadjs([
 
 // http://github.com/cekvenich/www/tree/master/srv/webroot
 
-log.log('split loaded')
+console.log('split loaded')
 //====================================================================
 function pgSplit($cont_, speed) {
-	log.log('spliting:')
+	console.log('spliting:')
 
 	// compute endpoints math to split screen
 	var haf = $(window).width() / 2
@@ -78,7 +78,7 @@ function pgSplit($cont_, speed) {
 	$('#firstSl').transition({ x: lft, easing: 'linear', duration: speed })
 	$('#cloneSl').transition({ x: haf, easing: 'linear', duration: speed })
 	setTimeout(function () {
-		log.log(':cleanup')
+		console.log(':cleanup')
 		$('#routerFx').empty()
 	}, speed)
 

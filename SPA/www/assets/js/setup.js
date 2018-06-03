@@ -1,5 +1,6 @@
 
 // http://github.com/logzio/logzio-js
+/*
 (function(window) {
 	const LogzioLogger = function(apiKey, sendConsoleJsErrors) {
 		this.key = apiKey
@@ -26,7 +27,7 @@
 			let logImg = new Image()
 			logImg.src = logUrl
 		 } catch (ex) {
-			if (window && window.console && typeof window.log.log == 'function')
+			if (window && window.console && typeof window.console.log == 'function')
 				log.log("Failed to send log because of exception:\n" + ex)
 				console.log(ex)
 			}
@@ -37,10 +38,7 @@
 window.log = new LogzioLogger('JQMYDEDILZCNAlWPIbiSyyWaroBvfKSa')
 
 log.log('Hello, this is just a test: 601')
-
-log.log({hello: 'there',
-			test: 'hello world'
-})
+*/
 
 // ////////////////////////////////////////////////////////////////////////////
  // http://github.com/muicss/loadjs/issues/56
@@ -96,7 +94,7 @@ loadjs.ready(['core'], function () {
 })//()
 
 function cssLoaded() {// called by the style sheet in layout
-	log.log('css loaded', Date.now()-_start)
+	console.log('css loaded', Date.now()-_start)
 	loadjs.done('css')
 }
 
@@ -117,16 +115,16 @@ loadjs.ready(['style'], function () { //load large css
 		})
 	},1000/60)
 })
-log.log('setup', "v2.05.12")
+console.log('setup', "v2.05.12")
 // usage: ////////////////////////////////////////////////////////////////////
 loadjs.ready(['core'], function () {// load data
-	log.log('core done', Date.now()-_start)
+	console.log('core done', Date.now()-_start)
 })
 loadjs.ready(['site'], function () {// do nav, signal is ready, but not style
-	log.log('site done', Date.now()-_start)
+	console.log('site done', Date.now()-_start)
 })
 loadjs.ready(['style'], function () {// 'show' page, ex: unhide
-	log.log('style done', Date.now()-_start)
+	console.log('style done', Date.now()-_start)
 
 	/* SPA Lab
 	loadjs('/assets/js/main.js',
@@ -137,14 +135,14 @@ loadjs.ready(['style'], function () {// 'show' page, ex: unhide
 
 })
 loadjs.ready(['css2'], function () {// 'show' page, ex: unhide
-	log.log('css2 done', Date.now()-_start)
+	console.log('css2 done', Date.now()-_start)
 })
 
 window.addEventListener('pageshow', function(event) {
-	log.log('pageshow:', event.timeStamp)
+	console.log('pageshow:', event.timeStamp)
 })
 window.addEventListener('load', function(event) {
-	log.log('load:', event.timeStamp)
+	console.log('load:', event.timeStamp)
 })
 
 // util: /////////////////////////////////////////////////////////////////////
