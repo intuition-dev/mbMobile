@@ -1,5 +1,5 @@
 
-console.log('fx', "v2.06.1c")
+console.log('fx', "v4.06.1c")
 
 loadjs.ready(['site', 'pfx'], function () {
 	console.log('gesture')
