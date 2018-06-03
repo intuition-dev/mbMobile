@@ -8,7 +8,7 @@
 	})
 	loadjs.ready(bundleIds, callbackFn)
 }
-console.log('SPAsetup', "v2.06.03c")
+console.log('SPAsetup', "v2.06.03d")
 ///////////////////////////////////////////////////////////////////////////////////
 //11 ie has 0% market share of mobile
 
@@ -22,9 +22,7 @@ $(document).ready(function() {
 		 window.isphone = true
 	}
 
-
-	window.isphone = false // REMOVE this line to support PhoneGap
-
+	window.isphone = false // use only for file testing
 
 	console.log('phonegap?',window.isphone)
 	if( window.isphone ) { // //file is a browser
@@ -59,10 +57,10 @@ loadjs.ready(['style'], function () {// 'show' page, ex: unhide
 	console.log('style done', Date.now()-_start)
 	loadjs('https://rawgit.com/metabake/SPA/master/SPA/www/router/spa-router.js')
 
-	/*
+
 	// SPA Lab:
 	loadjs('https://rawgit.com/metabake/SPA/master/SPA/www/assets/js/fx.js',
 		'fxLoded')
-	*/
+
 
 })
