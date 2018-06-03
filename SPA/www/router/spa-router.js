@@ -1,7 +1,7 @@
 // ts router generic //////////////////////////////////////////////////////////////////////////////
-loadjs.ready('site', function () {
+loadjs.ready('style', function () {
 
-	console.log('spa router', "v3.06.02")
+	console.log('spa router', "v3.06.02e")
 
 	$(window).on('popstate', function (e) {//back/forward button
 		console.log(' popstate' + e.originalEvent.state)
@@ -54,7 +54,6 @@ let SPArouter = {
 			try {
 				history.pushState({ url: toHref }, '', toHref)
 			} catch (err) { console.log('no push state on file//') }
-
 		}
 
 		//fire NAV event
