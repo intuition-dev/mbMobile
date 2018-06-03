@@ -8,7 +8,7 @@
 	})
 	loadjs.ready(bundleIds, callbackFn)
 }
-console.log('SPAsetup', "v2.06.1g")
+console.log('SPAsetup', "v2.06.1h")
 ///////////////////////////////////////////////////////////////////////////////////
 //11 ie has 0% market share of mobile
 
