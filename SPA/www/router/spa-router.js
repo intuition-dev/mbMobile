@@ -14,7 +14,7 @@ loadjs.ready('site', function () {
 		}
 	})
 
-	$(document).on('click', 'a', function (e) { //override links
+	$(document).on('click', 'a', function (e) { //over-ride links
 		let anchor = $(e.currentTarget)
 		let href = anchor.prop('href')
 		if (!href || href.length < 1) {
@@ -33,7 +33,7 @@ loadjs.ready('site', function () {
 	let pg = window.location.href
 	try {
 		history.pushState({ url: pg }, '', pg)
-	} catch (err) { console.log(err) }
+	} catch (err) { console.log('no push state on file//') }
 	localStorage.setItem('oldUrl', pg)
 })
 
@@ -53,7 +53,7 @@ let SPArouter = {
 		if (!back) {
 			try {
 				history.pushState({ url: toHref }, '', toHref)
-			} catch (err) { console.log(err) }
+			} catch (err) { console.log('no push state on file//') }
 
 		}
 
