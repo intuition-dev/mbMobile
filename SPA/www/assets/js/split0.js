@@ -21,9 +21,7 @@ loadjs.ready(['site','split'], function(){
 loadjs([
 		'//cdn.jsdelivr.net/jquery.transit/0.9.12/jquery.transit.min.js']
 		,'/assets/js/split.js'
-	, 'split', {
-	async: false //required due to loadjs bug with bundles
-})
+	, 'split')
 
 */
 

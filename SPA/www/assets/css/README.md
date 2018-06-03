@@ -24,7 +24,5 @@ loadjs([ '//cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/components/sidebar.min.j
 
 loadjs.ready(['style'], function () { //load large css
 	loadjs([ '/assets/css/semnatic2.css'
-	], 'css2', {
-		async: false //required due to loadjs bug with bundles
-	})
+	], 'css2')
 })
