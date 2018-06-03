@@ -33,7 +33,7 @@ loadjs.ready('style', function () {
 	let pg = window.location.href
 	try {
 		history.pushState({ url: pg }, '', pg)
-	} catch (err) { console.log('no push state on file//') }
+	} catch (err) { console.log('no push state on file//', err) }
 	localStorage.setItem('oldUrl', pg)
 })
 
@@ -53,7 +53,7 @@ let SPArouter = {
 		if (!back) {
 			try {
 				history.pushState({ url: toHref }, '', toHref)
-			} catch (err) { console.log('no push state on file//') }
+			} catch (err) { console.log('no push state on file//', err) }
 		}
 
 		//fire NAV event
@@ -94,7 +94,7 @@ let SPArouter = {
 		for (let key in queryVars) {
 			try {
 				queryStringParts.push(key + '=' + queryVars[key])
-			} catch (err) { console.log(err) }
+			} catch (err) { 'q', console.log(err) }
 		}
 		let queryString = queryStringParts.join('&')
 		return url + firstSeparator + queryString;
