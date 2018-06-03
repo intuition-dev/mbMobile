@@ -1,7 +1,7 @@
 // ts router generic //////////////////////////////////////////////////////////////////////////////
 loadjs.ready('site', function () {
 
-	console.log('spa router', "v3.06.01b")
+	console.log('spa router', "v3.06.02")
 
 	$(window).on('popstate', function (e) {//back/forward button
 		console.log(' popstate' + e.originalEvent.state)
