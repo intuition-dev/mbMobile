@@ -1,5 +1,5 @@
 
-console.log('fx', "v4.06.1d")
+console.log('fx', "v4.06.3e")
 
 loadjs.ready(['style', 'pfx'], function () {
 	console.log('gesture')
@@ -14,7 +14,7 @@ loadjs.ready(['style', 'pfx'], function () {
 	})
 })//ready
 
-loadjs.ready(['site', 'pfx'], function () {
+loadjs.ready(['style', 'pfx'], function () {
 	SPArouter.onNavigate(function (evt) {
 		if (evt.type == SPArouter.PAGE) {
 			console.log('PAGE')

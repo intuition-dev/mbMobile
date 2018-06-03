@@ -3,6 +3,9 @@ html
 	head
 		script.
 			let _start=Date.now()
+		script(src='https://cdn.jsdelivr.net/npm/loadjs@3.5.4/dist/loadjs.js')
+		script(src='https://cdn.jsdelivr.net/npm/riot@3.10.1/riot.min.js')
+
 		include _header
 
 		block head
@@ -11,7 +14,6 @@ html
 
 	body
 		script(src='https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js')
-		script(src='https://cdn.jsdelivr.net/npm/loadjs@3.5.4/dist/loadjs.js')
 		script(src='https://rawgit.com/metabake/SPA/master/SPA/www/assets/js/SPAsetup.js')
 
 		//- side menu shell

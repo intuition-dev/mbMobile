@@ -8,7 +8,7 @@
 	})
 	loadjs.ready(bundleIds, callbackFn)
 }
-console.log('SPAsetup', "v2.06.03d")
+console.log('SPAsetup', "v2.06.03e")
 ///////////////////////////////////////////////////////////////////////////////////
 //11 ie has 0% market share of mobile
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
 		 window.isphone = true
 	}
 
-	window.isphone = false // use only for file testing
+	//window.isphone = false // use only for file testing
 
 	console.log('phonegap?',window.isphone)
 	if( window.isphone ) { // //file is a browser
