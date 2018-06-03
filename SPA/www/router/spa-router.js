@@ -1,7 +1,7 @@
 // ts router generic //////////////////////////////////////////////////////////////////////////////
 loadjs.ready('style', function () {
 
-	console.log('spa router', "v3.06.03a")
+	console.log('spa router', "v3.06.03b")
 
 	$(window).on('popstate', function (e) {//back/forward button
 		console.log(' popstate' + e.originalEvent.state)
@@ -103,18 +103,15 @@ let SPArouter = {
 // /////////////////////////////////////////////////////////////////////////////////////
 
 // use / override:
-loadjs.ready('site', function () {
-	console.log('setup tsr')
-	SPArouter.onNavigate(function (evt) {
-		if (evt.type == SPArouter.NAV) { //start
-			console.log('router NAV')
-			//$('#router').fadeTo(100,.2)
-		}
-		else if (evt.type == SPArouter.PAGE) {
-			console.log('router PAGE')
-			$(SPArouter.zone).html(evt.newContent)
-			//$('#router').fadeTo(100,1)
-			window.scrollTo(0, 0)
-		}
-	})
+SPArouter.onNavigate(function (evt) {
+	if (evt.type == SPArouter.NAV) { //start
+		console.log('router NAV')
+		//$('#router').fadeTo(100,.2)
+	}
+	else if (evt.type == SPArouter.PAGE) {
+		console.log('router PAGE')
+		$(SPArouter.zone).html(evt.newContent)
+		//$('#router').fadeTo(100,1)
+		window.scrollTo(0, 0)
+	}
 })

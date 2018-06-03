@@ -57,6 +57,7 @@ loadjs.ready(['css', 'cssJs'], function () {
 loadjs.ready(['style'], function () {// 'show' page, ex: unhide
 	console.log('style done', Date.now()-_start)
 	loadjs('https://rawgit.com/metabake/SPA/master/SPA/www/router/spa-router.js')
+
 	/*
 	// SPA Lab:
 	loadjs('https://rawgit.com/metabake/SPA/master/SPA/www/assets/js/fx.js',
