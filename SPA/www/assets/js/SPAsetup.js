@@ -22,7 +22,9 @@ $(document).ready(function() {
 		 window.isphone = true
 	}
 
+
 	window.isphone = false // REMOVE this line to support PhoneGap
+
 
 	console.log('phonegap?',window.isphone)
 	if( window.isphone ) { // //file is a browser
@@ -38,7 +40,6 @@ function onDeviceReady() { // nothing will work before this
 		,'https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
 		//,'//cdn.jsdelivr.net/npm/intersection-observer@0.5.0/intersection-observer.js'
 		,'https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css' // http://ionicons.com/usage
-
 	], 'cssJs')
 }
 
