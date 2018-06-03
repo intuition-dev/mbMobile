@@ -8,7 +8,7 @@
 	})
 	loadjs.ready(bundleIds, callbackFn)
 }
-console.log('SPAsetup', "v2.06.03b")
+console.log('SPAsetup', "v2.06.03c")
 ///////////////////////////////////////////////////////////////////////////////////
 //11 ie has 0% market share of mobile
 
@@ -61,9 +61,7 @@ loadjs.ready(['style'], function () {// 'show' page, ex: unhide
 
 	// SPA Lab:
 	loadjs('https://rawgit.com/metabake/SPA/master/SPA/www/assets/js/fx.js',
-		'fxLoded', {
-		 false //required due to loadjs bug with bundles
-	})
+		'fxLoded')
 
 
 })
