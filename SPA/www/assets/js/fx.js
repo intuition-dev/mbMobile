@@ -1,7 +1,7 @@
 
-console.log('fx', "v4.06.1c")
+console.log('fx', "v4.06.1d")
 
-loadjs.ready(['site', 'pfx'], function () {
+loadjs.ready(['style', 'pfx'], function () {
 	console.log('gesture')
 	const guest = new ZingTouch.Region(document.body)
 	guest.bind(document.body, 'swipe', function (e) {
