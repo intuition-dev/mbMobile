@@ -10,11 +10,11 @@
 	})
 	loadjs.ready(bundleIds, callbackFn)
 }
-console.log('SPAsetup', "v2.06.1c")
+console.log('SPAsetup', "v2.06.1d")
 ///////////////////////////////////////////////////////////////////////////////////
 //11 ie has 0% market share of mobile
 
-document.addEventListener('deviceready', onDeviceReady, false)
+// document.addEventListener('deviceready', onDeviceReady, false)
 
 $(document).ready(function() {
 	// are we running in native app or in a browser?
@@ -26,7 +26,7 @@ $(document).ready(function() {
 
 	window.isphone = false // REMOVE this line to support PhoneGap
 
-	console.log(window.isphone)
+	console.log('phonegap?',window.isphone)
 	if( window.isphone ) { // //file is a browser
 		 document.addEventListener("deviceready", onDeviceReady, false)
 	} else {
@@ -35,6 +35,7 @@ $(document).ready(function() {
 })
 
 function onDeviceReady() { // nothing will work before this
+	console.log('deviceready!')
 	loadjs([ 'https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/components/sidebar.min.js'
 		,'https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
 		//,'//cdn.jsdelivr.net/npm/intersection-observer@0.5.0/intersection-observer.js'

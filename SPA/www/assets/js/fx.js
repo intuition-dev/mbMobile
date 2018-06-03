@@ -1,4 +1,6 @@
 
+console.log('fx', "v2.06.1c")
+
 loadjs.ready(['site', 'pfx'], function () {
 	console.log('gesture')
 	const guest = new ZingTouch.Region(document.body)

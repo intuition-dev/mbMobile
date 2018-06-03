@@ -1,5 +1,5 @@
 
-document.addEventListener('deviceready', onDeviceReady, false)
+//document.addEventListener('deviceready', onDeviceReady, false)
 
 function cssLoaded() {// called by the style sheet in layout
 	console.log('css')
