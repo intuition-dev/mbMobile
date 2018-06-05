@@ -20,11 +20,14 @@ The router will replace the content in the page, but only the 'main' part, tagge
 
 ### Lab/Demo:
 
-
 		nbake -p
 
-		Un-Comment line 60 in the SPA app, www/assets/js/SPAsetup.js and deploy to a mounted http server.
+		Deploy to a mounted http server in the cloud(Ex: CDN77, S3)
 		Run in browser as SPA web app.
+
+		Un-Comment line 60 in the SPA app, www/assets/js/SPAsetup.js and run again.
+
+This is just so you are comfortable editing, notice that app is loading deployed resources.
 
 
 ## Part II
@@ -33,4 +36,4 @@ http://github.com/metabake/PWA-router/blob/master/APP-STORE.md
 
 
 ## Other
-Also there are code examples of how to do data binding and how to use RIOTjs.
+Also there are code examples of how to do data binding and how to use RIOTjs. Check out topseed and plugins.
