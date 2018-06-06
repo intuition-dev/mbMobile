@@ -3,31 +3,39 @@
 ### METAbake&trade; is a development productivity suite. It should allow you to deliver 10 times faster than on a LAMP stack. We have found that - with METAbake&trade; - the work of 5 developers over 3 months can be done by 2 developers in 3 weeks. We expect you to achieve the same productivity gains.
 
 
-This is project 2 of 3 Meta&reg;
+This is project 2 of 3 in in METAbake&trade;. This Github project is about _SPA_, curated technologies and techniques that help you build dynamic sites and mobile apps faster.
+
+This project is named SPA (for Single-Page Application) because writing a good SPA is not trivial - it is certainly a bit harder than writing regular webpages. If properly done - using Phonegap version 8 - you can use a SPA as part of a hybrid/cross-platform Appstore app (iOS and Android) without loss of native capabilities such as device permissions. 
+
+Some technologies we like can be used for both SPA and non-SPA. One of them is _loadjs_, a tiny loader and dependency manager. See https://github.com/muicss/loadjs. It helps build  modular webapps that have layouts and an AppShell.
+
+You can use any frontend CSS framework you like with METAbake. The sample projects use a SASS-version of popular _Semantic-UI_;
+
+There is also a non-SPA example blog app that can be built with nbake, that showcases how Pug and YAML
+can be used to generate dynamic HTML while still running on a static web server. See https://github.com/topseed/nbake-intro-blog for more info.
+
+The Hello World example project includes a RIOT component written in Pug. If you like components and Pug,
+this is worth looking into.
+
 # SPA-router
 
- You should expect that SPA is a bit harder than regular webpages.
-SPA/spa is great for native/hybrid/cross platform app store, Apple and Android.
-Even games are done like via Phonegap version 8, a 'hybrid cross platform'. Some old version was slow on old IOS/Android.
+This project includes a JavaScript router named SPA-router. It is similar to turbolinks.js. 
+See `/SPA/www/router` for the source. 
 
-In this project we have a .js router, similar to crossroads.js, called SPA-router.
-Source is in SPA/www/router folder.
+On navigating the app, the router only replaces content in the AppShell (`<div id='router'>`); this creates a 'rich client feel' and improves perceived performance. The router lets you have SPA events, which can be used for content transitions such as 'fade in' or 'fly left', that make your app indistinguishable from native Appstore apps.
 
-If you don't like this router here, we also support Framework7, SmoothState or other similar SPA approaches.
-
-You'll have to know some 'app shell' basics.
-The router will replace the content in the page, but only the 'main' part, tagged w/ #router.
+If you don't like this router, METAbake also supports Framework7, SmoothState or other similar SPA approaches.
 
 ### Lab/Demo:
 
 		nbake -p
 
-		Deploy to a mounted http server in the cloud(Ex: CDN77, S3)
+		Deploy to a mounted http server in the cloud (e.g. CDN77, S3)
 		Run in browser as SPA web app.
 
-		Un-Comment line 60 in the SPA app, www/assets/js/SPAsetup.js and run again.
+//TBD delete Un-Comment line 60 in the SPA app, www/assets/js/SPAsetup.js and run again.
 
-This is just so you are comfortable editing, notice that app is loading deployed resources.
+//TBD delete This is just so you are comfortable editing, notice that app is loading deployed resources.
 
 
 ## Part II
@@ -35,5 +43,3 @@ This is just so you are comfortable editing, notice that app is loading deployed
 http://github.com/metabake/PWA-router/blob/master/APP-STORE.md
 
 
-## Other
-Also there are code examples of how to do data binding and how to use RIOTjs. Check out topseed and plugins.
