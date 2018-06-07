@@ -1,21 +1,20 @@
 
-# Part II Using http://build.phonegap.com for your SPA
+# Part II Using build.phonegap.com for your SPA
 
 Have you heard of mobile first? It is much easier if you 'Phonegap' first, as porting an app could mean some search and replace, especially for teams that don't have SPA experience.
 Here is a conversion check list:
 - resources must be on a relative path locally, or on an absolute path in the cloud (ex: https://mydomain/foo/index.html, the normal '//' will not work). Relative is 'local' and faster.
 - you can test the web app locally, from file system via 'open file with browser', and not from http server. There is no http server on the phone.
 - SPA
-- Handle the device ready event
+- handle the device ready event
 - load 'cordova.js'
 
 
-1. You should have an SPA/PWA web app deployed in the cloud before this step.
-
+1. You should have a SPA/PWA web app deployed in the cloud before this step.
 
 2. YOU MUST HAVE A DEBUGGER.
 Best is to install the debugger in the cloud, like at above OSX build cloud machine. (Aside, meta admin docker images contains weinre pre-installed, check Meta section)
-You can't go without debugger for PhoneGap development and deployment, because in most cases you don't have access to the console (there are some unwieldy ways to get access, but we won't discuss them here). We recommend to install http://npmjs.com/package/weinre, in the cloud, with:
+You can't go without debugger for PhoneGap development and deployment. There are some platform-specific remote debuggers. Instead, we recommend to install http://npmjs.com/package/weinre in the cloud, with:
 
 		npm -g i weinre
 
@@ -25,7 +24,7 @@ You can't go without debugger for PhoneGap development and deployment, because i
 		// in your browser, go to port weinre said above. There is a one line script that you need to put in your webapp. The Adobe web site has more info on Phonegap debugging.
 
 Test that your debugger is working with any regular web page.
-Create and account on Kobiton.com, appetize.io or similar Mobile device emulator service in the cloud. Of course this is a cloud Android devices - it's a good thing you installed weinre in the cloud; otherwise it wouldn't be seen on the WWW from different services.
+Create and account on Kobiton.com, appetize.io or similar mobile device emulator service in the cloud. Of course this is a cloud Android device - it's a good thing you installed weinre in the cloud; otherwise it wouldn't be seen on the WWW from different services.
 
 3. Optional/demo: Download the PhoneGap GUI app, use it to create an F7 app, build it with http://build.phonegap.com and deploy to Kobiton.com Android device. It should take only minutes to create an Appstore app!
 
