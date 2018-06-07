@@ -28,6 +28,8 @@ Create and account on Kobiton.com, appetize.io or similar mobile device emulator
 
 3. Optional/demo: Download the PhoneGap GUI app, use it to create an F7 app, build it with http://build.phonegap.com and deploy to Kobiton.com Android device. It should take only minutes to create an Appstore app!
 
+	See this video for detail: http://youtube.com/watch?v=Vyu2oWERWUM
+
 4. To add the app to the iOS/Apple appstore, create a Apple Developer Program account with Apple. (this will set you back ~USD99). This can be an account that you share with your team.
 You will also need a machine that runs OSX, but it can be in the cloud. A few places offer OSX hosting, e.g.: http://macstadium.com .
 Generate SSH keys for the IOS app on OSX; you'll need them for the Appstore. 
