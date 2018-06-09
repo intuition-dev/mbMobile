@@ -1,0 +1,16 @@
+basedir: ../../
+
+title: What Makes Great UX
+created: November 25, 2017
+date_published: '2017-11-25T13:00:00-08:00'
+content_html: In this article, we talk about what makes a great User Experience.
+image: assets/img/city768.jpg
+author:
+  name: Wolfgang Gehner
+  avatar: /assets/img/wolf.jpg
+read_minutes: 7
+tags:
+- design
+- management
+- trinity
+

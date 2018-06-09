@@ -1,0 +1,18 @@
+basedir: ../../
+
+title: What Makes Good UI
+created: April 25, 2017
+date_published: '2017-04-25T17:00:00-08:00'
+content_html: In this article, we talk about what makes good UI.
+image: assets/img/light768.jpg
+author:
+  name: Wolfgang Gehner
+  avatar: /assets/img/wolf.jpg
+read_minutes: 5
+tags:
+- design
+- management
+- pug
+
+
+

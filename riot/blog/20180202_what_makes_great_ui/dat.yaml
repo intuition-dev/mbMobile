@@ -1,0 +1,18 @@
+basedir: ../../
+
+title: What Makes Great UI
+created: February 2, 2018
+date_published: '2018-02-02T09:00:00-08:00'
+content_html: In this article, we talk about what makes great UI.
+image: assets/img/city768.jpg
+author:
+  name: Wolfgang Gehner
+  avatar: /assets/img/wolf.jpg
+read_minutes: 4
+tags:
+- design
+- development
+- trinity
+
+
+

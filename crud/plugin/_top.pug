@@ -1,0 +1,40 @@
+
+//side
+.ui.fixed.vertical.inverted.sidebar.menu
+	a.active.item(href='/page/auth')
+		i.left.icon.star
+		| Auth
+	a.item(href='/page/memberPro')
+		i.left.icon.book
+		| Protected
+
+//top
+.ui.fixed.inverted.menu
+	.ui.container
+		a.toc.item
+			i.sidebar.icon
+		.item MySite
+
+		a.item(href='/page/auth') Auth
+		a.item(href='/page/memberPro') Protected
+	.right.menu
+		a.item(href='http://github.com/topseed') Git
+
+style.
+	* {
+		letter-spacing: .05em !important;
+	}
+
+	.ui.menu {
+		height: 1.5em !important;
+	}
+
+	.pusher {
+		margin-top: 1.5em;
+	}
+
+	@media only screen and (min-width: 1281px) {
+		.toc.item {
+			display: none !important;
+		}
+	}

@@ -1,0 +1,17 @@
+basedir: ../../
+
+title: What Makes Great Software
+created: December 31, 2017
+date_published: '2017-12-31T11:00:00-08:00'
+content_html: In this article, we talk about what makes great software.
+image: assets/img/beach768.jpg
+author:
+  name: Vic Cekvenich
+  avatar: /assets/img/vic.jpg
+read_minutes: 5
+tags:
+- management
+- development
+- trinity
+
+

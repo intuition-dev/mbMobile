@@ -1,0 +1,61 @@
+
+br
+.ui.segment
+	#f1.ui.form
+		h4.ui.dividing.header NBake Items
+		.field
+			label Email
+			input(type='text', name='email', placeholder='al@gore.org')
+		.field
+			label Password
+			input(type='text', name='pswd', placeholder='654321')
+
+		.ui.message.hidden
+		button#up.ui.button(type='submit') SigUp
+		button#in.ui.button(type='submit') SigIn
+		button#out.ui.button(type='submit') SigOut
+		button#rest.ui.button(type='submit') Reset
+
+script.
+	loadjs.ready('site', function () {
+
+		$('#up').click(function(){
+			let email = $('#f1 [name="email"]').val()
+			let pswd = $('#f1 [name="pswd"]').val()
+			console.log(email,pswd)
+			auth.createUserWithEmailAndPassword(email,pswd)
+				.then(function(user) {
+					sendEmailVerification()
+				})
+				.catch(function(error){
+					//show error in .message
+					console.log(error)
+				})
+		})//click
+
+		$('#in').click(function(){
+			let email = $('#f1 [name="email"]').val()
+			let pswd = $('#f1 [name="pswd"]').val()
+			console.log(email,pswd)
+			auth.signInWithEmailAndPassword(email,pswd)
+				.then(function(user) {
+					console.log(user)
+				})
+				.catch(function(error){
+					console.log(fail, error)
+				})
+		})//click
+
+		$('#out').click(function(){
+			console.log('out')
+			auth.signOut()
+		})//click
+
+		$('#rest').click(function(){
+			let email = $('#f1 [name="email"]').val()
+			console.log(email)
+			auth.sendPasswordResetEmail(email)
+		})//click
+
+	}) //on ready
+

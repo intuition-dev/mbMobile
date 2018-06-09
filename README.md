@@ -5,7 +5,7 @@
 
 This is project 2 of 3 in in METAbake&trade;. This Github project is about _SPA_, curated technologies and techniques that help you build dynamic sites and mobile apps faster.
 
-This project is named SPA (for Single-Page Application) because writing a good SPA is the high art of app development - it is certainly a bit harder than writing regular webpages. If properly done - using Phonegap version 8+ - you can use a SPA as the core of a hybrid/cross-platform Appstore app (iOS and Android) without loss of native capabilities such as device permissions. 
+This project is named SPA (for Single-Page Application) because writing a good SPA is the high art of app development - it is certainly a bit harder than writing regular webpages. If properly done - using Phonegap version 8+ - you can use a SPA as the core of a hybrid/cross-platform Appstore app (iOS and Android) without loss of native capabilities such as device permissions.
 
 Some technologies we like can be used for both SPA and non-SPA. One of them is _loadjs_, a tiny loader and dependency manager. See https://github.com/muicss/loadjs. It helps build  modular webapps that have layouts and an AppShell.
 
@@ -19,8 +19,8 @@ this is worth looking into.
 
 # SPA-router
 
-This project includes a JavaScript router named _SPA-router_. It is similar to turbolinks.js. 
-See `/SPA/www/router` for the source. 
+This project includes a JavaScript router named _SPA-router_. It is similar to turbolinks.js.
+See `/SPA/www/router` for the source.
 
 On navigating the app, the router only replaces content in the AppShell (`<div id='router'>`); this creates a 'rich client feel' and improves perceived performance. The router lets you have SPA events, which can be used for content transitions such as 'fade in' or 'fly left', that make your app indistinguishable from native Appstore apps.
 
@@ -34,9 +34,7 @@ If you don't like this router, METAbake&trade; also supports Framework7, SmoothS
 	- Deploy to a mounted http server in the cloud (e.g. CDN77, S3)
 	- Run in browser as SPA web app.
 
-//TBD delete: Un-Comment line 60 in the SPA app, www/assets/js/SPAsetup.js and run again.
-
-//TBD delete: This is just so you are comfortable editing, notice that app is loading deployed resources.
+Un-Comment line 60 in the SPA app, www/assets/js/SPAsetup.js and run again.
 
 
 ## Part II

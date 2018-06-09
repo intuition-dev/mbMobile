@@ -1,0 +1,29 @@
+extends /layout1/_layout
+//- App Shell
+
+block head
+	//static binding ex:
+	title #{title}
+
+block main
+	script.
+		loadjs.ready(['promise','fetch'], function () {// load data ASAP
+			fetch('/blog/items.json').then(function(resp) {
+				return resp.json()
+			}).then(function(json) {
+				feed = json
+				console.log('ready', Date.now()-_start)
+				loadjs.done('feed')
+			})
+		})
+	p
+	br
+	p
+	.ui.text.container
+		include blog
+
+	script.
+		loadjs.ready('style', function () {
+			console.log('page 1 script here')
+		})
+

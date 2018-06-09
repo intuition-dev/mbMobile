@@ -13,7 +13,7 @@ Here is a conversion check list:
 - load 'cordova.js'
 
 
-1. You should have a SPA/PWA web app deployed in the cloud before this step.
+1. You should have a SPA/PWA web app deployed in the cloud before this step. And it will be a lot easier if the production files are mounted.
 
 2. YOU MUST HAVE A DEBUGGER.
 Best is to install the debugger in the cloud, like at above OSX build cloud machine. (Aside, meta admin docker images contains weinre pre-installed, check Meta section)

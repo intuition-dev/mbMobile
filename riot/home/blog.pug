@@ -1,0 +1,25 @@
+script(src='tags/feed-tag.min.js')
+p
+br
+p
+div
+	feed-tag
+
+p
+br
+p
+button#add.ui.button(type='submit') Add Few
+p
+br
+p
+
+script.
+	// nbake -t .
+
+	let rtag = riot.mount('feed-tag')[0] // mount the first tag
+
+	loadjs.ready('site', function() {
+		$('#add').click(function() {
+			rtag.addFew(2)
+		})
+	})//ready
