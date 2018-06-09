@@ -1,6 +1,9 @@
 
 # Part II Using build.phonegap.com for your SPA
 
+
+	See this video for example: http://youtube.com/watch?v=Vyu2oWERWUM
+
 Have you heard of mobile first? It is much easier if you 'Phonegap' first, as porting an app could mean some search and replace, especially for teams that don't have SPA experience.
 Here is a conversion check list:
 - resources must be on a relative path locally, or on an absolute path in the cloud (ex: https://mydomain/foo/index.html, the normal '//' will not work). Relative is 'local' and faster.
@@ -28,11 +31,9 @@ Create and account on Kobiton.com, appetize.io or similar mobile device emulator
 
 3. Optional/demo: Download the PhoneGap GUI app, use it to create an F7 app, build it with http://build.phonegap.com and deploy to Kobiton.com Android device. It should take only minutes to create an Appstore app!
 
-	See this video for detail: http://youtube.com/watch?v=Vyu2oWERWUM
-
 4. To add the app to the iOS/Apple appstore, create a Apple Developer Program account with Apple. (this will set you back ~USD99). This can be an account that you share with your team.
 You will also need a machine that runs OSX, but it can be in the cloud. A few places offer OSX hosting, e.g.: http://macstadium.com .
-Generate SSH keys for the IOS app on OSX; you'll need them for the Appstore. 
+Generate SSH keys for the IOS app on OSX; you'll need them for the Appstore.
 
 5. Now that you have build.phonegap.com ready AND you have an SPA webapp running in the cloud, you can deploy your custom webapp.
 
