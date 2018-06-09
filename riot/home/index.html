@@ -15,15 +15,14 @@
 	.toc.item {
 		display: none !important;
 	}
-}</style><div class="pusher"><script>loadjs.ready(['promise','fetch'], function () {// load data ASAP
-	fetch('/blog/items.json').then(function(resp) {
-		return resp.json()
-	}).then(function(json) {
-		feed = json
-		console.log('ready', Date.now()-_start)
-		loadjs.done('feed')
-	})
-})</script><p></p><br><p></p><div class="ui text container"><script src="tags/feed-tag.min.js"></script><p></p><br><p></p><div><feed-tag></feed-tag></div><p></p><br><p></p><button class="ui button" id="add" type="submit">Add Few</button><p></p><br><p></p><script>// nbake -t .
+}</style><div class="pusher"><script>fetch('/blog/items.json').then(function(resp) {
+	return resp.json()
+}).then(function(json) {
+	feed = json
+	console.log('ready', Date.now()-_start)
+	loadjs.done('feed')
+})
+</script><p></p><br><p></p><div class="ui text container"><script src="tags/feed-tag.min.js"></script><p></p><br><p></p><div><feed-tag></feed-tag></div><p></p><br><p></p><button class="ui button" id="add" type="submit">Add Few</button><p></p><br><p></p><script>// nbake -t .
 
 let rtag = riot.mount('feed-tag')[0] // mount the first tag
 
@@ -48,4 +47,4 @@ loadjs.ready('style', function() {
 
 	$('.ui.sidebar').sidebar('attach events', '.toc.item')
 
-})//ready</script><link rel="stylesheet" href="/assets/css/semantic1.css" onload="cssLoaded()"><!- nB v2.05.20 --></body></html>
+})//ready</script><link rel="stylesheet" href="/assets/css/semantic1.css" onload="cssLoaded()"><!- nB v2.06.01 --></body></html>

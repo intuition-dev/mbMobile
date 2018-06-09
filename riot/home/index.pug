@@ -7,15 +7,14 @@ block head
 
 block main
 	script.
-		loadjs.ready(['promise','fetch'], function () {// load data ASAP
-			fetch('/blog/items.json').then(function(resp) {
-				return resp.json()
-			}).then(function(json) {
-				feed = json
-				console.log('ready', Date.now()-_start)
-				loadjs.done('feed')
-			})
+		fetch('/blog/items.json').then(function(resp) {
+			return resp.json()
+		}).then(function(json) {
+			feed = json
+			console.log('ready', Date.now()-_start)
+			loadjs.done('feed')
 		})
+
 	p
 	br
 	p

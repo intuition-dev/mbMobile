@@ -1,5 +1,5 @@
 
-riot.tag2('feed-tag', '<virtual each="{items}"><a href="{url}"> <div class="ui fluid blue card"> <div class="image"><img riot-src="{image}"></div> <div class="content"> <div class="header">{title}</div> <div class="meta">{created}</div> <div class="description">{content_html}</div> </div> <div class="extra content"> <h5 class="ui image header"><img class="ui avatar image" riot-src="{author.avatar}"> <div class="content">{author.name} <div class="sub header">{read_minutes} minute read</div> </div> </h5> </div> </div></a> <p></p></virtual>', '', '', function(opts) {
+riot.tag2('feed-tag', '<virtual each="{items}"><a href="{url}"> <div class="ui fluid blue card"> <div class="image"><img riot-src="{image}"></div> <div class="content"> <div class="header">{title}</div> <div class="meta">{created}</div> <div class="description">{content_html}</div> </div> <div class="extra content"> <h5 class="ui image header"><img class="ui avatar image" riot-src="{author.avatar}"> <div class="content">{author.name}</div> </h5> </div> </div></a> <p></p></virtual>', '', '', function(opts) {
     init()
     function init() {
     	thiz = this
