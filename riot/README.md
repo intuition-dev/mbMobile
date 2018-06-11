@@ -3,8 +3,7 @@ This is an example that uses RIOT for dynamic binding.
 
 Take a look at riotFirst folder to learn riot.
 Here is a sample tag:
-https://github.com/metabake/SPA/blob/master/riot/riotFirst/tags/first-tag.pug
-
+https://github.com/metabake/B-M-SPA/blob/master/riot/riotFirst/tags/first-tag.pug
 
 		first-tag
 			p oh hi
@@ -37,4 +36,4 @@ And then use the tag:
 			firstTag.doSomething(21)
 
 
-Then learn how to do user auth and CRUD in crud folder.
+Then learn how to do user auth and CRUD in crud folder ( https://github.com/metabake/B-M-SPA/tree/master/crud )

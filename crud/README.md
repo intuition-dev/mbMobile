@@ -1,8 +1,10 @@
 # nbake-firestore
 
-plugins has curd.pug
+Read up on Firestore auth and CRUD on their web site.
 
-1. Include crud.pug in plugins/layout.
+module folder has curd.pug
+
+1. Include crud.pug in module/layout.
 
 2. Configure FireStore on their home page.
 
