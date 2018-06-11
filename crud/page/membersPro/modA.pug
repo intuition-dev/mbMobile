@@ -11,6 +11,7 @@ br
 		button#data.ui.button(type='submit') Add data
 
 script.
+	// data binding should be inside riot tag
 	loadjs.ready('site', function () {
 		console.log('auth', isUserIn()) // if not, you can gray out the page with a modal
 
