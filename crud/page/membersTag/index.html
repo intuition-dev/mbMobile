@@ -99,13 +99,14 @@ auth.onAuthStateChanged(function(user_) {
 	.toc.item {
 		display: none !important;
 	}
-}</style><div class="pusher"><p></p><div class="ui text container"><br><div class="ui segment"><div class="ui form" id="f2"><h4 class="ui dividing header">NBake Items</h4><fieldD-tag></fieldD-tag><div class="ui message hidden"></div><button class="ui button" id="data" type="submit">Add data</button></div></div><script>// data binding should be inside riot tag
+}</style><div class="pusher"><p></p><div class="ui text container"><script src="tags/fieldD-tag.js"></script><br><div class="ui segment"><div class="ui form" id="f2"><h4 class="ui dividing header">NBake Items</h4><fieldD-tag></fieldD-tag><div class="ui message hidden"></div><button class="ui button" id="data" type="submit">Add data</button></div></div><script>// data binding should be inside riot tag
 loadjs.ready('site', function () {
 	console.log('auth', isUserIn()) // if not, you can gray out the page with a modal
 
-	$('#data').click(function(){
+	let myDtag = riot.mount('fieldD-tag')[0] // the first tag
 
-		
+	$('#data').click(function(){
+		myDtag.clicked()
 	})//click
 
 }) //on ready</script></div><script>loadjs.ready('style', function () {
