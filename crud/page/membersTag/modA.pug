@@ -1,3 +1,4 @@
+script(src='tags/fieldD-tag.js')
 
 br
 .ui.segment
@@ -13,9 +14,10 @@ script.
 	loadjs.ready('site', function () {
 		console.log('auth', isUserIn()) // if not, you can gray out the page with a modal
 
-		$('#data').click(function(){
+		let myDtag = riot.mount('fieldD-tag')[0] // the first tag
 
-			
+		$('#data').click(function(){
+			myDtag.clicked()
 		})//click
 
 	}) //on ready
