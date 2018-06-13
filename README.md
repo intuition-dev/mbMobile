@@ -5,7 +5,7 @@
 
 This is project 2 of 3 in in METAbake&trade;. This Github project is about _B-M-SPA_, curated technologies and techniques that help you build dynamic sites and mobile apps faster.
 
-This project is named B-M-SPA for "Bricks, Mortar and Single-Page Application". It contains building blocks for dynamic sites and mobile apps, and points at ways to to put them together. Writing a good SPA is the high art of app development - it is certainly a bit harder than writing regular webpages. If properly done - using Phonegap version 8+ - you can use a SPA as the core of a hybrid/cross-platform Appstore app (iOS and Android) without loss of native capabilities such as device permissions.
+This project is named B-M-SPA for "Bricks, Mortar and Single-Page Applications". It contains building blocks for dynamic sites and mobile apps, and points at ways to to put them together. Writing a good SPA is the high art of app development - it is certainly a bit harder than writing regular webpages. If properly done - using Phonegap version 8+ - you can use a SPA as the core of a hybrid/cross-platform Appstore app (iOS and Android) without loss of native capabilities such as device permissions.
 
 Some technologies we like can be used for both SPA and non-SPA. One of them is _loadjs_, a tiny loader and dependency manager. See https://github.com/muicss/loadjs. It helps build  modular webapps that have layouts and an AppShell.
 
