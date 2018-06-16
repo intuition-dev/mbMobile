@@ -37,7 +37,7 @@ function onDeviceReady() { // nothing will work before this
 	loadjs([ 'https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/components/sidebar.min.js'
 		,'https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
 		//,'//cdn.jsdelivr.net/npm/intersection-observer@0.5.0/intersection-observer.js'
-		,'https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css' // http://ionicons.com/usage
+		,'https://unpkg.com/vivid-icons@4.1.2/dist/css/vivid-icons.min.css' // http://vivid-icons.com/usage
 	], 'cssJs')
 }
 

@@ -16,18 +16,18 @@ Here is a conversion check list:
 1. You should have a SPA/PWA web app deployed in the cloud before this step. And it will be a lot easier if the production files are mounted.
 
 2. YOU MUST HAVE A DEBUGGER.
-Best is to install the debugger in the cloud, like at above OSX build cloud machine. (Aside, meta admin step also asks for weinre, check Meta section)
-You can't go without debugger for PhoneGap development and deployment. There are some platform-specific remote debuggers. Instead, we recommend to install http://npmjs.com/package/weinre in the cloud, with:
+Best is to install the debugger in the cloud, like at above OSX build cloud machine. (Aside, meta admin step also asks for vorlon, check Meta section)
+You can't go without debugger for PhoneGap development and deployment. There are some platform-specific remote debuggers. Instead, we recommend to install http://npmjs.com/package/vorlon in the cloud, with:
 
-		npm -g i weinre
+		npm -g i vorlon
 
-		//start weinre with your IP
-		weinre --boundHost X.X.X.X
+		//start vorlon with your IP
+		vorlon --boundHost X.X.X.X
 
-		// in your browser, go to port weinre said above. There is a one line script that you need to put in your webapp. The Adobe web site has more info on Phonegap debugging.
+		// in your browser, go to port vorlon said above. There is a one line script that you need to put in your webapp. The Adobe web site has more info on Phonegap debugging.
 
 Test that your debugger is working with any regular web page.
-Create and account on Kobiton.com, appetize.io or similar mobile device emulator service in the cloud. Of course this is a cloud Android device - it's a good thing you installed weinre in the cloud; otherwise it wouldn't be seen on the WWW from different services.
+Create and account on Kobiton.com, appetize.io or similar mobile device emulator service in the cloud. Of course this is a cloud Android device - it's a good thing you installed vorlon in the cloud; otherwise it wouldn't be seen on the WWW from different services.
 
 3. Optional/demo: Download the PhoneGap GUI app, use it to create an F7 app, build it with http://build.phonegap.com and deploy to Kobiton.com Android device. It should take only minutes to create an Appstore app!
 
@@ -37,7 +37,7 @@ Generate SSH keys for the IOS app on OSX; you'll need them for the Appstore.
 
 5. Now that you have build.phonegap.com ready AND you have an SPA webapp running in the cloud, you can deploy your custom webapp.
 
-		Get a  weinre script from weinre and put in header of your webapp.
+		Get a  vorlon script from vorlon and put in header of your webapp.
 
 		Zip the webapp with the config.xml. Upload to build.phonegap.com
 
@@ -45,7 +45,7 @@ Generate SSH keys for the IOS app on OSX; you'll need them for the Appstore.
 
 		In Kobiton.com, start a 'device'. Upload the app
 
-		In browser: Monitor you weinre.
+		In browser: Monitor you vorlon.
 
 This way you have the same code base that runs on a webapp AND in the Appstore app! This is different from React Native.
 

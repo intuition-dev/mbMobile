@@ -15,7 +15,7 @@ Some technologies we like can be used for both SPA and non-SPA. One of them is _
 You can use any frontend CSS framework you like with METAbake. The sample projects use a SASS-version of popular _Semantic-UI_;
 
 There is also a non-SPA example blog app that can be built with nbake, that showcases how Pug and YAML
-can be used to generate dynamic HTML while still running on a static web server. See https://github.com/topseed/nbake-intro-blog for more info.
+can be used to generate dynamic HTML while still running on a static web server. See https://github.com/MetaBake/nbake-intro-blog for more info.
 
 The Hello World example project includes a _RIOT_ component written in Pug. If you like components and Pug,
 this is worth looking into.
