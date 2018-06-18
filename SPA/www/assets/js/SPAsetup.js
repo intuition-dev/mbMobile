@@ -1,18 +1,3 @@
-// ////////////////////////////////////////////////////////////////////////////
- // http://github.com/muicss/loadjs/issues/56
-
- // https://jsfiddle.net/muicss/4791kt3w
- function require(bundleIds, callbackFn) {
-	bundleIds.forEach(function(bundleId) {
-		if (!loadjs.isDefined(bundleId)) loadjs(bundles[bundleId], bundleId)
-	})
-	loadjs.ready(bundleIds, callbackFn)
-}
-console.log('SPAsetup', "v2.06.03e")
-///////////////////////////////////////////////////////////////////////////////////
-//11 ie has 0% market share of mobile
-
-// document.addEventListener('deviceready', onDeviceReady, false)
 
 $(document).ready(function() {
 	// are we running in native app or in a browser?
@@ -37,7 +22,7 @@ function onDeviceReady() { // nothing will work before this
 	loadjs([ 'https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/components/sidebar.min.js'
 		,'https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
 		//,'//cdn.jsdelivr.net/npm/intersection-observer@0.5.0/intersection-observer.js'
-		,'https://unpkg.com/vivid-icons@4.1.2/dist/css/vivid-icons.min.css' // http://vivid-icons.com/usage
+		, 'https://unpkg.com/vivid-icons@1.0.3/dist/vivid-icons.min.js'
 	], 'cssJs')
 }
 
