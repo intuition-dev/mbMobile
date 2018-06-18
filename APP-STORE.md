@@ -35,7 +35,7 @@ Create and account on Kobiton.com, appetize.io or similar mobile device emulator
 You will also need a machine that runs OSX, but it can be in the cloud. A few places offer OSX hosting, e.g.: http://macstadium.com .
 Generate SSH keys for the IOS app on OSX; you'll need them for the Appstore.
 
-5. Now that you have build.phonegap.com ready AND you have an SPA webapp running in the cloud, you can deploy your custom webapp.
+5. Now that you have build.phonegap.com ready AND you have an SPA webapp running in the cloud, you can deploy your custom webapp. Create a https://kobiton.com account. 
 
 		Get a  vorlon script from vorlon and put in header of your webapp.
 
@@ -46,6 +46,7 @@ Generate SSH keys for the IOS app on OSX; you'll need them for the Appstore.
 		In Kobiton.com, start a 'device'. Upload the app
 
 		In browser: Monitor you vorlon.
+
 
 This way you have the same code base that runs on a webapp AND in the Appstore app! This is different from React Native.
 
