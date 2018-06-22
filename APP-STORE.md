@@ -22,9 +22,13 @@ You can't go without debugger for PhoneGap development and deployment. There are
 		npm -g i vorlon
 
 		//start vorlon with your IP
-		vorlon --boundHost X.X.X.X
+		vorlon
+
+
 
 		// in your browser, go to port vorlon said above. There is a one line script that you need to put in your webapp. The Adobe web site has more info on Phonegap debugging.
+
+Configure <script src="http://HOST:PORT/vorlon.js"></script>
 
 Test that your debugger is working with any regular web page.
 Create and account on Kobiton.com, appetize.io or similar mobile device emulator service in the cloud. Of course this is a cloud Android device - it's a good thing you installed vorlon in the cloud; otherwise it wouldn't be seen on the WWW from different services.
@@ -35,9 +39,7 @@ Create and account on Kobiton.com, appetize.io or similar mobile device emulator
 You will also need a machine that runs OSX, but it can be in the cloud. A few places offer OSX hosting, e.g.: http://macstadium.com .
 Generate SSH keys for the IOS app on OSX; you'll need them for the Appstore.
 
-5. Now that you have build.phonegap.com ready AND you have an SPA webapp running in the cloud, you can deploy your custom webapp. Create a https://kobiton.com account. 
-
-		Get a  vorlon script from vorlon and put in header of your webapp.
+5. Now that you have build.phonegap.com ready AND you have an SPA webapp running in the cloud, you can deploy your custom webapp. Create a https://kobiton.com account.
 
 		Zip the webapp with the config.xml. Upload to build.phonegap.com
 
