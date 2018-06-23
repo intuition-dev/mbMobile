@@ -15,6 +15,22 @@ Here is a conversion check list:
 
 1. You should have a SPA/PWA web app deployed in the cloud before this step. And it will be a lot easier if the production files are mounted.
 
+ex hosting w/ S3:
+
+
+		{
+		"Version":"2012-10-17",
+		"Statement": [{
+			"Sid":"PublicReadGetObject",
+				"Effect":"Allow",
+			"Principal": "*",
+				"Action":["s3:GetObject"],
+				"Resource":["arn:aws:s3:::YOUR-BUCKET/*"
+				]
+			}]
+		}
+
+
 2. YOU MUST HAVE A DEBUGGER.
 Best is to install the debugger in the cloud, like at above OSX build cloud machine. (Aside, meta admin step also asks for vorlon, check Meta section)
 You can't go without debugger for PhoneGap development and deployment. There are some platform-specific remote debuggers. Instead, we recommend to install http://npmjs.com/package/vorlon in the cloud, with:
