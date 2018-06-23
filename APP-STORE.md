@@ -6,7 +6,7 @@
 
 Have you heard of mobile first? It is much easier if you 'Phonegap' first, as porting an app could mean some search and replace, especially for teams that don't have SPA experience.
 Here is a conversion check list:
-- resources must be on a relative path locally, or on an absolute path in the cloud (ex: https://mydomain/foo/index.html, the normal '//' will not work). Relative is 'local' and faster.
+- resources must be on an absolute path in the cloud (ex: https://mydomain/foo/index.html, the normal '//' will not work).
 - you can test the web app locally, from file system via 'open file with browser', and not from http server. There is no http server on the phone.
 - SPA
 - handle the device ready event
@@ -57,7 +57,6 @@ Extra: You can use the mobileEx example to run ANY spa in the cloud with minor e
 There are 3 way to Phonegap:
 - Just load the remote SPA from WWW, as in the mobileEx example.
 - Load resources from WWW.
-- Load local relative resource
 
 The last one is fastest as there is no network latency. You can mix in the middle one to load larger resources that would not fit on a phone. For example: all of the blogs. You'd just get the remote JSON and then load it from the WWW.
 
