@@ -1,6 +1,6 @@
 
-1. Deploy to a CDN in the cloud, S3 works best
-1. Edit relattive resource 'url' suffix for pug
+1. Deploy to a CDN in the cloud; S3 works best
+1. Edit relative resource 'url' suffix for pug
 1. setup and run vorlonJs in the cloud
 1. Configure <script src="http://HOST:PORT/vorlon.js"></script> in header.
 2. Zip

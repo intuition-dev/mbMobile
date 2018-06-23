@@ -1,40 +1,39 @@
 
 //side
 .ui.fixed.vertical.inverted.sidebar.menu
-	a.active.item(href='one/index.html')
-		i.left.icon.star
-		| One
-	a.item(href='two/index.html')
-		i.left.icon.book
-		| Two
+   a.active.item(href=ROOT+'one/index.html')
+      i.icon(data-vi='cog', data-vi-size='28')
+      | One
+   a.item(href=ROOT+'two/index.html')
+      i.icon(data-vi='cog', data-vi-size='28')
+      | Two
 
 //top
 .ui.fixed.inverted.menu
-	.ui.container
-		a.toc.item
-			i.sidebar.icon
-		.item MySite
+   .ui.container
+      a.toc.item
+         i.icon(data-vi='menu', data-vi-size='28')
+      .item My SPA
 
-		a.item(href='one/index.html') One
-		a.item(href='two/index.html') Two
-	.right.menu
-		a.item(href='http://METAbake.org') Git
+      a.item(href=ROOT+'one/index.html') One
+      a.item(href=ROOT+'two/index.html') Two
+
 
 style.
-	* {
-		letter-spacing: .02em !important;
-	}
+   * {
+      letter-spacing: .02em !important;
+   }
 
-	.ui.menu {
-		height: 1.5em !important;
-	}
+   .ui.menu {
+      height: 1.5em !important;
+   }
 
-	.pusher {
-		margin-top: 1.5em;
-	}
+   .pusher {
+      margin-top: 1.5em;
+   }
 
-	@media only screen and (min-width: 1281px) {
-		.toc.item {
-			display: none !important;
-		}
-	}
+   @media only screen and (min-width: 1281px) {
+      .toc.item {
+         display: none !important;
+      }
+   }
