@@ -3,7 +3,7 @@
 a:focus { outline: none; }
 
 * {
-	letter-spacing: .05em !important;
+   letter-spacing: .05em !important;
 }
 
 /* nav */
@@ -20,10 +20,10 @@ nav a:hover {
    text-shadow: 0 0 .5px white;
 }
 
-.center, .center-column, .top, .right, .bottom, .left {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.center, .center-column, .top, .right, .bottom, .left{
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .center-column {
@@ -43,4 +43,10 @@ nav a:hover {
 /* */
 .pad {
    padding: .6rem;
+}
+
+.flex {
+   display: flex;
+   flex-wrap: wrap;
+   align-content: flex-start;
 }
