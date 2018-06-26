@@ -32,22 +32,11 @@ ex hosting w/ S3:
 
 
 2. YOU MUST HAVE A DEBUGGER.
-Best is to install the debugger in the cloud, like at above OSX build cloud machine. (Aside, meta admin step also asks for vorlon, check Meta section)
-You can't go without debugger for PhoneGap development and deployment. There are some platform-specific remote debuggers. Instead, we recommend to install http://npmjs.com/package/vorlon in the cloud, with:
+You can't go without debugger for PhoneGap development and deployment. There are some platform-specific remote debuggers. Instead, we recommend to install http://http://jsconsole.com/ in the cloud, and edit the main layout.pug.
 
-		npm -g i vorlon
-
-		//start vorlon with your IP
-		vorlon
-
-
-
-		// in your browser, go to port vorlon said above. There is a one line script that you need to put in your webapp. The Adobe web site has more info on Phonegap debugging.
-
-Configure <script src="http://HOST:PORT/vorlon.js"></script>
 
 Test that your debugger is working with any regular web page.
-Create and account on Kobiton.com, appetize.io or similar mobile device emulator service in the cloud. Of course this is a cloud Android device - it's a good thing you installed vorlon in the cloud; otherwise it wouldn't be seen on the WWW from different services.
+Create and account on Kobiton.com, appetize.io or similar mobile device emulator service in the cloud. Of course this is a cloud Android device
 
 3. Optional/demo: Download the PhoneGap GUI app, use it to create an F7 app, build it with http://build.phonegap.com and deploy to Kobiton.com Android device. It should take only minutes to create an Appstore app!
 
@@ -63,7 +52,7 @@ Generate SSH keys for the IOS app on OSX; you'll need them for the Appstore.
 
 		In Kobiton.com, start a 'device'. Upload the app
 
-		In browser: Monitor you vorlon.
+		In browser: Monitor you jsconsole.com.
 
 
 This way you have the same code base that runs on a webapp AND in the Appstore app! This is different from React Native.
