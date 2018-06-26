@@ -2,7 +2,7 @@
 # Part II Using build.phonegap.com for your SPA
 
 
-	See this video for example: http://youtube.com/watch?v=Vyu2oWERWUM
+   See this video for example: http://youtube.com/watch?v=Vyu2oWERWUM
 
 Have you heard of mobile first? It is much easier if you 'Phonegap' first, as porting an app could mean some search and replace, especially for teams that don't have SPA experience.
 Here is a conversion check list:
@@ -18,21 +18,24 @@ Here is a conversion check list:
 ex hosting w/ S3:
 
 
-		{
-		"Version":"2012-10-17",
-		"Statement": [{
-			"Sid":"PublicReadGetObject",
-				"Effect":"Allow",
-			"Principal": "*",
-				"Action":["s3:GetObject"],
-				"Resource":["arn:aws:s3:::YOUR-BUCKET/*"
-				]
-			}]
-		}
+      {
+      "Version":"2012-10-17",
+      "Statement": [{
+         "Sid":"PublicReadGetObject",
+            "Effect":"Allow",
+         "Principal": "*",
+            "Action":["s3:GetObject"],
+            "Resource":["arn:aws:s3:::YOUR-BUCKET/*"
+            ]
+         }]
+      }
 
 
 2. YOU MUST HAVE A DEBUGGER.
-You can't go without debugger for PhoneGap development and deployment. There are some platform-specific remote debuggers. Instead, we recommend to install http://http://jsconsole.com/ in the cloud, and edit the main layout.pug.
+You can't go without debugger for PhoneGap development and deployment. There are some platform-specific remote debuggers. Instead, we recommend to install http://jsconsole.com/ in the cloud, and edit the main layout.pug. Once on jsconsole.com type in colon listen
+
+
+      :listen
 
 
 Test that your debugger is working with any regular web page.
@@ -46,13 +49,13 @@ Generate SSH keys for the IOS app on OSX; you'll need them for the Appstore.
 
 5. Now that you have build.phonegap.com ready AND you have an SPA webapp running in the cloud, you can deploy your custom webapp. Create a https://kobiton.com account.
 
-		Zip the webapp with the config.xml. Upload to build.phonegap.com
+      Zip the webapp with the config.xml. Upload to build.phonegap.com
 
-		Build the Android app using build.phonegap.com and download the Android  App.
+      Build the Android app using build.phonegap.com and download the Android  App.
 
-		In Kobiton.com, start a 'device'. Upload the app
+      In Kobiton.com, start a 'device'. Upload the app
 
-		In browser: Monitor you jsconsole.com.
+      In browser: Monitor you jsconsole.com.
 
 
 This way you have the same code base that runs on a webapp AND in the Appstore app! This is different from React Native.
