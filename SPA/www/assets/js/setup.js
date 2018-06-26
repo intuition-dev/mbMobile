@@ -68,6 +68,22 @@ function getUrlVars() {
    return vars
 }
 
+function inView(el) { // is element in viewport
+   //special bonus for jQuery
+   if (typeof jQuery === "function" && el instanceof jQuery) {
+       el = el[0];
+   }
+
+   var rect = el.getBoundingClientRect()
+
+   return (
+       rect.top >= 0 &&
+       rect.left >= 0 &&
+       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+       rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+   )
+}
+
 // polyfills
 if (!window.Promise) {
    /* load bundle 'promise' */
