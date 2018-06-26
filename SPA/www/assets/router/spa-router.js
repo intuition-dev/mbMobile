@@ -1,41 +1,37 @@
-// SPA router  copy 6 18.6.25 //////////////////////////////////////////////////////////////////////////////
-loadjs.ready('style', function () {
+// SPA router ORIG 6 18.6.25 //////////////////////////////////////////////////////////////////////////////
 
-	console.log('spa router', "v3.06.03d")
-
-	$(window).on('popstate', function (e) {//back/forward button
-		console.log(' popstate' + e.originalEvent.state)
-		let state = e.originalEvent.state
-		if (state !== null) {
-			e.preventDefault()
-			let oldUrl = localStorage.getItem('oldUrl')
-			localStorage.setItem('oldUrl', state.url)
-			SPArouter.loadHtml(state.url, oldUrl, true)
-		}
-	})
-
-	$(document).on('click', 'a', function (e) { //over-ride links
-		let anchor = $(e.currentTarget)
-		let href = anchor.prop('href')
-		if (!href || href.length < 1) {
-			return
-		}
-		if (anchor.is('.norouter'))
-			return
-
-		//else:
-		e.preventDefault()
-		let fromHref = window.location.href
-		localStorage.setItem('oldUrl', href)
-		SPArouter.loadHtml(href, fromHref)
-	})
-
-	let pg = window.location.href
-	try {
-		history.pushState({ url: pg }, '', pg)
-	} catch (err) { console.log('no push state on file//', err) }
-	localStorage.setItem('oldUrl', pg)
+$(window).on('popstate', function (e) {//back/forward button
+   console.log(' popstate' + e.originalEvent.state)
+   let state = e.originalEvent.state
+   if (state !== null) {
+      e.preventDefault()
+      let oldUrl = localStorage.getItem('oldUrl')
+      localStorage.setItem('oldUrl', state.url)
+      SPArouter.loadHtml(state.url, oldUrl, true)
+   }
 })
+
+$(document).on('click', 'a', function (e) { //over-ride links
+   let anchor = $(e.currentTarget)
+   let href = anchor.prop('href')
+   if (!href || href.length < 1) {
+      return
+   }
+   if (anchor.is('.norouter'))
+      return
+
+   //else:
+   e.preventDefault()
+   let fromHref = window.location.href
+   localStorage.setItem('oldUrl', href)
+   SPArouter.loadHtml(href, fromHref)
+})
+
+let pg = window.location.href
+try {
+   history.pushState({ url: pg }, '', pg)
+} catch (err) { console.log('no push state on file//', err) }
+localStorage.setItem('oldUrl', pg)
 
 let SPArouter = {
 
@@ -102,7 +98,8 @@ let SPArouter = {
 }
 // /////////////////////////////////////////////////////////////////////////////////////
 
-// use / override:
+console.log('spa router')
+// use | override:
 SPArouter.onNavigate(function (evt) {
 	if (evt.type == SPArouter.NAV) { //start
 		console.log('router NAV')

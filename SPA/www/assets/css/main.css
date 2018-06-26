@@ -1,0 +1,42 @@
+
+/* reset */
+a:focus { outline: none; }
+
+/* nav */
+nav {
+   margin-bottom: 0 !important;
+   padding-right: .75rem;
+}
+nav a {
+   color: hsl(0, 0%, 86%) !important;
+}
+nav a:hover {
+   background-color: black !important;
+   color: white !important;
+   text-shadow: 0 0 .5px white;
+}
+
+.center, .center-column, .top, .right, .bottom, .left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.center-column {
+    flex-direction: column;
+}
+
+.top    { align-items:     flex-start; }
+.right  { justify-content: flex-end;   }
+.bottom { align-items:     flex-end;   }
+.left   { justify-content: flex-start; }
+
+#off-cbut {
+   margin-top: 10px;
+}
+/* end nav*/
+
+/* */
+.pad {
+   padding: .6rem;
+}
