@@ -55,3 +55,31 @@ loadjs.ready(['style'], function () {// 'show' page, ex: unhide
 
    console.log('style done', Date.now()-_start)
 })//ready
+
+// util: /////////////////////////////////////////////////////////////////////
+function getUrlVars() {
+   var vars = [], hash
+   var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&')
+   for(var i = 0; i < hashes.length; i++) {
+      hash = hashes[i].split('=')
+      vars.push(hash[0])
+      vars[hash[0]] = hash[1]
+   }
+   return vars
+}
+
+// polyfills
+if (!window.Promise) {
+   /* load bundle 'promise' */
+   loadjs(['//cdn.jsdelivr.net/es6-promise-polyfill/1.2.0/promise.min.js'], 'promise', {
+      async: false //required due to loadjs bug with bundles
+   })
+}
+else loadjs.done('promise') /* we already have it */
+
+if (!window.fetch) {
+   loadjs(['//cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js'], 'fetch', {
+      async: false //required due to loadjs bug with bundles
+   })
+}
+else loadjs.done('fetch')
