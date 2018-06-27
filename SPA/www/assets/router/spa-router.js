@@ -1,4 +1,6 @@
 // SPA router ORIG 6 18.6.25 //////////////////////////////////////////////////////////////////////////////
+// License GPL 3, Copyright MetaBake.org, Wolgang, Cekvenich
+// All code and conventions are protected by copyright and license in the root
 
 $(window).on('popstate', function (e) {//back/forward button
    console.log(' popstate' + e.originalEvent.state)
