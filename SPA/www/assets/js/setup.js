@@ -17,7 +17,7 @@ $(document).ready(function () {
 
 loadjs([
 	'https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
-	//,'//cdn.jsdelivr.net/npm/intersection-observer@0.5.0/intersection-observer.js'
+	,'//cdn.jsdelivr.net/npm/intersection-observer@0.5.0/intersection-observer.js'
 	, 'https://unpkg.com/vivid-icons@1.0.3/dist/vivid-icons.min.js'
 	, 'https://unpkg.com/js-offcanvas/dist/_js/js-offcanvas.pkgd.min.js'
 	, 'https://unpkg.com/js-offcanvas/dist/_css/prefixed/js-offcanvas.css'
