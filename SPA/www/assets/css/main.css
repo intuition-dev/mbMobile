@@ -48,5 +48,13 @@ nav a:hover {
 .flex {
    display: flex;
    flex-wrap: wrap;
+   justify-content: center;
    align-content: flex-start;
+}
+/*
+   width = item + margin to make orphan go left
+*/
+.flex:after {
+   content: '';
+   width: 300px;
 }
