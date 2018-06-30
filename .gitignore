@@ -1,9 +1,9 @@
 /.project
 
-node_modules/
+.DS_Store
 
-platforms/
+node_modules/
 
 package-lock.json
 
-.DS_Store
+site/
