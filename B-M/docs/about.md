@@ -1,20 +1,20 @@
-# Opes fugit illa sceleratus exitus praemia micantes
 
-## Aethera secreta
+## About
 
-Lorem markdownum **parva ac** et illa cognita *velox*, chrysolithi **ut nec
-nostris**, et hoc et tendit vestigia. Anthedone vertice omnibus idem diruerent
-te soleat nos idem mittunt, dura **est** lacrimis, posituro. Femina aequoris
-iste narratur edendo furialibus [gerens](http://me.net/boreas-iudex). Incaluere
-tua nulla frustraque manet sequar inrita Caesareos in cum. Hae haec protinus
-mole, iubar iubet.
+[Chat: metaBake.org ](http://chat.metaBake.org)
 
-    if (4) {
-        optical_delete = 2;
-    }
-    web /= ppm;
-    myspaceSsdYahoo += cybersquatterHoc - internicPowerDesktop -
-            kindle_mamp_model;
-    var standbyBounceUri = netbiosLogic.friend.drive(esports_parameter(
-            winsCopySocial.friend_data(3, trash)), samplingPcmciaD +
-            hyperWirelessMirrored);
+
+### metaBake.org; is a development productivity suite. It should allow you to deliver 10 times faster than on a LAMP stack. We have found that - with metaBake.org; - the work of 5 developers over 3 months can be done by 2 developers in 3 weeks. We expect you to achieve the same productivity gains.
+
+
+metaBake.org productivity is based on three pillars:
+- _nbake_, a static site generation tool that runs locally
+- _B-M-SPA_, curated technologies and techniques that help you build dynamic apps and mobile apps faster
+- _meta_, a cloud-based build and admin app infrastructure that helps deliver functionality to your clients more quickly.
+
+
+# About B&M SPA
+
+This is project 2 of 3 in in METAbake&trade;. This Github project is about _B-M-SPA_, curated technologies and techniques that help you build dynamic apps and mobile apps faster.
+
+This project is named B-M-SPA for "Bricks, Mortar and Single-Page Applications". It contains building blocks for dynamic apps and mobile apps, and points at ways to to put them together. Writing a good SPA is the high art of app development - it is certainly a bit harder than writing regular webpages. If properly done - using Phonegap version 8+ - you can use a SPA as the core of a hybrid/cross-platform Appstore app (iOS and Android) without loss of native capabilities such as device permissions.
