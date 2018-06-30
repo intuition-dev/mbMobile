@@ -1,4 +1,8 @@
 
+
+[Click for full Docs] (http://meta-docs.s3-website-us-east-1.amazonaws.com/SPA/)
+
+
 ## About
 
 [Chat: metaBake.org ](http://chat.metaBake.org)
