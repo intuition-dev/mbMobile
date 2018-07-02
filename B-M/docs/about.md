@@ -21,13 +21,8 @@ So far, somehow, server-side rendered LAMP has dominated web deployments, with W
 
 You can reinvest the time saved by using MetaBake into a more interactive user experience (UX). Better UX is proven to lead into higher user engagement and better user retention.
 
-Prerequisites: you should know HTML and CSS. If you need to catch up, we recommend 'Design and Build Websites' by Jon Duckett. You will also learn Pug, to get started on Pug, watch [Pug on Youtube](http://youtube.com/watch?v=wzAWI9h3q18)
-
-To get an overview of MetaBake pillars, this may help, or it may confuse [Pug Pillars Slides](http://prez.metabake.org/p)
-
-
 # About B&M SPA
 
-This Github project is about _B-M-SPA_, curated technologies and techniques that help you build dynamic apps and mobile apps faster. It assume that you are familiar with the nbake project.
+This section is about _B-M-SPA_, curated technologies and techniques that help you build dynamic apps and mobile apps faster. It assume that you are familiar with the nBake project, as it builds on it. If you are not familiar with nBake, please go to [nBake Docs](http://doc.MetaBake.org/nbake) and review.
 
 This project is named B-M-SPA for "Bricks, Mortar and Single-Page Applications". It contains building blocks for dynamic apps and mobile apps, and points at ways to to put them together. Writing a good SPA is the high art of app development - it is certainly a bit harder than writing regular webpages. If properly done - using Phonegap version 8+ - you can use a SPA as the core of a hybrid/cross-platform Appstore app (iOS and Android) without loss of native capabilities such as device permissions.

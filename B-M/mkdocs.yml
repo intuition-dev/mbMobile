@@ -3,8 +3,11 @@ site_url: http://MetaBake.org
 repo_url: http://MetaBake.org
 copyright: (copyright MetaBake | cekvenich)
 pages:
-   - Home: index.md
+   - Home/ App Store: index.md
    - App Store: app-store.md
+   - SPA-Router: router.md
+   - Blog Example: blog.md
+   - Other examples: other.md
    - Resources: res.md
    - About: about.md
 

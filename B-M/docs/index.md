@@ -1,33 +1,34 @@
 
 
-There is also a non-SPA example blog app that can be built with nBake, that showcases how Pug and YAML
-can be used to generate dynamic HTML while still running on a static web server. See https://github.com/MetaBake/nbake-intro-blog for more info.
 
-The Hello World example project includes a _RIOT_ component written in Pug. If you like components and Pug,
-this is worth looking into.
+### (B-M) Bricks and Mortar with SPA, router, PhoneGap, Blog
+and more examples
 
-# SPA-router
+## Prerequisites for App Store
 
-This project includes a JavaScript router named _SPA-router_. It is similar to Smooth State js.
-See `/SPA/www/router` for the source.
+For cross platform development, with single code base based on Pug, we use Adobe PhoneGap.com, version 8+ at http://build.PhoneGap.com. Before going to the PhoneGap section you need to have an S3 WebApp, mounted locally, as explained in nBake docs
 
-On navigating the app, the router only replaces content in the AppShell (`<div id='router'>`); this creates a 'rich client feel' and improves perceived performance. The router lets you have SPA events, which can be used for content transitions such as 'fade in' or 'fly left', that make your app indistinguishable from native Appstore apps.
+You may want to glance SPA Router (click on left), or even skip SPA|PhoneGap and look at other examples.
 
-If you don't like this router, MetaBake&trade; also supports Framework7, SmoothState or other similar SPA approaches.
+```
+   # extract sample single code base phonegap app to a mounted S3 directory.
+   nbake -s
+   cd SPA/www
+   # only www folder goes to S3 mount, config.xml is for a later step.
 
-### Lab/Demo:
+   # we will be running mobile, but we need to see what is going on. In a browser go to http://jsconsole.com. At that website type
+   :listen
 
-	- get sample app
-	nBake -p
+   # copy above output, and paste in your extracted folder/SPA/www/layout/layout.pug, at the top of that file.
+   # and build
+   nBake .
 
-	- Deploy to a mounted http server in the cloud (e.g. CDN77, S3)
-	- Run in browser as SPA web app.
+   # now open your S3 webapp, what ever the S3 url is and make sure everything looks OK for mobile size and that jsconsole above is working.
 
-Uncomment line 60 in the SPA app, www/assets/js/SPAsetup.js and run again.
+   # now use you IDE to edit each dat.yaml. Change ROOT: '' to instead be the S3 URL from above.
+   nbake .
+   # Check that web app is OK.
 
-
-## Part II
-
-http://github.com/MetaBake/PWA-router/blob/master/APP-STORE.md
-
+```
+Notice most of the work is regular web app development. If above works, no we can deploy, go to App Store (link on the left).
 

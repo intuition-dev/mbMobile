@@ -7,11 +7,11 @@
 - [Source code](http://github.com/metabake)
 
 ## Docs:
+To get an overview of MetaBake pillars, this may help, or it may confuse [MetaBake Slides](http://prez.metabake.org/p)
 
 - [nBake](http://doc.MetaBake.org/nbake); CLI, step 1
 - [SPA](http://doc.MetaBake.org/SPA); eg. PhoneGap v8
 - [Meta](http://doc.MetaBake.org/meta); Bespoke starter for Admin/Build Services
-- [Pug Slides Prezo](http://prez.metabake.org/p)
 
 'Train-the-Trainer' is scheduled about monthly, and it is announced in the form. If you need to reach out to creators of MetaBake, email vic(at)MetaBake.org.
 
@@ -32,7 +32,7 @@
 - [Webmaster](https://www.google.com/webmasters); w/ real time SEO help
 
 
-## Paid services and support for MetaBake
+## Commercial services and support for MetaBake
 
 - www.MetaBake.net
 - www.AppThings.io
@@ -40,3 +40,4 @@
 #### Videos:
 
 - http://youtube.com/watch?v=jQHRLH_4p0E nBake
+- http://youtube.com/watch?v=Vyu2oWERWUM PhoneGap
