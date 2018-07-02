@@ -1,6 +1,6 @@
 
 
-There is also a non-SPA example blog app that can be built with nbake, that showcases how Pug and YAML
+There is also a non-SPA example blog app that can be built with nBake, that showcases how Pug and YAML
 can be used to generate dynamic HTML while still running on a static web server. See https://github.com/MetaBake/nbake-intro-blog for more info.
 
 The Hello World example project includes a _RIOT_ component written in Pug. If you like components and Pug,
@@ -18,7 +18,7 @@ If you don't like this router, MetaBake&trade; also supports Framework7, SmoothS
 ### Lab/Demo:
 
 	- get sample app
-	nbake -p
+	nBake -p
 
 	- Deploy to a mounted http server in the cloud (e.g. CDN77, S3)
 	- Run in browser as SPA web app.
