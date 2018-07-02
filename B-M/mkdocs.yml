@@ -5,6 +5,7 @@ copyright: (copyright MetaBake | cekvenich)
 pages:
    - Home: index.md
    - App Store: app-store.md
+   - Resources: res.md
    - About: about.md
 
 theme: readthedocs
