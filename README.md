@@ -1,6 +1,6 @@
 
 
-[Click for full Docs](http://http://doc.metabake.org/SPA/)
+[Click for *full Docs*](http://doc.metabake.org/SPA/)
 
 
 ## About
