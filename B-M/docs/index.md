@@ -13,7 +13,7 @@ See `/SPA/www/router` for the source.
 
 On navigating the app, the router only replaces content in the AppShell (`<div id='router'>`); this creates a 'rich client feel' and improves perceived performance. The router lets you have SPA events, which can be used for content transitions such as 'fade in' or 'fly left', that make your app indistinguishable from native Appstore apps.
 
-If you don't like this router, METAbake&trade; also supports Framework7, SmoothState or other similar SPA approaches.
+If you don't like this router, MetaBake&trade; also supports Framework7, SmoothState or other similar SPA approaches.
 
 ### Lab/Demo:
 
@@ -28,6 +28,6 @@ Uncomment line 60 in the SPA app, www/assets/js/SPAsetup.js and run again.
 
 ## Part II
 
-http://github.com/metabake/PWA-router/blob/master/APP-STORE.md
+http://github.com/MetaBake/PWA-router/blob/master/APP-STORE.md
 
 

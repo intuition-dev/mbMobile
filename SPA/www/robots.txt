@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
-Host: metabake.org
+Host: MetaBake.org
 
