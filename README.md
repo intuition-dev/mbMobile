@@ -23,6 +23,6 @@ You can reinvest the time saved by using MetaBake into a more interactive user e
 
 # About B&M SPA
 
-This section is about _B-M-SPA_, curated technologies and techniques that help you build dynamic apps and mobile apps faster. It assume that you are familiar with the nBake project, as it builds on it.
+This section is about _B-M-SPA_, curated technologies and techniques that help you build dynamic apps and mobile apps faster. It assume that you are familiar with the nBake project, as it builds on it. If you are not familiar with nBake, please go to [nBake Docs](http://doc.MetaBake.org/nbake) and review.
 
 This project is named B-M-SPA for "Bricks, Mortar and Single-Page Applications". It contains building blocks for dynamic apps and mobile apps, and points at ways to to put them together. Writing a good SPA is the high art of app development - it is certainly a bit harder than writing regular webpages. If properly done - using Phonegap version 8+ - you can use a SPA as the core of a hybrid/cross-platform Appstore app (iOS and Android) without loss of native capabilities such as device permissions.

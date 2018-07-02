@@ -28,14 +28,10 @@ Generate SSH keys for the IOS app on OSX; you'll need them for the Appstore.
    In browser: Monitor you jsconsole.com.
 ```
 
-This way you have the same code base that runs on a webapp AND in the Appstore app! This is different from React Native.
+Once you have this working, you can load some resource with a relative path in your initial page.
+ But you can't start with '/' as the app is now running inside the file system. so 'asssets/my.js' will load it locally.
 
-Extra: You can use the mobileEx example to run ANY spa in the cloud with minor edits. All you need to know is PhoneGap.
+#### Last step in PhoneGap
 
-There are 3 way to Phonegap:
-- Just load the remote SPA from WWW, as in the mobileEx example.
-- Load resources from WWW.
-
-The last one is fastest as there is no network latency. You can mix in the middle one to load larger resources that would not fit on a phone. For example: all of the blogs. You'd just get the remote JSON and then load it from the WWW.
-
+You'll need to edit the icons following PhoneGap docs that will display while the app is being loaded.
 
