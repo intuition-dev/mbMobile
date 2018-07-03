@@ -38,6 +38,6 @@ To get an overview of MetaBake pillars, this may help, or it may confuse [MetaBa
 - www.AppThings.io
 
 #### Videos:
-
+- [Pug on Youtube](http://youtube.com/watch?v=wzAWI9h3q18)
 - http://youtube.com/watch?v=jQHRLH_4p0E nBake
 - http://youtube.com/watch?v=Vyu2oWERWUM PhoneGap
