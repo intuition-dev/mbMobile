@@ -1,7 +1,7 @@
 
 # Using build.phonegap.com from your SPA
 
-Have you heard of mobile first? You can also 'Phonegap' first. (* _MetaBake_ pillar 4)
+Have you heard of mobile first? You can also 'Phonegap' first, with SPA. (* _MetaBake_ pillar 5)
 Porting an app could mean some search and replace, especially for teams that don't have SPA experience.
 Here is a conversion check list:
 - resources must be on an absolute path in the cloud (ex: http://bla.mydomain.net/foo/my.js )
@@ -35,4 +35,7 @@ Once you have this working, you can load some resource with a relative path in y
 #### Last step in PhoneGap
 
 You'll need to edit the icons following PhoneGap docs that will display while the app is being loaded.
+
+
+
 

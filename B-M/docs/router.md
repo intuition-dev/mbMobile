@@ -2,7 +2,7 @@
 
 # SPA-router
 
-This project includes a JavaScript router named _SPA-router_.
+This project includes a JavaScript router named _SPA-router_. Maybe this is the best way to start SPA | PhoneGap.
 
 On navigating the app, the router only replaces content in the AppShell (`<div id='router'>`); this creates a 'rich client feel' and improves perceived performance. The router lets you have SPA events, which can be used for content transitions such as 'fade in' or 'fly left', that make your app indistinguishable from native Appstore apps.
 

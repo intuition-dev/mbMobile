@@ -8,8 +8,9 @@ and more examples
 
 For cross platform development, with single code base based on Pug, we use Adobe PhoneGap.com, version 8+ at http://build.PhoneGap.com. Before going to the PhoneGap section you need to have an S3 WebApp, mounted locally, as explained in nBake docs
 
-You may want to glance SPA Router (click on left), or even skip SPA|PhoneGap and look at other examples.
+You may want to glance SPA Router (click on left), or even skip SPA|PhoneGap and look at other examples. SPA-Router (on the left) is a easy way to get started. Else, jump on in here.
 
+Before doing app store, make sure your WebApp is mounted to S3 and ROOT in dat.yaml points to the absolute path (ie: you http:// in the cloud), like this:
 ```
    # extract sample single code base phonegap app to a mounted S3 directory.
    nbake -s
