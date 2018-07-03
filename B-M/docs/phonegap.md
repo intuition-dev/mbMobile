@@ -9,7 +9,7 @@ Here is a conversion check list:
 - handle the device ready event
 - load 'cordova.js'
 
-1. You should have a SPA web app deployed in the cloud before this step. And it will be a lot easier if the web app files are mounted, easier to edit. Test that your debugger(eg. jsConsole.com) is working with any regular web page.
+1. You should have a SPA web app deployed in the cloud before this step. And it will be a lot easier if the web app files are mounted, easier to edit. Test that your debugger(eg. console.re) is working with any regular web page.
 
 2. Create and account on Kobiton.com, or similar mobile device emulator service in the cloud.
 
@@ -26,7 +26,7 @@ Generate SSH keys for the IOS app on OSX; you'll need them for the Appstore.
 
    In Kobiton.com, start a 'device'. Upload the app
 
-   In browser: Monitor you jsconsole.com.
+   In browser: Monitor you console.re.
 ```
 
 Once you have this working, you can load some resource with a relative path in your initial page.

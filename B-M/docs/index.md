@@ -10,21 +10,19 @@ For cross platform development, with single code base based on Pug, we use Adobe
 
 You may want to glance SPA Router (click on left), or even skip SPA|PhoneGap and look at other examples. SPA-Router (on the left) is a easy way to get started. Else, jump on in here.
 
-Before doing app store, make sure your WebApp is mounted to S3 and ROOT in dat.yaml points to the absolute path (ie: you http:// in the cloud), like this:
+Before doing app store, make sure your WebApp is mounted to S3 and copy the www folder to that mount. Then you have to fix in S3(properties/metadata/Content-Type) the CSS files to be text/css. Then ROOT in each dat.yaml points to the absolute path (ie: you http:// in the cloud) - use your IDE. Like this:
 ```
    # extract sample single code base phonegap app to a mounted S3 directory.
    nbake -s
    cd SPA/www
    # only www folder goes to S3 mount, config.xml is for a later step.
 
-   # we will be running mobile, but we need to see what is going on. In a browser go to http://jsconsole.com. At that website type
-   :listen
+   # we will be running mobile, but we need to see what is going on. In a browser go to http://console.re and configure your layout.pug
 
-   # copy above output, and paste in your extracted folder/SPA/www/layout/layout.pug, at the top of that file.
    # and build
    nBake .
 
-   # now open your S3 webapp, what ever the S3 url is and make sure everything looks OK for mobile size and that jsconsole above is working.
+   # now open your S3 webapp, what ever the S3 url is and make sure everything looks OK for mobile size and that console.re above is working.
 
    # now use you IDE to edit each dat.yaml. Change ROOT: '' to instead be the S3 URL from above.
    nbake .
