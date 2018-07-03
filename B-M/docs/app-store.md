@@ -1,7 +1,8 @@
 
 # Using build.phonegap.com from your SPA
 
-Have you heard of mobile first? You can also 'Phonegap' first, as porting an app could mean some search and replace, especially for teams that don't have SPA experience.
+Have you heard of mobile first? You can also 'Phonegap' first. (* _MetaBake_ pillar 4)
+Porting an app could mean some search and replace, especially for teams that don't have SPA experience.
 Here is a conversion check list:
 - resources must be on an absolute path in the cloud (ex: http://bla.mydomain.net/foo/my.js )
 - SPA
