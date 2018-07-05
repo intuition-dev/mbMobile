@@ -9,7 +9,7 @@
 	</author>
 	<content src="index.html" />
 	<preference name="DisallowOverscroll" value="true" />
-	<preference name="android-minSdkVersion" value="19" />
+	<preference name="android-minSdkVersion" value="22" />
 
 	<preference name="permissions" value="none"/>
 
