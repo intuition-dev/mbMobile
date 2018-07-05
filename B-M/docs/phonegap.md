@@ -13,7 +13,6 @@ Here is a conversion check list:
 
 2. Make sure your ROOT in dat.yaml points to the url. Also make sure you bring patience, PhoneGap takes a bit of time to get going the first time you learn it - like anything new.
 
-2. Create and account on Kobiton.com, or similar mobile device emulator service in the cloud.
 
 4. For Andorid, or Windows, skip this step. To add the app to the iOS/Apple appstore, create a Apple Developer Program account with Apple. (this will set you back ~USD99). This can be an account that you share with your team.
 You will also need a machine that runs OSX, but it can be in the cloud. A few places offer OSX hosting, e.g.: http://macstadium.com .
@@ -24,9 +23,9 @@ Generate SSH keys for the IOS app on OSX; you'll need them for the Appstore.
 ```
    Zip the webapp with the config.xml. Upload to build.phonegap.com
 
-   Build the Android app using build.phonegap.com and download the Android  App.
+   Build the Android app using build.phonegap.com and download the Android apx.
 
-   In Kobiton.com, start a 'device'. Upload the app
+   Email via gmail the apx from build.phonegap.com. In your Andoriod device, open in gmail and run the apx app.
 
    In browser: Monitor you console.re.
 ```
