@@ -45,15 +45,23 @@ loadjs.ready(['style'], function () {// 'show' page, ex: unhide
 		triggerButton: '#off-cbut' // btn to open offcanvas
 	})
 	let offcanvas = $('#off-canvas').data('offcanvas-component')
+	
+	$('#off-cbut').click(function () {
+		console.re.log('#offItems' )
+		offcanvas.open()
+	})
 	$('#offItems').click(function () {
-		console.re.log('#offItems')
+		console.re.log('#offItems' )
 		offcanvas.close()
 	})
-	$('.delayShowing').removeClass('delayShowing') // show
-
-	loadjs(ROOT + '/assets/router/spa-router.js')
 
 	console.re.log('style done', Date.now() - _start)
+	$('.delayShowing').removeClass('delayShowing') // show
+	loadjs(ROOT + '/assets/router/spa-router.js')
+	$( window ).resize(function() {
+		console.re.log( $(window).width() )
+	})
+
 })//ready
 
 // util: /////////////////////////////////////////////////////////////////////
