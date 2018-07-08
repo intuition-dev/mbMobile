@@ -45,7 +45,7 @@ loadjs.ready(['style'], function () {// 'show' page, ex: unhide
 		triggerButton: '#off-cbut' // btn to open offcanvas
 	})
 	let offcanvas = $('#off-canvas').data('offcanvas-component')
-	
+
 	$('#off-cbut').click(function () {
 		console.re.log('#offItems' )
 		offcanvas.open()
@@ -91,19 +91,3 @@ function inView(el) { // is element in viewport
 		rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
 	)
 }
-
-// polyfills
-if (!window.Promise) {
-	/* load bundle 'promise' */
-	loadjs(['//cdn.jsdelivr.net/es6-promise-polyfill/1.2.0/promise.min.js'], 'promise', {
-		async: false //required due to loadjs bug with bundles
-	})
-}
-else loadjs.done('promise') /* we already have it */
-
-if (!window.fetch) {
-	loadjs(['//cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js'], 'fetch', {
-		async: false //required due to loadjs bug with bundles
-	})
-}
-else loadjs.done('fetch')
