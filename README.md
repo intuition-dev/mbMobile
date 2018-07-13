@@ -3,7 +3,6 @@
 - [Click for 'THE' B-M-SPA  Docs](http://doc.metabake.org/SPA/)
 - [Chat: MetaBake.org ](http://chat.MetaBake.org)
 
-Note docs are in git: _nBake/FOUND
 
 # About MetaBake
 
