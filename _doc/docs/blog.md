@@ -7,7 +7,7 @@
    cd blog
 ```
 
-#### dat.yaml
+## dat.yaml
 
 dat.yaml has dual usage.
 
