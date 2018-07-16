@@ -1,7 +1,7 @@
 
 - [SPA video](https://youtu.be/LHFjjDPlU3A)
-- [Click for 'THE' B-M-SPA  Docs](http://doc.metabake.org/SPA/)
-- [Chat: MetaBake.org ](http://chat.MetaBake.org)
+- [Click for 'THE' B-M-SPA docs](http://doc.metabake.org/SPA/)
+- [Chat: metabake.org ](http://chat.metabake.org)
 
 
 # About MetaBake
