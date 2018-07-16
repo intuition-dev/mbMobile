@@ -1,5 +1,5 @@
 
-## Blog|Item example
+## Blog/Item example
 
 
 ```
@@ -11,7 +11,7 @@
 
 dat.yaml has dual usage.
 
-- One is static. Used to configure the pug page, and help with repeated fields. For example in SEO or to help when sharing item/content with a social network, for those that needed it.
+- One is static. Used to configure the Pug page, and help with repeated fields. For example, in SEO or to help when sharing item/content with a social network.
 - The other is dynamic:
 
 ```
