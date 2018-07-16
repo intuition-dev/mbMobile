@@ -6,11 +6,11 @@ and more examples
 
 ## Prerequisites for App Store
 
-We use Adobe PhoneGap version 8+ for cross platform development with a single code base based on Pug using https://build.phonegap.com. Before going to the PhoneGap section you need to have an S3 web app, mounted locally, as explained in nBake docs.
+We use Adobe PhoneGap version 8+ for cross platform development with a single code base based on Pug. Apps are built using https://build.phonegap.com. Before going to the PhoneGap section you need to have an S3 web app, mounted locally, as explained in nBake docs.
 
 You may want to look at SPA Router (click on left), or even skip SPA/PhoneGap and look at other examples. SPA-Router (on the left) is a easy way to get started. Else, jump on in here.
 
-Before doing app store, make sure your web app is mounted to S3 and the www folder is copied to that mount. Then fix the CSS files in S3 (properties/metadata/Content-Type) to be text/css. The ROOT in each dat.yaml points to the absolute path (ie: your http:// in the cloud) - use your IDE. Like this:
+Before doing app store, make sure that you have mounted your web app to S3 and have copied the www folder to that mount. Then fix the CSS files in S3 (properties/metadata/Content-Type) to be text/css. The ROOT in each dat.yaml needs to point to the absolute path (ie: your http:// in the cloud) - use your IDE. Like this:
 ```
    # extract sample single-codebase PhoneGap app to a mounted S3 directory.
    nbake -s
