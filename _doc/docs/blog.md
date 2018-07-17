@@ -7,12 +7,12 @@
    cd blog
 ```
 
-## dat.yaml
+## dat.yaml  -part 2
 
 dat.yaml has dual usage.
 
 - One is static. Used to configure the Pug page, and help with repeated fields. For example, in SEO or to help when sharing item/content with a social network.
-- The other is dynamic:
+- The other is dynamic, with dat_i.yaml, used to create items.json from dat.yaml.
 
 ```
    cd blog
