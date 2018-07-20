@@ -1,20 +1,17 @@
 basedir: ../../
+title: Sports Latest News Photos Videos Info Buzz and more
 
-title: What Makes Good UI
-created: April 25, 2017
-date_published: '2017-04-25T17:00:00-08:00'
-content_html: In this article, we talk about what makes good UI.
-image: assets/img/light768.jpg
+image: >-
+  https://www.gannett-cdn.com/uxstatic/usatoday/usat-web-static-3793.0/images/logos/sports.png
 author:
-  name: Wolfgang Gehner
-  avatar: /assets/img/wolf.jpg
-read_minutes: 5
-tags:
-- design
-- management
-- pug
-
+  name: Vic Cekvenich
+  avatar: /assets/img/vic.jpg
 
 ROOT: ''
-
+date_published: '2017-04-25T17:00:00-08:00'
 pretty: true
+publish: false
+content_text: >-
+  USA TODAY Sports Offers The Latest News Buzz Information Photos and Videos
+  From The World of Sports
+external_url: 'https://www.usatoday.com/sports/'

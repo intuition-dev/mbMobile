@@ -3,7 +3,18 @@
 
    .image
       img(src=image)
-   br
-   .subtitle #{content_html}
 
-   include:marked article.md
+   // - .norouter is for spa-router to un trap
+   a.norouter(href= external_url )
+      h2 #{title}
+
+   p #{date_published}
+   figure.image.is-48x48
+      img( src= author.avatar )
+
+   .subtitle.is-6 #{ author.name }
+
+   .subtitle #{content_text}
+
+   .subtitle
+      include:marked comments.md
