@@ -3,7 +3,7 @@
 
 
 ```
-   nbake -b
+   mbake -b
    cd blog
 ```
 
@@ -16,7 +16,7 @@ dat.yaml has dual usage.
 
 ```
    cd blog
-   nbake -i .
+   mbake -i .
 ```
 That generates an items.json file that you can client side fetch, and bind dynamically.
 

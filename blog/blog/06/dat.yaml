@@ -1,0 +1,17 @@
+basedir: ../../
+title: Sports Latest News Photos Videos Info Buzz and more
+
+image: >-
+  https://www.gannett-cdn.com/uxstatic/usatoday/usat-web-static-3793.0/images/logos/sports.png
+author:
+  name: Vic Cekvenich
+  avatar: /assets/img/vic.jpg
+
+ROOT: ''
+date_published: '2017-04-25T17:00:00-08:00'
+pretty: true
+publish: false
+content_text: >-
+  USA TODAY Sports Offers The Latest News Buzz Information Photos and Videos
+  From The World of Sports
+external_url: 'https://www.usatoday.com/sports/'

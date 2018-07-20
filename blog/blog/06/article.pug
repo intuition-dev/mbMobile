@@ -1,0 +1,20 @@
+
+.box
+
+   .image
+      img(src=image)
+
+   a(href='#{url}')
+      h2 #{title}
+
+   p #{date_published}
+   figure.image.is-48x48
+      img( src= '#{ author.avatar }' )
+
+   p.subtitle.is-6 #{ author.name }
+
+   br
+   .subtitle #{content_text}
+
+
+   include:marked comments.md
