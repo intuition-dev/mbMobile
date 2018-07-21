@@ -1,7 +1,6 @@
 site_name: SPA Docs
 site_url: http://MetaBake.org
 repo_url: http://MetaBake.org
-copyright: (copyright MetaBake | cekvenich)
 pages:
    - Home/ App Store: index.md
    - SPA-Router: router.md
