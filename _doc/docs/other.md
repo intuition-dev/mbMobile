@@ -1,8 +1,17 @@
+
+
+
 # Other
 
 There are more examples here:
 
 - [github.com/metabake/examples-plugins](https://github.com/metabake/examples-plugins)
+
+### CSS Fix
+
+In general, CSS is broken, use Sass/LESS instead (*_MetaBake_ pillar 3). You can check out some other Front End (FE) Frameworks here:
+- [FE Frameworks](https://github.com/metabake/front-end-frameworks); with SASS or Less.
+The selected frameworks that can be customized and built with http://prepros.io.
 
 
 ### Benchmark
@@ -18,11 +27,7 @@ Make the API public on the client side, not server side. This way, if protocols 
 (*_MetaBake_ pillar 6)
 
 
+### Remote teams
 
-## Other examples
-
-There are more examples here:
-
-- [github.com/metabake/examples-plugins](https://github.com/metabake/examples-plugins)
-
+This also enables new management methodologies, e.g. 'Flash Teams' (*_MetaBake_ pillar 8)
 
