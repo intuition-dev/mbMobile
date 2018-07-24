@@ -14,12 +14,39 @@ Tese are the 3 main project, that leverage the 10 pillars:
 - [Pug](https://pug.metabake.org)
 - <a href='http://chat.metabake.org' target='_blank'>Forum/Chat</a>, to support this project, please join!
 
+## Commercial hosting, services and support for MetaBake
+
+- <http://www.metabake.net>
+- <http://voncode.com>
+- <http://code83.com>
+- <http://fabianocunha.io>
+
+#### Videos:
+
+- [MetaBake quick demo](https://youtu.be/WyCdSFTUIvM)
+- [MetaBake Slides](http://prez.metabake.org/p)
+- [Meetup Video](https://vimeo.com/280212026)
+- [mbake part 1](https://youtu.be/-KkPfAnEXyk)
+- [MetaBake Sales Summary](https://www.youtube.com/watch?v=OK-cJNSkQII)
+
+- [Pug on Youtube](http://youtube.com/watch?v=wzAWI9h3q18)
+- [SPA](https://youtu.be/LHFjjDPlU3A)
+- [Meta Eg 1](http://youtube.com/watch?v=c4mWhefhOoQ)
+
+
 ## Meta Definitions:
 - Pug : Low Code Declarative 4GL markup. Custom 'tags' in Pug via RIOTjs
 - Server-less: No known end point. E.g.: CDN, AWS Cognito. Not server-less in Meta-talk: AWS Lambda
 - Team Player: Benefits group via Cloud Dev Environment, ex: CodeAnywhere+Meta. Selfish: Local dev. environment.
 - Front End Framework: Google/search for 'Front End Framework' yields Bootstrap, Bulma, etc. We have examples with a few in Github project of same name.
 - Meta: Building software that builds software. Has more than one level of meaning.
+
+
+Sins to eschew:
+- js, prefer pug
+- local IDE dev, we use cloud
+- server side development, use client side
+
 
 ### Other:
 
@@ -45,28 +72,9 @@ Tese are the 3 main project, that leverage the 10 pillars:
 - [High tech](https://engineering.videoblocks.com/web-architecture-101-a3224e126947?gi=8a9df433a15f) Server-less is low tech. As opposed to high tech.
 - [Automatic programing](https://en.wikipedia.org/wiki/Automatic_programming)
 
-## Commercial hosting, services and support for MetaBake
-
-- <http://www.metabake.net>
-- <http://voncode.com>
-- <http://code83.com>
-- <http://fabianocunha.io>
-
-#### Videos:
-
-- [MetaBake quick demo](https://youtu.be/WyCdSFTUIvM)
-- [MetaBake Slides](http://prez.metabake.org/p)
-- [Meetup Video](https://vimeo.com/280212026)
-- [MetaBake Sales Summary](https://www.youtube.com/watch?v=OK-cJNSkQII)
-
-- [Pug on Youtube](http://youtube.com/watch?v=wzAWI9h3q18)
-- [mBake foundations](http://youtube.com/watch?v=jQHRLH_4p0E)
-- [SPA](https://youtu.be/LHFjjDPlU3A)
-- [Meta Eg 1](http://youtube.com/watch?v=c4mWhefhOoQ)
-
 ### Creators of Meta
 
 We were involved with Struts and SilverStream. We plan to make MetaBake more popular than both.
 
 
-- Doc version 3.7.57b
+- Doc version 3.7.57d
