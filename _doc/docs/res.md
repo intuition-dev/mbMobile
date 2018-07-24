@@ -1,19 +1,18 @@
 
 # Resources
 
-- [Pug](https://pug.metabake.org)
-- <a href='http://chat.metabake.org' target='_blank'>Forum/Chat</a>, to support this project, please join!
-- <a href='https://www.npmjs.com/package/mbake' target='_blank'>Check for latest version of mbake</a>
-- <a href='http://github.com/metabake' target='_blank'>Source Code</a>
+## TOC:
 
-## Docs:
-To get an overview of MetaBake pillars, this may help [MetaBake Slides](http://prez.metabake.org/p)
+Tese are the 3 main project, that leverage the 10 pillars:
 
 - [mbake](http://doc.metabake.org/mbake); CLI, step 1, give it stars: '*'
-- [SPA](http://doc.metabake.org/SPA); eg. PhoneGap v8
-- [Meta](http://doc.metabake.org/meta); Bespoke starter for Admin/Build Services
+- [SPA](http://doc.metabake.org/SPA); eg. Brick and Mortar, ex: PhoneGap v8
+- [Meta](http://doc.metabake.org/meta); Bespoke starter for Admin/Build Services and WebIDE
 
 'Train-the-Trainer' is scheduled about monthly, and it is announced in the forum. Feel free to post questions there.
+
+- [Pug](https://pug.metabake.org)
+- <a href='http://chat.metabake.org' target='_blank'>Forum/Chat</a>, to support this project, please join!
 
 ## Meta Definitions:
 - Pug : Low Code Declarative 4GL markup. Custom 'tags' in Pug via RIOTjs
@@ -24,7 +23,8 @@ To get an overview of MetaBake pillars, this may help [MetaBake Slides](http://p
 
 ### Other:
 
-- <a href='https://github.com/metabake/_mbake/tree/master/CRUD/riotFirst' target='_blank'>Pug RIOTjs example</a>
+- <a href='https://www.npmjs.com/package/mbake' target='_blank'>Check for latest version of mbake</a>
+
 - [RIOTjs](https://riot.js.org/)
 - [Grid Forms](http://kumailht.com/gridforms)
 - [Bulma CSS](https://bulma.io/documentation/components)
@@ -69,4 +69,4 @@ To get an overview of MetaBake pillars, this may help [MetaBake Slides](http://p
 We were involved with Struts and SilverStream. We plan to make MetaBake more popular than both.
 
 
-- Doc version 3.7.57a
+- Doc version 3.7.57b
