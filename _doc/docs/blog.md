@@ -1,5 +1,5 @@
 
-## Blog/Item example
+## Blog/Items example
 
 
 ```
