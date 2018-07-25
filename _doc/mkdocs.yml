@@ -2,11 +2,14 @@ site_name: SPA Docs
 site_url: http://MetaBake.org
 repo_url: http://MetaBake.org
 pages:
-   - Home/ App Store: index.md
-   - SPA-Router: router.md
+   - Home/ B.M.: index.md
+
+   - CSS Fix: css.md
    - Blog Example: blog.md
-   - App Store: phonegap.md
-   - Other examples: other.md
+   - SPA-Router: router.md
+   - App Store: appStore.md
+   - More examples: more.md
+
    - Resources: res.md
    - About: about.md
 
