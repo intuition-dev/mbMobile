@@ -22,7 +22,6 @@ loadjs([
 	, 'https://unpkg.com/js-offcanvas/dist/_js/js-offcanvas.pkgd.min.js'
 	, 'https://unpkg.com/js-offcanvas/dist/_css/prefixed/js-offcanvas.css'
 	, ROOT + '/assets/css/gridforms/gridforms.css'
-	, ROOT + '/assets/js/lorem.js'
 ], 'cssJs')
 
 function onDeviceReady() { // nothing will work before this
