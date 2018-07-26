@@ -1,4 +1,4 @@
-*.rb linguist-language=JavaScript
-*.rb linguist-vendored=JavaScript
+*.* linguist-language=Pug
+*.* linguist-vendored=Pug
 
-jc_ansiterm_0.1/* linguist-vendored=true
+*.js linguist-vendored=true
