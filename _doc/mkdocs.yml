@@ -8,8 +8,9 @@ pages:
    - Blog Example: blog.md
    - SPA-Router: router.md
    - App Store: appStore.md
-   - More examples: more.md
-
+   - More: more.md
+   
+   - Next Step: next.md
    - Resources: res.md
    - About: about.md
 
