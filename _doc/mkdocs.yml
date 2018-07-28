@@ -9,7 +9,8 @@ pages:
    - SPA-Router: router.md
    - App Store: appStore.md
    - More: more.md
-   
+
+   - Using with Netlify: netlify.md
    - Next Step: next.md
    - Resources: res.md
    - About: about.md
