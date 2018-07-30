@@ -21,7 +21,9 @@ loadjs([
 	, 'https://unpkg.com/vivid-icons@1.0.3/dist/vivid-icons.min.js'
 	, 'https://unpkg.com/js-offcanvas/dist/_js/js-offcanvas.pkgd.min.js'
 	, 'https://unpkg.com/js-offcanvas/dist/_css/prefixed/js-offcanvas.css'
-	, ROOT + '/assets/css/gridforms/gridforms.css'
+   , ROOT + '/assets/css/gridforms/gridforms.css'
+   , 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'
+   , 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
 ], 'cssJs')
 
 function onDeviceReady() { // nothing will work before this
