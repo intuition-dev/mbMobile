@@ -2,6 +2,11 @@
 - [Click for 'THE' B-M-SPA docs](http://doc.metabake.org/SPA/)
 - [Chat: metabake.org ](http://chat.metabake.org)
 
+## Join the low code movement,
+### for 10X faster web app development, with MetaBake.org
+
+-[Upcoming online class](https://www.eventbrite.com/e/join-the-low-code-movement-develop-crud-faster-with-pug-riot-firebase-and-s3-tickets-48524849130)
+
 
 # About MetaBake
 
