@@ -1,5 +1,5 @@
 basedir: .
 
-ROOT: 'http://spa22.s3-website-us-east-1.amazonaws.com'
+ROOT: ''
 
 pretty: true
