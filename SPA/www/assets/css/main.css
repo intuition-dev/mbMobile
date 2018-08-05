@@ -11,7 +11,7 @@ a:focus { outline: none; }
 nav {
    margin-bottom: 0 !important;
    padding-right: .75rem;
-   
+
 }
 nav a {
    color: hsl(0, 0%, 86%) !important;
@@ -44,7 +44,7 @@ nav a:hover {
 */
 .flex:after {
    content: '';
-   width: 300px;
+   w0idth: 300px;
 }
 
 /* menu */
