@@ -19,8 +19,8 @@ loadjs([
     'https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
 
     , 'https://unpkg.com/vivid-icons@1.0.9/dist/vivid-icons.min.js'
-    , 'https://unpkg.com/js-offcanvas/dist/_js/js-offcanvas.pkgd.min.js'
-    , 'https://unpkg.com/js-offcanvas/dist/_css/prefixed/js-offcanvas.css'
+    , 'https://cdn.jsdelivr.net/npm/js-offcanvas@1.2.6/dist/_js/js-offcanvas.pkgd.js'
+    , 'https://cdn.jsdelivr.net/npm/js-offcanvas@1.2.6/dist/_css/prefixed/js-offcanvas.css'
     , ROOT + '/assets/css/gridforms/gridforms.css'
     , 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'
     , 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
@@ -48,23 +48,23 @@ loadjs.ready(['css', 'device', 'cssJs'], function () {
 
 let _scSz = true
 function setupUserSzSc() {
-   $( window ).scroll( function() {
-      _scSz = true
-   })
-   $( window ).resize(function() {
-      _scSz = true
-   })
+    $(window).scroll(function () {
+        _scSz = true
+    })
+    $(window).resize(function () {
+        _scSz = true
+    })
 }//()
-setInterval( function() {
-  if ( _scSz ) {
-   _scSz = false
-   userSzSc()
-  }
+setInterval(function () {
+    if (_scSz) {
+        _scSz = false
+        userSzSc()
+    }
 }, 150)
 
 // usage: ////////////////////////////////////////////////////////////////////
 loadjs.ready(['style'], function () {// 'show' page, ex: unhide
-   setupUserSzSc()
+    setupUserSzSc()
 
     $('#off-canvas').offcanvas({
         triggerButton: '#off-cbut' // btn to open offcanvas
