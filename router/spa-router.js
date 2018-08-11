@@ -2,6 +2,9 @@
 // License GPL 3, Copyright MetaBake.org, Wolgang, Cekvenich
 // All code and conventions are protected by copyright and license in the root
 
+// requires script(src='https://unpkg.com/axios@0.18.0/dist/axios.min.js')
+
+
 $(window).on('popstate', function (e) {//back/forward button
    console.re.log(' popstate' + e.originalEvent.state)
    let state = e.originalEvent.state

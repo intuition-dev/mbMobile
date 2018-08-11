@@ -18,5 +18,5 @@ dat.yaml has dual usage.
    cd blog
    mbake -i .
 ```
-That generates an items.json file that you can client side fetch, and bind dynamically.
+That generates an items.json file that you can client side fetch(| axios), and bind dynamically.
 
