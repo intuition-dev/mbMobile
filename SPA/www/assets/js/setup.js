@@ -16,20 +16,21 @@ $(document).ready(function () {
 })
 
 loadjs([
-    'https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
+   'https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
 
-    , 'https://unpkg.com/vivid-icons@1.0.9/dist/vivid-icons.min.js'
-    , 'https://cdn.jsdelivr.net/npm/js-offcanvas@1.2.6/dist/_js/js-offcanvas.pkgd.js'
-    , 'https://cdn.jsdelivr.net/npm/js-offcanvas@1.2.6/dist/_css/prefixed/js-offcanvas.css'
-    , ROOT + '/assets/css/gridforms/gridforms.css'
-    , 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'
-    , 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
+   , 'https://use.fontawesome.com/releases/v5.2.0/js/solid.js'
+   , 'https://use.fontawesome.com/releases/v5.2.0/js/fontawesome.js'
+   , 'https://cdn.jsdelivr.net/npm/js-offcanvas@1.2.6/dist/_js/js-offcanvas.pkgd.js'
+   , 'https://cdn.jsdelivr.net/npm/js-offcanvas@1.2.6/dist/_css/prefixed/js-offcanvas.css'
+   , ROOT + '/assets/css/gridforms/gridforms.css'
+   , 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'
+   , 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
 
-    , 'https://cdn.jsdelivr.net/npm/zenscroll@4.0.2/zenscroll-min.js'
-    , 'https://cdn.jsdelivr.net/npm/blueimp-load-image@2.19.0/js/load-image.all.min.js'
-    , 'https://cdn.jsdelivr.net/npm/is_js@0.9.0/is.min.js'
+   , 'https://cdn.jsdelivr.net/npm/zenscroll@4.0.2/zenscroll-min.js'
+   , 'https://cdn.jsdelivr.net/npm/blueimp-load-image@2.19.0/js/load-image.all.min.js'
+   , 'https://cdn.jsdelivr.net/npm/is_js@0.9.0/is.min.js'
 
-    , 'https://cdn.rawgit.com/terrylinooo/jquery.disableAutoFill/92cb6f86/src/jquery.disableAutoFill.js'
+   , 'https://cdn.rawgit.com/terrylinooo/jquery.disableAutoFill/92cb6f86/src/jquery.disableAutoFill.js'
 
 ], 'cssJs')
 
