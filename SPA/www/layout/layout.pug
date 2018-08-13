@@ -27,30 +27,30 @@ html
       script(src= ROOT + '/assets/js/setup.js')
 
       .c-offcanvas-content-wrap
-         nav.delayShowing.columns.has-background-black.has-text-white.is-mobile.is-gapless
-               .column.left
-                  .pad My App
-
-               .column.right
-                  a.is-hidden-mobile.navbar-item(href= ROOT ) Home
-                  a.is-hidden-mobile.navbar-item(href= ROOT + '/screens/scrA') One
-                  a.is-hidden-mobile.navbar-item(href= ROOT + '/screens/scrB') Two
-                  a#off-cbut.js-offcanvas-trigger( href='#off-canvas')
-                     i.icon(data-vi='menu', data-vi-size='28')
+         #navBar.nav.flex.edge.delayShowing
+            .left
+               .pad.has-text-white.is-size-4 My App
+            .right
+               .pad
+                  a.navItem.is-hidden-mobile(href= ROOT ) Home
+                  a.navItem.is-hidden-mobile(href= ROOT + '/screens/scrA') One
+                  a.navItem.is-hidden-mobile(href= ROOT + '/screens/scrB') Two
+                  a#off-cbut.js-offcanvas-trigger( href='#navOpen')
+                     i#bars.bord.is-hidden-desktop.fas.fa-bars(style='color:white')
 
          #router
             block main
 
-      #off-canvas.delayShowing
-         nav.has-background-black.has-text-white
-           .pad My App
-         ul.menu-list#offItems
+      #navOpen.delayShowing
+         .navOpenBrand.has-background-black.has-text-white
+           .pad.is-size-4 My App
+         ul.navOpen-list
             li
                a(href=ROOT ) Home2
             li
                a(href=ROOT + 'screens/scrA') One
             li
-              a(href= ROOT + 'screens/scrB') Two
+               a(href= ROOT + 'screens/scrB') Two
 
 
       link(href= ROOT + '/assets/css/bulma.css', onload='cssLoaded()', rel='stylesheet')
@@ -60,3 +60,5 @@ html
          function userSzSc() {
             console.log('resize|scroll')
          }
+
+   //link(href= ROOT + '/assets/css/debug.css', rel='stylesheet')

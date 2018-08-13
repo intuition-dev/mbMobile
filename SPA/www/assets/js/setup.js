@@ -23,8 +23,8 @@ loadjs([
    , 'https://cdn.jsdelivr.net/npm/js-offcanvas@1.2.6/dist/_js/js-offcanvas.pkgd.js'
    , 'https://cdn.jsdelivr.net/npm/js-offcanvas@1.2.6/dist/_css/prefixed/js-offcanvas.css'
    , ROOT + '/assets/css/gridforms/gridforms.css'
-   , 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'
-   , 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
+   //, 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'
+   //, 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
 
    , 'https://cdn.jsdelivr.net/npm/zenscroll@4.0.2/zenscroll-min.js'
    , 'https://cdn.jsdelivr.net/npm/blueimp-load-image@2.19.0/js/load-image.all.min.js'
@@ -67,17 +67,17 @@ setInterval(function () {
 loadjs.ready(['style'], function () {// 'show' page, ex: unhide
     setupUserSzSc()
 
-    $('#off-canvas').offcanvas({
+    $('#navOpen').offcanvas({
         triggerButton: '#off-cbut' // btn to open offcanvas
     })
-    let offcanvas = $('#off-canvas').data('offcanvas-component')
+    let offcanvas = $('#navOpen').data('offcanvas-component')
 
     $('#off-cbut').click(function () {
         console.re.log('#offItems')
         offcanvas.open()
     })
-    $('#offItems').click(function () {
-        console.re.log('#offItems')
+    $('#navOpen').click(function () {
+        console.re.log('#navOpen')
         offcanvas.close()
     })
 
