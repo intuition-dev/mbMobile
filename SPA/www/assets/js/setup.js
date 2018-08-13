@@ -68,22 +68,21 @@ loadjs.ready(['style'], function () {// 'show' page, ex: unhide
     setupUserSzSc()
 
     $('#navOpen').offcanvas({
-        triggerButton: '#off-cbut' // btn to open offcanvas
-    })
-    let offcanvas = $('#navOpen').data('offcanvas-component')
+      triggerButton: '#off-cbut' // btn to open offcanvas
+   })
+   let offcanvas = $('#navOpen').data('offcanvas-component')
+   $('#off-cbut').click(function () {
+      console.re.log('#offItems')
+      offcanvas.open()
+   })
+   $('#navOpen').click(function () {
+      console.re.log('#navOpen')
+      offcanvas.close()
+   })
 
-    $('#off-cbut').click(function () {
-        console.re.log('#offItems')
-        offcanvas.open()
-    })
-    $('#navOpen').click(function () {
-        console.re.log('#navOpen')
-        offcanvas.close()
-    })
-
-    console.re.log('style done', Date.now() - _start)
-    $('.delayShowing').removeClass('delayShowing') // show
-    loadjs(ROOT + '/assets/router/spa-router.js')
+   console.re.log('style done', Date.now() - _start)
+   $('.delayShowing').removeClass('delayShowing') // show
+   loadjs(ROOT + '/assets/router/spa-router.js')
 
 })//ready
 
