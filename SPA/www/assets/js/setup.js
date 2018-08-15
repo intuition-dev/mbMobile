@@ -1,5 +1,5 @@
 
-$(document).ready(function () {
+$(document).ready(function() {
     // are we running in native app or in a browser?
     window.isphone = false
     if (document.URL.indexOf("http://") === -1
@@ -16,21 +16,21 @@ $(document).ready(function () {
 })
 
 loadjs([
-   'https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
+    'https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
 
-   , 'https://use.fontawesome.com/releases/v5.2.0/js/solid.js'
-   , 'https://use.fontawesome.com/releases/v5.2.0/js/fontawesome.js'
-   , 'https://cdn.jsdelivr.net/npm/js-offcanvas@1.2.6/dist/_js/js-offcanvas.pkgd.js'
-   , 'https://cdn.jsdelivr.net/npm/js-offcanvas@1.2.6/dist/_css/prefixed/js-offcanvas.css'
-   , ROOT + '/assets/css/gridforms/gridforms.css'
-   //, 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'
-   //, 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
 
-   , 'https://cdn.jsdelivr.net/npm/zenscroll@4.0.2/zenscroll-min.js'
-   , 'https://cdn.jsdelivr.net/npm/blueimp-load-image@2.19.0/js/load-image.all.min.js'
-   , 'https://cdn.jsdelivr.net/npm/is_js@0.9.0/is.min.js'
 
-   , 'https://cdn.rawgit.com/terrylinooo/jquery.disableAutoFill/92cb6f86/src/jquery.disableAutoFill.js'
+    , 'https://cdn.jsdelivr.net/npm/js-offcanvas@1.2.6/dist/_js/js-offcanvas.pkgd.js'
+    , 'https://cdn.jsdelivr.net/npm/js-offcanvas@1.2.6/dist/_css/prefixed/js-offcanvas.css'
+    , ROOT + '/assets/css/gridforms/gridforms.css'
+    //, 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'
+    //, 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
+
+    , 'https://cdn.jsdelivr.net/npm/zenscroll@4.0.2/zenscroll-min.js'
+    , 'https://cdn.jsdelivr.net/npm/blueimp-load-image@2.19.0/js/load-image.all.min.js'
+    , 'https://cdn.jsdelivr.net/npm/is_js@0.9.0/is.min.js'
+
+    , 'https://cdn.rawgit.com/terrylinooo/jquery.disableAutoFill/92cb6f86/src/jquery.disableAutoFill.js'
 
 ], 'cssJs')
 
@@ -43,20 +43,20 @@ function cssLoaded() {// called by the style sheet in layout
     loadjs.done('css')
 }
 
-loadjs.ready(['css', 'device', 'cssJs'], function () {
+loadjs.ready(['css', 'device', 'cssJs'], function() {
     loadjs.done('style')
 })
 
 let _scSz = true
 function setupUserSzSc() {
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         _scSz = true
     })
-    $(window).resize(function () {
+    $(window).resize(function() {
         _scSz = true
     })
 }//()
-setInterval(function () {
+setInterval(function() {
     if (_scSz) {
         _scSz = false
         userSzSc()
@@ -64,25 +64,25 @@ setInterval(function () {
 }, 150)
 
 // usage: ////////////////////////////////////////////////////////////////////
-loadjs.ready(['style'], function () {// 'show' page, ex: unhide
+loadjs.ready(['style'], function() {// 'show' page, ex: unhide
     setupUserSzSc()
 
     $('#navOpen').offcanvas({
-      triggerButton: '#off-cbut' // btn to open offcanvas
-   })
-   let offcanvas = $('#navOpen').data('offcanvas-component')
-   $('#off-cbut').click(function () {
-      console.re.log('#offItems')
-      offcanvas.open()
-   })
-   $('#navOpen').click(function () {
-      console.re.log('#navOpen')
-      offcanvas.close()
-   })
+        triggerButton: '#off-cbut' // btn to open offcanvas
+    })
+    let offcanvas = $('#navOpen').data('offcanvas-component')
+    $('#off-cbut').click(function() {
+        console.re.log('#offItems')
+        offcanvas.open()
+    })
+    $('#navOpen').click(function() {
+        console.re.log('#navOpen')
+        offcanvas.close()
+    })
 
-   console.re.log('style done', Date.now() - _start)
-   $('.delayShowing').removeClass('delayShowing') // show
-   loadjs(ROOT + '/assets/router/spa-router.js')
+    console.re.log('style done', Date.now() - _start)
+    $('.delayShowing').removeClass('delayShowing') // show
+    loadjs(ROOT + '/assets/router/spa-router.js')
 
 })//ready
 
