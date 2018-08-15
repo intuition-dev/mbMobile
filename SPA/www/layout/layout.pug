@@ -36,7 +36,12 @@ html
                   a.navItem.is-hidden-mobile(href= ROOT + '/screens/scrA') One
                   a.navItem.is-hidden-mobile(href= ROOT + '/screens/scrB') Two
                   a#off-cbut.js-offcanvas-trigger( href='#navOpen')
-                     i#bars.bord.is-hidden-desktop.fas.fa-bars(style='color:white')
+                     #bars.bord.is-hidden-desktop(style='color:white')
+                        .bord.show-lg(style='color:white')
+                           svg.feather(width='24', height='24', viewBox='0 0 24 24')
+                              line(x1='3', y1='12', x2='21', y2='12')
+                              line(x1='3', y1='6', x2='21', y2='6')
+                              line(x1='3', y1='18', x2='21', y2='18')
 
          #router
             block main
