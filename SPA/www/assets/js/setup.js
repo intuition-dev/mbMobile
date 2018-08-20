@@ -22,7 +22,7 @@ loadjs([
 
     , 'https://cdn.jsdelivr.net/npm/js-offcanvas@1.2.6/dist/_js/js-offcanvas.pkgd.js'
     , 'https://cdn.jsdelivr.net/npm/js-offcanvas@1.2.6/dist/_css/prefixed/js-offcanvas.css'
-    , ROOT + '/assets/css/gridforms/gridforms.css'
+    , ROOT + 'assets/css/gridforms/gridforms.css'
     //, 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'
     //, 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
 
@@ -82,7 +82,7 @@ loadjs.ready(['style'], function() {// 'show' page, ex: unhide
 
     console.re.log('style done', Date.now() - _start)
     $('.delayShowing').removeClass('delayShowing') // show
-    loadjs(ROOT + '/assets/router/spa-router.js')
+    loadjs(ROOT + 'assets/router/spa-router.js')
 
 })//ready
 
