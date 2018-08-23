@@ -6,6 +6,7 @@ pages:
 
    - CSS Fix: css.md
    - Blog Example: blog.md
+   - Master Detail: masterDetail.md
    - SPA-Router: router.md
    - App Store: appStore.md
    - More: more.md
