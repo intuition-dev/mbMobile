@@ -1,24 +1,38 @@
 extends /layout/layout
 //- App Shell
 
-
 block main
 
    .pad Oh Hi1
 
-   .pad
-      input#date1 
-      //(readonly='')
+   #cal1.pad
+      p Date:
+         input#date1(readonly='')
+      br
+      p Time:
+         input#time1(readonly='')
 
+   //so it has room to open
+   style.
+      #cal1 {
+         height: 300vh; 
+      }
    //link(href= ROOT + 'assets/css/debug.css', rel='stylesheet')
 
    script.
-      console.log('pg')
+      console.log('pgC')
       loadjs.ready(['cssJs','device'], initCal)
+
       function initCal() {
+         $('#date1').pickadate({
+            editable: false
+         })
+         $('#time1').pickatime({
+            editable: false,
+            interval: 90,
+            disable: [  true,
+               [13,30], [16,30]
+            ]
+         })
 
-         console.log('cal cal')
-
-         $('#date1').pickdate()
-
-      }
+      }//()
