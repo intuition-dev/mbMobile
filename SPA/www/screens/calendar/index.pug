@@ -6,4 +6,19 @@ block main
 
    .pad Oh Hi1
 
+   .pad
+      input#date1 
+      //(readonly='')
+
    //link(href= ROOT + 'assets/css/debug.css', rel='stylesheet')
+
+   script.
+      console.log('pg')
+      loadjs.ready(['cssJs','device'], initCal)
+      function initCal() {
+
+         console.log('cal cal')
+
+         $('#date1').pickdate()
+
+      }
