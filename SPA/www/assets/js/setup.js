@@ -84,7 +84,7 @@ loadjs.ready(['style'], function() {// 'show' page, ex: unhide
 
     console.re.log('style done', Date.now() - _start)
     $('.delayShowing').removeClass('delayShowing') // show
-    loadjs(ROOT + 'assets/router/spa-router.js')
+    loadjs(ROOT + 'assets/router/spa-router.js', function() {console.log('router')})
 
 })//ready
 
