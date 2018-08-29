@@ -4,7 +4,7 @@ repo_url: http://MetaBake.org
 pages:
    - Home/ B.M.: index.md
 
-   - CSS Fix: css.md
+   - CSS: css.md
    - Blog Example: blog.md
    - Master Detail: masterDetail.md
    - SPA-Router: router.md
