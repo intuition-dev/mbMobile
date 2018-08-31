@@ -33,14 +33,20 @@ script.
       }
    ]
 
+
    loadjs([
-      'https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css'
-      ,'https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js'
+     'https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css'
+   , 'https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js'
+   , 'https://cdn.datatables.net/fixedheader/3.1.5/css/fixedHeader.dataTables.min.css'
+   , 'https://cdn.datatables.net/select/1.2.7/css/select.dataTables.min.css'
+
    ], 'dwjs')//load
    loadjs.ready('dwjs', function () {
       loadjs([
-         'https://cdn.datatables.net/select/1.2.6/js/dataTables.select.min.js'
+          'https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js'
+         ,'https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js'
       ], 'dwjs2')//load
+   })//ready//load
    })//ready
    loadjs.ready(['dwjs2'], function () {
 
