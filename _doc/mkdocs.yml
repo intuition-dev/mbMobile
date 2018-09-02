@@ -8,11 +8,11 @@ pages:
    - Blog Example: blog.md
    - Master Detail: masterDetail.md
    - SPA-Router: router.md
+
    - Electron: elect.md
    - PhoneGap: phoneGap.md
    - More: more.md
 
-   - Using with Netlify: netlify.md
    - Next Step: next.md
    - Resources: res.md
    - About: about.md

@@ -4,14 +4,6 @@
 - [SPA](https://youtu.be/LHFjjDPlU3A)
 
 
-Have you heard of mobile first? You can also 'PhoneGap' first, with SPA.
-
-Porting an app could mean some search and replace, especially for teams that don't have SPA experience.
-Here is a conversion check list:
-- resources must be on an absolute path in the cloud (ex: http://bla.mydomain.net/foo/my.js )
-- SPA
-- handle the device ready event
-- load 'cordova.js'
 
 1. You should have a SPA web app deployed in the cloud before this step. And it will be a lot easier if the web app files are mounted, easier to edit. Test that your debugger(eg. console.re) is working with any regular web page.
 
