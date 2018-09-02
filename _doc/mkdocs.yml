@@ -8,7 +8,8 @@ pages:
    - Blog Example: blog.md
    - Master Detail: masterDetail.md
    - SPA-Router: router.md
-   - App Store: appStore.md
+   - Electron: elect.md
+   - PhoneGap: phoneGap.md
    - More: more.md
 
    - Using with Netlify: netlify.md
