@@ -1,5 +1,6 @@
-// SPA router ORIG 6 18.6.25 
-// SPA router ORIG 9.2
+// ORIG
+
+// SPA router 9.2
 //////////////////////////////////////////////////////////////////////////////
 // License LGPL v2.1, Copyright Metabake.org | Wolfgang | Cekvenich
 
@@ -7,7 +8,7 @@
 // and https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
 
 $(window).on('popstate', function (e) {//back/forward button
-   console.re.log(' popstate' + e.originalEvent.state)
+   console.log(' popstate' + e.originalEvent.state)
    let state = e.originalEvent.state
    if (state !== null) {
       e.preventDefault()
@@ -36,7 +37,7 @@ $(document).on('click', 'a', function (e) { //over-ride links
 let pg = window.location.href
 try {
    history.pushState({ url: pg }, '', pg)
-} catch (err) { console.re.log('no push state on file//', err) }
+} catch (err) { console.log('no push state on file//', err) }
 localStorage.setItem('oldUrl', pg)
 
 let SPArouter = {
@@ -51,25 +52,25 @@ let SPArouter = {
    }
 
    , loadHtml: function (toHref, fromHref, back) { //triggered, but function can be called directly also
-      console.re.log('loaded', toHref)
+      console.log('loaded', toHref)
       if (!back) {
          try {
             history.pushState({ url: toHref }, '', toHref)
-         } catch (err) { console.re.log('no push state on file//') }
+         } catch (err) { console.log('no push state on file//') }
       }
 
       //fire NAV event
       SPArouter.navigated.dispatch({ type: SPArouter.NAV, toHref: toHref, fromHref: fromHref, back: back })
 
       let url = SPArouter.appendQueryString(toHref, { 'SPArouter': "\"" + SPArouter.zone + "\"" })
-      console.re.log(url)
-      fetch(url, {
+      console.log(url)
+      axios.get(url, {
          method: 'get',
          credentials: 'same-origin'
       }).then(function (response) {
          if (!response.ok) {
-            console.re.log('not ok')
-            console.re.log(response)
+            console.log('not ok')
+            console.log(response)
             throw Error(response.statusText)
          }
          return response.text()
@@ -79,13 +80,13 @@ let SPArouter = {
          document.title = title
 
          let newContent = $html.find(SPArouter.zone).html()
-         //console.re.log(newContent)
+         //console.log(newContent)
 
          //fire new PAGE received event
          SPArouter.navigated.dispatch({ type: SPArouter.PAGE, toHref: toHref, fromHref: fromHref, newContent: newContent, $html: $html, back: back })
 
       }).catch(function (er) {
-         console.re.log(er)
+         console.log(er)
          SPArouter.navigated.dispatch({ type: SPArouter.ERR, err: er })
       })
    }
@@ -96,7 +97,7 @@ let SPArouter = {
       for (let key in queryVars) {
          try {
             queryStringParts.push(key + '=' + queryVars[key])
-         } catch (err) { 'q', console.re.log(err) }
+         } catch (err) { 'q', console.log(err) }
       }
       let queryString = queryStringParts.join('&')
       return url + firstSeparator + queryString;
@@ -104,15 +105,15 @@ let SPArouter = {
 }
 // /////////////////////////////////////////////////////////////////////////////////////
 
-console.re.log('spa router')
+console.log('spa router')
 // use | override:
 SPArouter.onNavigate(function (evt) {
    if (evt.type == SPArouter.NAV) { //start
-      console.re.log('router NAV')
+      console.log('router NAV')
       //$('#router').fadeTo(100,.2)
    }
    else if (evt.type == SPArouter.PAGE) {
-      console.re.log('router PAGE')
+      console.log('router PAGE')
       $(SPArouter.zone).html(evt.newContent)
       //$('#router').fadeTo(100,1)
       window.scrollTo(0, 0)
