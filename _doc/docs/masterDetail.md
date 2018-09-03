@@ -13,7 +13,7 @@ Also use resources link on the left, Chat/Form/Support and check out [DataTables
 - Click an item on a list to get edit view
 - Edit and save, and see the new list.
 
-You'll leverage Firestore and write Riot tags (components) in Pug.
+You'll leverage Firestore  and write Riot tags (components) in Pug.
 
 
 ### Exceptions
