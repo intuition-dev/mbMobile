@@ -3,6 +3,7 @@
    "productName": "ElBuild",
    "version": "0.0.1",
    "main": "init/main.js",
+   "homepage": "./",
    "scripts": {
       "start": "electron .",
       "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=res/icon.icns --prune=true --out=release-builds",
@@ -13,6 +14,8 @@
    },
    "devDependencies": {
       "electron-packager": "^12.1.1",
-      "electron": "^2.0.7"
+      "electron": "^2.0.7",
+      "electron-builder": "^20.28.3"
+      
    }
 }
