@@ -1,2 +1,5 @@
+basedir: .
+
+ROOT: './'
 
 pretty: true

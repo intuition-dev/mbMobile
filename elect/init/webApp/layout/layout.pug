@@ -1,0 +1,77 @@
+doctype html
+html
+   head
+      -// https://stackoverflow.com/questions/32621988/electron-jquery-is-not-defined/37480521#37480521
+      script.
+         try {
+            window.nodeRequire = require; 
+            delete window.require;
+            delete window.exports; delete window.module;
+            console.log('fixed')
+         } catch(err) {
+            console.log('fixed?', err)
+         }
+
+      script.
+         ROOT = '#{ROOT}' //- sets global pug and .js from dat.yaml
+         console.log('root','#{ROOT}')
+         let _start=Date.now()
+         window.onerror = function (msg, url, lineNo, columnNo, error) {
+            console.log(msg, url, lineNo)
+            return false
+         }
+      
+      meta(charset='utf-8')
+      
+      meta(name='viewport', content='width=device-width, initial-scale=1')
+      title Metabake.org
+      link(rel='shortcut icon', href= ROOT + 'assets/favicon.png', type='image/x-icon')
+      script(src='https://cdn.jsdelivr.net/npm/loadjs@3.5.4/dist/loadjs.js')
+      script(src='https://cdn.jsdelivr.net/npm/riot@3.11.2/riot.min.js')
+      script(src='https://unpkg.com/axios@0.18.0/dist/axios.min.js')
+
+      style.
+            .delayShowing { opacity: 0.01; }
+
+   body
+      script(src='https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js')
+      script(src= ROOT + 'assets/js/setup.js')
+
+      -//top
+      #head.delayShowing.flex.edge.bblack.white.pad
+         h3#navbarBrand.left.navbar-brand.text-bold El App
+         .right
+            button#butLogOut.btn Exit
+
+      .columns.delayShowing
+         #menu.column.bblack.white
+            ul.nav
+
+               li.nav-item
+                  a(href= '/fROOT' + '/') Home
+                     svg.nav-ico.feather(viewBox='0 0 24 24')
+                        polyline(points='22 12 18 12 15 21 9 3 6 12 2 12')
+               li.nav-item
+                  a(href= '/fROOT' + '/screen/scrA') ScrA
+                     svg.nav-ico.feather(viewBox='0 0 24 24')
+                        polyline(points='22 12 18 12 15 21 9 3 6 12 2 12')
+               li.nav-item
+                  a(href='/fROOT' + '/screen/scrB') ScrB
+                     svg.nav-ico.feather(viewBox='0 0 24 24')
+                        polyline(points='22 12 18 12 15 21 9 3 6 12 2 12')
+
+         .column#router
+            block main
+      script.
+
+      link(href= ROOT + 'assets/css/spectre.css', onload='cssLoaded()', rel='stylesheet')
+      link(href= ROOT + 'assets/css/nav.css' , rel='stylesheet')
+
+      link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
+      link(href= ROOT + 'assets/css/main.css', rel='stylesheet')
+      script.
+         function userSzSc() {
+            console.log('resize|scroll')
+         }
+
+   //link(href= ROOT + 'assets/css/debug.css', rel='stylesheet')
