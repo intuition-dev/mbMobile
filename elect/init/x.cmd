@@ -1,2 +1,0 @@
-call mbake .
-npm start
