@@ -6,7 +6,6 @@ pages:
 
    - CSS: css.md
    - Blog Example: blog.md
-   - Master Detail: masterDetail.md
    - SPA-Router: router.md
 
    - Electron: elect.md
