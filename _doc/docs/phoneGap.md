@@ -5,7 +5,7 @@
 
 
 
-1. You should have a SPA web app deployed in the cloud before this step. And it will be a lot easier if the web app files are mounted, easier to edit. Test that your debugger(eg. console.re) is working with any regular web page.
+1. After you develop an electron up, it is easier to do phonegap.
 
 2. Make sure your ROOT in dat.yaml points to the url. Also make sure you bring patience, PhoneGap takes a bit of time to get going the first time you learn it - like anything new.
 

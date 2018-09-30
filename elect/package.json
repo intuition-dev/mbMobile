@@ -2,7 +2,7 @@
    "name": "ElBuild",
    "productName": "ElBuild",
    "version": "0.0.1",
-   "main": "init/main.js",
+   "main": "app/index.js",
    "homepage": "./",
    "scripts": {
       "start": "electron .",

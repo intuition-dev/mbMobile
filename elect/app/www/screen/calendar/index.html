@@ -12,8 +12,8 @@
       }
       
     </script>
-    <script>ROOT = './' //- sets global pug and .js from dat.yaml
-      console.log('root','./')
+    <script>ROOT = '/' //- sets global pug and .js from dat.yaml
+      console.log('root','/')
       let _start=Date.now()
       window.onerror = function (msg, url, lineNo, columnNo, error) {
          console.log(msg, url, lineNo)
@@ -24,7 +24,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Metabake.org</title>
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/loadjs@3.5.4/dist/loadjs.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/riot@3.12.0/riot.min.js"></script>
     <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
@@ -36,7 +36,7 @@
   <body>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pickadate@3.5.6/lib/picker.js"></script>
-    <script src="./assets/js/setup.js"></script>
+    <script src="/assets/js/setup.js"></script>
     <div class="delayShowing flex edge bblack white pad" id="head">
       <h3 class="left navbar-brand text-bold" id="navbarBrand">El App</h3>
       <div class="right">
@@ -61,14 +61,51 @@
         </ul>
       </div>
       <div class="column" id="router">
-        <div class="pad">Oh Hi</div>
+        <div class="pad">Oh Hi1</div>
+        <div class="pad" id="cal1">
+          <p>Date:
+            <input id="date1" readonly="">
+          </p><br>
+          <p>Time:
+            <input id="time1" readonly="">
+          </p>
+        </div>
+        <!--so it has room to open-->
+        <style>
+          #cal1 {
+             height: 300vh; 
+          }
+        </style>
+        <!--link(href= ROOT + 'assets/css/debug.css', rel='stylesheet')-->
+        <script>
+          console.log('pgC')
+          loadjs.ready(['cssJs','device'], initCal)
+          
+          function initCal() {
+             $('#date1').pickadate({
+                editable: false,
+                clear: ''
+             })
+             $('#time1').pickatime({
+                editable: false,
+                clear: '',
+                min: new Date(2015,3,20,10),
+                max: new Date(2015,7,14,20,30),
+                interval: 90,
+                disable: [  true,
+                   [14,30], [12+7,0]
+                ]
+             })
+          
+          }//()
+        </script>
       </div>
     </div>
     <script></script>
-    <link href="./assets/css/spectre.css" onload="cssLoaded()" rel="stylesheet">
-    <link href="./assets/css/nav.css" rel="stylesheet">
+    <link href="/assets/css/spectre.css" onload="cssLoaded()" rel="stylesheet">
+    <link href="/assets/css/nav.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="./assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
     <script>
       function userSzSc() {
          console.log('resize|scroll')

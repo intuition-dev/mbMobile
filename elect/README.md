@@ -1,16 +1,16 @@
 
 Video demo: [Video Demo](https://youtu.be/VelUBKcwbQY)
 
+You can run as http app if you have an http server, webroot is in app/www
+
 npm i # to setup
 
 npm start # to run
 
-
 To create an exe:
 npm run package-win
 
-
-WebApp is in /init/
+App is in /app
 
 Also contains page transition effects.
 

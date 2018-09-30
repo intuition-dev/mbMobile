@@ -6,7 +6,7 @@ function createWindow () {
    mainWindow.setMenu(null)
    mainWindow.setTitle('On hi')
 
-   mainWindow.loadFile('init/webApp/index.html')
+   mainWindow.loadFile('app/www/index.html')
 
    mainWindow.webContents.openDevTools()
    mainWindow.on('closed', function () {
