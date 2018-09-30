@@ -10,11 +10,11 @@
       "package-win": "electron-packager . MyApp --overwrite --asar=true --platform=win32 --arch=ia32 --icon=res/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ElBuild\""
    },
    "dependencies": {
-      "mbake": "^3.9.2"
+      "mbake": "^4.10.02"
    },
    "devDependencies": {
-      "electron-packager": "^12.1.1",
-      "electron": "^2.0.7",
-      "electron-builder": "^20.28.3"
+      "electron-packager": ">=12.1.2",
+      "electron": ">=3.0.2",
+      "electron-builder": ">=20.28.4"
    }
 }
