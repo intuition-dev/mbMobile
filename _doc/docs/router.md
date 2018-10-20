@@ -1,6 +1,6 @@
 
 
-# SPA-router - Pillar 5
+# SPA-router - Pillar 7
 
 
 SPA is easy!
