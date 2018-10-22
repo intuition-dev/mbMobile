@@ -45,7 +45,7 @@ let SPArouter = {
    zone: '#router' //the content in your layout. The rest should be app shell from PWA.
    , NAV: '_navigation-start'
    , PAGE: '_newpage-loaded'
-   
+
    , navigated: new signals.Signal()
 
    , onNavigate: function (foo) {
@@ -101,7 +101,7 @@ function han(a) {
    console.log(a)
 }
 addEventListener('nav', han)
-dispatchEvent(new CustomEvent('nav', {detail: 'b'}))
+dispatchEvent(new CustomEvent('nav', {detail: {b:'b'}} ))
 
 // default: /////////////////////////////////////////////////////////////////////////////////////
 console.log('spa router')
