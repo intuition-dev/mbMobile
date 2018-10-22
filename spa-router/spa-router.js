@@ -46,11 +46,13 @@ let SPArouter = {
    , NAV: '_navigation-start'
    , PAGE: '_newpage-loaded'
 
+   /* 
    , navigated: new signals.Signal()
 
    , onNavigate: function (foo) {
       SPArouter.navigated.add(foo)
    }
+   */
 
    , loadHtml: function (toHref, fromHref, back) { //triggered, but function can be called directly also
       console.log('loaded', toHref)
@@ -61,7 +63,7 @@ let SPArouter = {
       }
 
       //fire NAV event
-      SPArouter.navigated.dispatch({ type: SPArouter.NAV, toHref: toHref, fromHref: fromHref, back: back })
+      disE({ type: SPArouter.NAV, toHref: toHref, fromHref: fromHref, back: back })
 
       let url = SPArouter.appendQueryString(toHref, { 'SPArouter': "\"" + SPArouter.zone + "\"" })
       console.log(url)
@@ -76,11 +78,11 @@ let SPArouter = {
          //console.log(newContent)
 
          //fire new PAGE received event
-         SPArouter.navigated.dispatch({ type: SPArouter.PAGE, toHref: toHref, fromHref: fromHref, newContent: newContent, $html: $html, back: back })
+         disE({ type: SPArouter.PAGE, toHref: toHref, fromHref: fromHref, newContent: newContent, $html: $html, back: back })
 
       }).catch(function (er) {
          console.log('error', er)
-         SPArouter.navigated.dispatch({ type: SPArouter.ERR, err: er })
+         disE({ type: SPArouter.ERR, err: er })
       })
    }
 
@@ -97,27 +99,28 @@ let SPArouter = {
    }
 }
 
-function han(a) {
-   console.log(a)
+addEventListener('nav', onNavigate)
+
+function disE(msg) {
+   dispatchEvent(new CustomEvent('nav', { detail: msg } ) )
 }
-addEventListener('nav', han)
-dispatchEvent(new CustomEvent('nav', {detail: {b:'b'}} ))
 
 // default: /////////////////////////////////////////////////////////////////////////////////////
 console.log('spa router')
 // use | override:
-SPArouter.onNavigate(function (evt) {
-   if (evt.type == SPArouter.NAV) { //start
+function onNavigate (evt) {
+   console.log(evt)
+   if (evt.detail.type == SPArouter.NAV) { //start
       console.log('router NAV')
       //$('#router').fadeTo(100,.2)
    }
-   else if (evt.type == SPArouter.PAGE) {
+   else if (evt.detail.type == SPArouter.PAGE) {
       console.log('router PAGE')
-      $(SPArouter.zone).html(evt.newContent)
+      $(SPArouter.zone).html(evt.detail.newContent)
       //$('#router').fadeTo(100,1)
       window.scrollTo(0, 0)
    }
-})
+}
 
 // fROOT //////////////////////////////////////////////
 window.fROOT = location.toString().replace(location.search, '') // magic resource fix to know the first ROOT for SPA
