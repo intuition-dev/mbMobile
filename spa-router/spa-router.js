@@ -1,11 +1,10 @@
-// ORIG
+// ORIG here, others are copies
 
-// SPA router v9.3
+// SPA router v4.11.15
 ///////////////////////////////////////////////////////////////////
 // License LGPL v2.1, Copyright Metabake.org | Wolfgang | Cekvenich
 
-// requires jquery, https://unpkg.com/axios@0.19.0-beta.1/dist/axios.min.js
-// and https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
+// Requires jQuery, Axios and Signals
 
 $(window).on('popstate', function (e) {//back/forward button
    console.log(' popstate' + e.originalEvent.state)
