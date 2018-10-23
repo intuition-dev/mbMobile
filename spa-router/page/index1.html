@@ -12,10 +12,28 @@
 
       <div id='router'>
          <p>oh hi 1</p>
-         <script>console.log('1 sc')</script>
+         <script>console.log('1 sc')
+         </script>
       </div>
       <footer>
          <p>f</p>
       </footer>
+   <script>
+
+
+// SPA Ex:
+SPArouter = new _SPArouter(onNavigate)
+function onNavigate (evt) {
+   if (evt.detail.type == SPArouter.NavSTART) { //start
+      //$('#router').fadeTo(100,.2)
+   }
+   else if (evt.detail.type == SPArouter.NavDONE) {
+      $(SPArouter.zone).html(evt.detail.newContent)
+      //$('#router').fadeTo(100,1)
+      window.scrollTo(0, 0)
+   }
+}
+
+</script>
    </body>
 </html>
