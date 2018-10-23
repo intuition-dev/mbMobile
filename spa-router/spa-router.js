@@ -46,14 +46,6 @@ let SPArouter = {
    , NAV: '_navigation-start'
    , PAGE: '_newpage-loaded'
 
-   /* 
-   , navigated: new signals.Signal()
-
-   , onNavigate: function (foo) {
-      SPArouter.navigated.add(foo)
-   }
-   */
-
    , loadHtml: function (toHref, fromHref, back) { //triggered, but function can be called directly also
       console.log('loaded', toHref)
       if (!back) {
