@@ -1,45 +1,10 @@
-class _SPArouter {
-    constructor(foo) {
-        this.zone = '#router';
-        this.NavSTART = '_nav-start';
-        this.NavDONE = '_nav-loaded';
-        this.ERR = '_nav-ERR';
-        addEventListener('nav', foo);
-        const thiz = this;
-        $(window).on('popstate', function (e) {
-            let state = e.originalEvent.state;
-            if (state !== null) {
-                e.preventDefault();
-                let oldUrl = localStorage.getItem('oldUrl');
-                localStorage.setItem('oldUrl', state.url);
-                thiz.loadHtml(state.url, oldUrl, true);
-            }
-        });
-        $(document).on('click', 'a', function (e) {
-            let anchor = $(e.currentTarget);
-            let href = anchor.prop('href');
-            console.log(href);
-            if (!href || href.length < 1) {
-                return;
-            }
-            if (anchor.is('.norouter'))
-                return;
-            e.preventDefault();
-            let fromHref = window.location.href;
-            localStorage.setItem('oldUrl', href);
-            thiz.loadHtml(href, fromHref, null);
-        });
-        let pg = window.location.href;
-        try {
-            history.pushState({ url: pg }, '', pg);
-        }
-        catch (err) {
-            console.log('no push state on file//', err);
-        }
-        localStorage.setItem('oldUrl', pg);
-        this.fROOTfix();
-    }
-    loadHtml(toHref, fromHref, back_) {
+
+// SPA router v4.11.18
+// License LGPL v2.1, Copyright Metabake.org | Wolfgang | Cekvenich
+// Requires jQuery, Axios
+
+class SPArouter {
+    static loadHtml(toHref, fromHref, back_) {
         if (!back_) {
             try {
                 history.pushState({ url: toHref }, '', toHref);
@@ -48,21 +13,20 @@ class _SPArouter {
                 console.log('no push state on file//');
             }
         }
-        this.disE({ type: this.NavSTART, toHref: toHref, fromHref: fromHref, back: back_ });
-        let url = this.appendQueryString(toHref, { 'SPArouter': "\"" + this.zone + "\"" });
-        const thiz = this;
+        SPArouter.disE({ type: SPArouter.NavSTART, toHref: toHref, fromHref: fromHref, back: back_ });
+        let url = SPArouter.appendQueryString(toHref, { 'SPArouter': "\"" + SPArouter.zone + "\"" });
         axios.get(url).then(function (txt) {
             let $html = $('<html></html>').append($(txt.data));
             let title = $html.find('title').first().text();
             document.title = title;
-            let newContent = $html.find(thiz.zone).html();
-            thiz.disE({ type: thiz.NavDONE, toHref: toHref, fromHref: fromHref, newContent: newContent, $html: $html, back: back_ });
+            let newContent = $html.find(SPArouter.zone).html();
+            SPArouter.disE({ type: SPArouter.NavDONE, toHref: toHref, fromHref: fromHref, newContent: newContent, $html: $html, back: back_ });
         }).catch(function (er) {
             console.log('error', er);
-            thiz.disE({ type: thiz.ERR, err: er });
+            SPArouter.disE({ type: SPArouter.ERR, err: er });
         });
     }
-    appendQueryString(url, queryVars) {
+    static appendQueryString(url, queryVars) {
         let firstSeparator = (url.indexOf('?') == -1 ? '?' : '&');
         let queryStringParts = new Array();
         for (let key in queryVars) {
@@ -76,10 +40,10 @@ class _SPArouter {
         let queryString = queryStringParts.join('&');
         return url + firstSeparator + queryString;
     }
-    disE(msg) {
+    static disE(msg) {
         dispatchEvent(new CustomEvent('nav', { detail: msg }));
     }
-    fROOTfix() {
+    static fROOTfix() {
         let fROOT = location.toString().replace(location.search, '');
         let ii = fROOT.lastIndexOf(':');
         fROOT = fROOT.substring(ii + 1);
@@ -103,4 +67,43 @@ class _SPArouter {
                     $(this).attr('href', this.href + '/index.html');
             });
     }
+    static init(foo) {
+        addEventListener('nav', foo);
+        $(window).on('popstate', function (e) {
+            let state = e.originalEvent.state;
+            if (state !== null) {
+                e.preventDefault();
+                let oldUrl = localStorage.getItem('oldUrl');
+                localStorage.setItem('oldUrl', state.url);
+                SPArouter.loadHtml(state.url, oldUrl, true);
+            }
+        });
+        $(document).on('click', 'a', function (e) {
+            let anchor = $(e.currentTarget);
+            let href = anchor.prop('href');
+            console.log(href);
+            if (!href || href.length < 1) {
+                return;
+            }
+            if (anchor.is('.norouter'))
+                return;
+            e.preventDefault();
+            let fromHref = window.location.href;
+            localStorage.setItem('oldUrl', href);
+            SPArouter.loadHtml(href, fromHref, null);
+        });
+        let pg = window.location.href;
+        try {
+            history.pushState({ url: pg }, '', pg);
+        }
+        catch (err) {
+            console.log('no push state on file//', err);
+        }
+        localStorage.setItem('oldUrl', pg);
+        SPArouter.fROOTfix();
+    }
 }
+SPArouter.zone = '#router';
+SPArouter.NavSTART = '_nav-start';
+SPArouter.NavDONE = '_nav-loaded';
+SPArouter.ERR = '_nav-ERR';

@@ -6,15 +6,15 @@
 declare var $: any
 declare var axios: any
 
-class _SPArouter {
+class SPArouter {
 
-   zone =  '#router' //the content in your layout. The rest should be app shell from PWA.
+   static zone =  '#router' //the content in your layout. The rest should be app shell from PWA.
 
-   NavSTART= '_nav-start'
-   NavDONE= '_nav-loaded'
-   ERR= '_nav-ERR'
+   static NavSTART= '_nav-start'
+   static NavDONE= '_nav-loaded'
+   static ERR= '_nav-ERR'
 
-   loadHtml(toHref, fromHref, back_) { //triggered, but function can be called directly also
+   static loadHtml(toHref, fromHref, back_) { //triggered, but function can be called directly also
       //console.log('loaded', toHref)
       if (!back_) {
          try {
@@ -23,31 +23,30 @@ class _SPArouter {
       }
 
       //fire NAV event
-      this.disE({ type: this.NavSTART, toHref: toHref, fromHref: fromHref, back: back_ })
+      SPArouter.disE({ type: SPArouter.NavSTART, toHref: toHref, fromHref: fromHref, back: back_ })
 
-      let url = this.appendQueryString(toHref, { 'SPArouter': "\"" + this.zone + "\"" })
+      let url = SPArouter.appendQueryString(toHref, { 'SPArouter': "\"" + SPArouter.zone + "\"" })
       //console.log(url)
 
-      const thiz = this
       //   credentials: 'same-origin' 
       axios.get(url).then(function (txt) {
          let $html = $('<html></html>').append($(txt.data))
          let title = $html.find('title').first().text()
          document.title = title
 
-         let newContent = $html.find(thiz.zone).html()
+         let newContent = $html.find(SPArouter.zone).html()
          //console.log(newContent)
 
          //fire new PAGE received event
-         thiz.disE({ type: thiz.NavDONE, toHref: toHref, fromHref: fromHref, newContent: newContent, $html: $html, back: back_ })
+         SPArouter.disE({ type: SPArouter.NavDONE, toHref: toHref, fromHref: fromHref, newContent: newContent, $html: $html, back: back_ })
 
       }).catch(function (er) {
          console.log('error', er)
-         thiz.disE({ type: thiz.ERR, err: er })
+         SPArouter.disE({ type: SPArouter.ERR, err: er })
       })
    }//()
 
-   appendQueryString (url, queryVars) {
+   static appendQueryString (url, queryVars) {
       let firstSeparator = (url.indexOf('?') == -1 ? '?' : '&')
       let queryStringParts = new Array()
       for (let key in queryVars) {
@@ -59,11 +58,11 @@ class _SPArouter {
       return url + firstSeparator + queryString;
    }
 
-    disE(msg) {
+   static disE(msg) {
       dispatchEvent(new CustomEvent('nav', { detail: msg } ) )
    }
 
-    fROOTfix() { /* I forget why I need this */
+   static fROOTfix() { /* I forget why I need this */
 
       let fROOT = location.toString().replace(location.search, '') // magic resource fix to know the first ROOT for SPA
       let ii = fROOT.lastIndexOf(':')
@@ -93,10 +92,8 @@ class _SPArouter {
       })
    }//()
 
-    constructor(foo) {
+    static init(foo) {
       addEventListener('nav', foo)
-
-      const thiz = this
 
       $(window).on('popstate', function (e) {//back/forward button
          //console.log(' popstate' + e.originalEvent.state)
@@ -105,7 +102,7 @@ class _SPArouter {
             e.preventDefault()
             let oldUrl = localStorage.getItem('oldUrl')
             localStorage.setItem('oldUrl', state.url)
-            thiz.loadHtml(state.url, oldUrl, true)
+            SPArouter.loadHtml(state.url, oldUrl, true)
          }
       })
       
@@ -123,7 +120,7 @@ class _SPArouter {
          e.preventDefault()
          let fromHref = window.location.href
          localStorage.setItem('oldUrl', href)
-         thiz.loadHtml(href, fromHref, null)
+         SPArouter.loadHtml(href, fromHref, null)
       })
       
       let pg = window.location.href
@@ -133,7 +130,7 @@ class _SPArouter {
       
       localStorage.setItem('oldUrl', pg)
       
-      this.fROOTfix()
+      SPArouter.fROOTfix()
 
    }// init
 
