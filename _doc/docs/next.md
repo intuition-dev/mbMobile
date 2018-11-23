@@ -1,3 +1,3 @@
 # Next.
 
-Next step would be the 'Meta' project, at git.metabake.org.
+Next step would be the 'Meta' project, at git.metabake.net.
