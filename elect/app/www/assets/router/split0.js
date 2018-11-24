@@ -25,7 +25,7 @@ loadjs([
 
 */
 
-// http://github.com/cekvenich/www/tree/master/srv/webroot
+// http://github.com/Cekvenich/www/tree/master/srv/webroot
 
 console.log('split loaded')
 //====================================================================
