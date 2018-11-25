@@ -74,3 +74,11 @@ loadjs.ready(['style'], function () {// 'show' page, ex: unhide
 
    console.log('style done', Date.now() - _start)
 })//ready
+
+function disE(evtName, msg) {
+   dispatchEvent(new CustomEvent(evtName, { detail: msg }))
+}
+// eg
+addEventListener('bla', function(evt) {
+   console.log(evt.detail)
+})
