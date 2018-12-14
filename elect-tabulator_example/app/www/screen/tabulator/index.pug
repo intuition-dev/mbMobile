@@ -11,13 +11,10 @@ block main
             let apiService = new ApiService();
             apiService.getFeedData()
                .then(feed => {
-                  console.log('feed.data.articles', feed.data.articles);
-                  //- let tabledata = [
-                  //-    {id:1, email:"Oli Bob", name:"Oli Bob"}
-                  //- ];
+                  //console.log('feed.data.articles', feed.data.articles);
 
                   this.table = new Tabulator("#feed-table", {
-                     data:feed.data.articles,         // assign data to table
+                     data:feed.data.articles,// assign data to table
                      layout:"fitColumns",    // fit columns to width of table
                      columns:[               // Define Table Columns
                         {title:"id", field:"id", visible:false},
@@ -39,6 +36,5 @@ block main
                      },
                   });
                });
-
 
          });

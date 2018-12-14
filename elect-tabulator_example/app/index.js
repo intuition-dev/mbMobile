@@ -8,7 +8,7 @@ function createWindow () {
 
    mainWindow.loadFile('app/www/index.html')
 
-   mainWindow.webContents.openDevTools()
+   //mainWindow.webContents.openDevTools()
    mainWindow.on('closed', function () {
       mainWindow = null
    })
