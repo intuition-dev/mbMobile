@@ -85,7 +85,8 @@ li.nav-item {
    height: 60px;
    line-height: 60px;
    position: fixed;
-   width: 100vw;
+   // width: 100vw;
+   width: 192px;
 }
 #navbarBrand {
    margin-top: 5px;
@@ -105,7 +106,7 @@ li.nav-item {
 
 #router {
    width: calc( 100vw - 200px);
-   margin-top: 60px;
+   // margin-top: 60px;
    margin-left: 195px;
 }
 
@@ -146,7 +147,7 @@ svg {
 
 .table-custom {
    .tabulator-col, .tabulator-cell {
-      width: 50%!important;
+      width: 25%!important;
    }
    .tabulator-headers, .tabulator-row, .tabulator-table {
       width: 100%!important;

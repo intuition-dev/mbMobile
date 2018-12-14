@@ -113,7 +113,7 @@ li.nav-item {
   height: 60px;
   line-height: 60px;
   position: fixed;
-  width: 100vw; }
+  width: 192px; }
 
 #navbarBrand {
   margin-top: 5px; }
@@ -135,7 +135,6 @@ li.nav-item {
 
 #router {
   width: calc( 100vw - 200px);
-  margin-top: 60px;
   margin-left: 195px; }
 
 /* new TODO move to folders*/
@@ -174,7 +173,7 @@ svg {
     font-size: .6rem; }
 
 .table-custom .tabulator-col, .table-custom .tabulator-cell {
-  width: 50% !important; }
+  width: 25% !important; }
 
 .table-custom .tabulator-headers, .table-custom .tabulator-row, .table-custom .tabulator-table {
   width: 100% !important; }

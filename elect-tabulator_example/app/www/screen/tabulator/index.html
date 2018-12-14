@@ -52,33 +52,39 @@
         <div class="pad">
           <div class="table-custom" id="feed-table"></div>
           <script>
-            loadjs.ready(['cssJs'], function () {
+            loadjs.ready(['services'], function () {
+               let apiService = new ApiService();
+               apiService.getFeedData()
+                  .then(feed => {
+                     console.log('feed.data.articles', feed.data.articles);
+                     //- let tabledata = [
+                     //-    {id:1, email:"Oli Bob", name:"Oli Bob"}
+                     //- ];
             
-               let tabledata = [
-                  {id:1, email:"Oli Bob", name:"Oli Bob"}
-               ];
+                     this.table = new Tabulator("#feed-table", {
+                        data:feed.data.articles,         // assign data to table
+                        layout:"fitColumns",    // fit columns to width of table
+                        columns:[               // Define Table Columns
+                           {title:"id", field:"id", visible:false},
+                           {title:"Source", field:"source.name", align:"left"},
+                           {title:"Author", field:"author", align:"left"},
+                           {title:"Title", field:"title", align:"left"},
+                           {title:"Content", field:"content", align:"left"}
+                        ],
+                        rowClick:(e, row) => { // fill the form fields
+                           this.activeRow = row;
+                           var row = row.getData();
+                           window.rowUid = row.id;
+                           $('input[name="name"]').val(row.name);
+                           $('input[name="email"]').val(row.email);
             
-               this.table = new Tabulator("#feed-table", {
-                  //data:feed.data,         // assign data to table
-                  data:tabledata,         // assign data to table
-                  layout:"fitColumns",    // fit columns to width of table
-                  columns:[               // Define Table Columns
-                     {title:"id", field:"id", visible:false},
-                     {title:"Email", field:"email", align:"left"},
-                     {title:"Name", field:"name", align:"left"}
-                  ],
-                  rowClick:(e, row) => { // fill the form fields
-                     this.activeRow = row;
-                     var row = row.getData();
-                     window.rowUid = row.id;
-                     $('input[name="name"]').val(row.name);
-                     $('input[name="email"]').val(row.email);
+                           $('html, body').animate({ // scroll to form
+                               scrollTop: $("#editor-form").offset().top
+                           }, 500);
+                        },
+                     });
+                  });
             
-                     $('html, body').animate({ // scroll to form
-                         scrollTop: $("#editor-form").offset().top
-                     }, 500);
-                  },
-               });
             
             });
           </script>
@@ -96,6 +102,6 @@
       $('.delayShowing').removeClass('delayShowing') // show
       
     </script>
-  <!-- mB v4.12.19 on 2018-12-14T10:10:54.405Z --></body>
+  <!-- mB v4.12.19 on 2018-12-14T11:33:12.142Z --></body>
   <!--link(href= ROOT + 'assets/css/debug.css', rel='stylesheet')-->
 </html>

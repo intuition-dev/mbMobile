@@ -29,6 +29,14 @@ loadjs([
 
 ], 'cssJs')
 
+loadjs.ready(['cssJs'], function () {
+   
+   loadjs([
+      ROOT + 'assets/js/services.js'
+   ], 'services')
+
+});
+
 function onDeviceReady() { // nothing will work before this
    console.log('deviceready!')
    loadjs.done('device')
