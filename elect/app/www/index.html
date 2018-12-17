@@ -23,11 +23,12 @@
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Metabake.org</title>
+    <title>Metabake.net</title>
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/loadjs@3.5.4/dist/loadjs.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/riot@3.12.0/riot.min.js"></script>
-    <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/riot@3.13.2/riot.min.js"></script>
+    <script src="https://unpkg.com/axios@0.19.0-beta.1/dist/axios.min.js"></script>
+    <!--script(src='https://cdn.jsdelivr.net/npm/johnnydepp@0.0.3/dist/depp.min.js')-->
     <style>
       .delayShowing { opacity: 0.01; }
       
@@ -35,29 +36,16 @@
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pickadate@3.5.6/lib/picker.js"></script>
     <script src="./assets/js/setup.js"></script>
-    <div class="delayShowing flex edge bblack white pad" id="head">
-      <h3 class="left navbar-brand text-bold" id="navbarBrand">El App</h3>
-      <div class="right">
-        <button class="btn" id="butLogOut">Exit</button>
-      </div>
+    <!--top-->
+    <div class="delayShowing flex edge bblack pad" id="head">
+      <h3 class="left navbar-brand" id="navbarBrand">News <span>Feed</span></h3>
     </div>
     <div class="columns delayShowing">
       <div class="column bblack white" id="menu">
         <ul class="nav">
-          <li class="nav-item"><a href="/fROOT/">Home
-              <svg class="nav-ico feather" viewBox="0 0 24 24">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg></a></li>
-          <li class="nav-item"><a href="/fROOT/screen/dataTable">ScrD
-              <svg class="nav-ico feather" viewBox="0 0 24 24">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg></a></li>
-          <li class="nav-item"><a href="/fROOT/screen/calendar">ScrC
-              <svg class="nav-ico feather" viewBox="0 0 24 24">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg></a></li>
+          <li class="nav-item"><?xml version="1.0" ?><svg class="home-i" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path class="heroicon-ui" d="M13 20v-5h-2v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7.59l-.3.3a1 1 0 1 1-1.4-1.42l9-9a1 1 0 0 1 1.4 0l9 9a1 1 0 0 1-1.4 1.42l-.3-.3V20a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2zm5 0v-9.59l-6-6-6 6V20h3v-5c0-1.1.9-2 2-2h2a2 2 0 0 1 2 2v5h3z"/></svg><a href="/fROOT/">Home</a></li>
+          <li class="nav-item"><?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="92px" height="92px" viewBox="0 0 92 92" xml:space="preserve"><path id="XMLID_725_" d="M61.7 82.2c-.1 3-2.6 5.3-5.5 5.3H56c-3-.1-5.4-2.7-5.3-5.7.6-14.2-2.8-24.8-10.1-31.7C29 39.2 10.8 41 10.6 41c-3 .3-5.7-1.9-6.1-4.9-.3-3 1.8-5.7 4.9-6.1.9-.1 23.3-2.4 38.7 11.9 9.8 9.2 14.3 22.8 13.6 40.3zM18.5 60.9c-3.4 0-6.8 1.4-9.2 3.8-2.4 2.4-3.8 5.8-3.8 9.2s1.4 6.8 3.8 9.2c2.4 2.4 5.8 3.8 9.2 3.8 3.4 0 6.8-1.4 9.2-3.8 2.4-2.4 3.8-5.8 3.8-9.2s-1.4-6.8-3.8-9.2c-2.4-2.4-5.8-3.8-9.2-3.8zm48.6-38.7C44.2.9 10.8 4.7 9.3 4.8c-3 .4-5.2 3.1-4.8 6.1.4 3 3.1 5.2 6.1 4.8.3 0 29.8-3.3 49 14.5 12.1 11.2 17.7 28.5 16.7 51.5-.1 3 2.2 5.6 5.3 5.7h.2c2.9 0 5.4-2.3 5.5-5.3 1.2-26.2-5.6-46.4-20.2-59.9z"/><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description about="https://iconscout.com/legal#licenses" dc:title="feed" dc:description="feed" dc:publisher="Iconscout" dc:date="2017-09-24" dc:format="image/svg+xml" dc:language="en"><dc:creator><rdf:Bag><rdf:li>Amit Jakhu</rdf:li></rdf:Bag></dc:creator></rdf:Description></rdf:RDF></metadata></svg><a href="/fROOT/screen/tabulator">News</a></li>
         </ul>
       </div>
       <div class="column" id="router">
@@ -66,15 +54,15 @@
     </div>
     <script></script>
     <link href="./assets/css/spectre.css" onload="cssLoaded()" rel="stylesheet">
-    <link href="./assets/css/nav.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="./assets/css/main.css" rel="stylesheet">
     <script>
       function userSzSc() {
          console.log('resize|scroll')
       }
+      $('.delayShowing').removeClass('delayShowing') // show
       
     </script>
-  </body>
+  <!-- mB v4.12.19 on 2018-12-14T11:33:12.068Z --></body>
   <!--link(href= ROOT + 'assets/css/debug.css', rel='stylesheet')-->
 </html>

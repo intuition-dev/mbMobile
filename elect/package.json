@@ -1,6 +1,6 @@
 {
-   "name": "ElBuild",
-   "productName": "ElBuild",
+   "name": "TabulatorFeed",
+   "productName": "TabulatorFeed",
    "version": "0.0.1",
    "main": "app/index.js",
    "homepage": "./",
