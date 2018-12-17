@@ -18,22 +18,24 @@ $(document).ready(function () {
 loadjs([
    'https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
 
-   ,ROOT + 'assets/css/gridform.css'
-
-   //, 'https://cdn.jsdelivr.net/npm/zenscroll@4.0.2/zenscroll-min.js'
    , 'https://cdn.jsdelivr.net/npm/blueimp-load-image@2.19.0/js/load-image.all.min.js'
    , 'https://cdn.jsdelivr.net/npm/is_js@0.9.0/is.min.js'
 
-   , 'https://cdn.jsdelivr.net/npm/pickadate@3.5.6/lib/picker.date.js'
-   , 'https://cdn.jsdelivr.net/npm/pickadate@3.5.6/lib/picker.time.js'
-
-   , ROOT + 'assets/css/pickadate/classic.css'
-   , ROOT + 'assets/css/pickadate/classic.date.css'
-   , ROOT + 'assets/css/pickadate/classic.time.css'
+   , 'https://cdn.jsdelivr.net/npm/tabulator-tables@4.1.3/dist/js/tabulator.min.js'
+   , 'https://cdn.jsdelivr.net/npm/tabulator-tables@4.1.3/dist/css/tabulator.min.css'
+   , 'https://cdn.jsdelivr.net/npm/tabulator-tables@4.1.3/dist/css/tabulator_simple.min.css'
 
    , ROOT + 'assets/js/jquery.disableAutoFill.js'
 
 ], 'cssJs')
+
+loadjs.ready(['cssJs'], function () {
+   
+   loadjs([
+      ROOT + 'assets/js/services.js'
+   ], 'services')
+
+});
 
 function onDeviceReady() { // nothing will work before this
    console.log('deviceready!')
@@ -68,7 +70,7 @@ setInterval(function () {
 loadjs.ready(['style'], function () {// 'show' page, ex: unhide
    setupUserSzSc()
 
-   $('.delayShowing').removeClass('delayShowing') // show
+   //$('.delayShowing').removeClass('delayShowing') // show
 
    loadjs(ROOT + 'assets/router/spa-router.js')
 
