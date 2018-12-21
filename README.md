@@ -2,35 +2,51 @@
 - [Click for 'THE' B-M-SPA docs](http://doc.metabake.org/SPA/)
 
 
-## Less code = 10X faster web app development.
-### With Metabake's modern development approach, it is not about replacing your tech stack with another tech stack -- it is about eliminating it!
 
-# About Metabake
+## Low-code productivity for programmers via static generation; for Pug, Markdown and more; including dynamic data binding.
 
-Metabake.net is a development productivity suite. It should allow you to deliver 10 times faster then legacy development stacks/methodologies. We have found that - with Metabake.net; - the work of 6 developers over 6 months can be done by 3 developers in 3 weeks. We expect you to achieve the same productivity gains.
+Metabake mbake CLI lets you generate websites and dynamic webapps in Pug by leveraging low code pillars for high development productivity.
 
-How does open source Metabake deliver 10X faster and cheaper web app development? Not enough organizations are fully leveraging the new Serverless. With Serverless services like Firestore and S3 you get rid of **ALL** server-side and middleware development and operations. This is where up to 2/3 of your time and cost used to go. Gone!
+## Install
 
-On the client side (browser apps and mobile apps) Metabake does something similar: it eliminates much of the tech stack and reduces the amount of coding and complexity. How? In school textbooks you learned about 1st generation languages, 2nd generation languages and our current 3rd generation languages, such as JavaScript, PHP and Ruby. With each new generation we achieved huge productivity improvements. We consider 'Pug'--also used by Node/Express--a 4th generation language that helps gain an equally big jump in productivity. With Metabake we show you how to build complete applications in Pug. With this Less code approach we demonstrate much faster and cheaper web app and mobile app development.
+Easy to install
 
-The Metabake approach has 10 pillars that are the foundation for achieving mind-blowing development productivity gains. I'll just mention one more pillar here: automatic programming. You've probably heard of 'static site generators' like Hugo or Jekyll that people use to generate their web site or a blog. Automatic programming means using a similar generator to write your web app! This can get you to yet another level of productivity.
+```sh
+yarn global add mbake
+mbake
+```
 
-To learn more about the Metabake approach, including all 10 pillars and full examples, go to metabake.net. Or, to dive in right away, use the 'mbake CLI' from github.com/metabake as the first step into 10X faster web app development.
+## First Page
 
-#### Metabake productivity is based on three modules:
+Create file index.pug
+```pug
+header
+body
+    p Hello #{key1}
+```
+and create file dat.yaml
+```yaml
+key1: World
+```
 
-- mbake, a static site generation tool that runs locally;
-- B-M-SPA, curated technologies and techniques that help you build dynamic apps and mobile apps faster;
-- Meta, a bespoke cloud-based build and admin app infrastructure that helps deliver functionality to your clients more quickly.
+### Now make with mbake
 
-We benchmark against _LAMP_, _RAILS_, _MEAN_ and such. For example, LAMP is the technology WordPress was built on. Every 10 years or so technology gets 10 times better, which *forces* everyone to upgrade. Assembly was 10 times better than machine language. C/.js is 10 times better than Assembly. We believe that we found the answer on how to have a more productive team.
+```sh
+mbake .
+```
 
-So far, somehow, server-side rendered LAMP has dominated web deployments, with WordPress having some 30% of the World Wide Web. It is time to start displacing that.
+This will create index.html. 
 
-You can reinvest the time saved by using Metabake into a more interactive user experience (UX). Better UX is proven to lead into higher user engagement and better user retention.
+Of course you can use regular Pug syntax to include other Pug files; or Markdown. Metabake Markdown flavor includes CSS support:
+```pug
+    include:metaMD comment.md
+```
 
-# About B&M SPA
+## Home Page
 
-This section is about _B-M-SPA_, curated technologies and techniques that help you build dynamic apps and mobile apps faster. It assumes that you are familiar with the mbake project, as it builds on it. If you are not familiar with mbake, please go to [mbake docs](http://doc.metabake.org/mbake) and review.
+Examples include an admin module, a watcher module, SPA, Blog, Website, Slides, Dashboard, CRUD, PWA, Electron, Hybrid mobile apps, Cloud v2.0 via AWS|FireStore, RIOTjs and more. 
+Primary focus is high development productivity (via "low code") and being easy to learn. But it is also fully flexible to build any WebApp in any directory tree structure you like an use any CSS/SASS framework you like.
+Metabake supports CSS classes in Markdown, plus, because it uses Pug - it can also do any HTML layout. But Metabake is not static only - it fully supports and has examples and docs for dynamic apps.
 
-This project is named B-M-SPA for "Bricks, Mortar and Single-Page Applications". It contains building blocks for dynamic apps and mobile apps, and points at ways to to put them together. Writing a good SPA is the high art of app development - it is certainly a bit harder than writing regular webpages. If properly done - using Phonegap version 8+ - you can use a SPA as the core of a hybrid/cross-platform appstore app (iOS and Android) without loss of native capabilities such as device permissions.
+[Metabake.net](http://www.metabake.net)
+
