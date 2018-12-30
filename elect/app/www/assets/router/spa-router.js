@@ -1,7 +1,7 @@
 
 // SPA router v9.2
 //////////////////////////////////////////////////////////////////////////////
-// License LGPL v2.1, Copyright Metabake.net | Cekvenich
+// License LGPL v2.1, Copyright MetaBake.org | Cekvenich
 
 // requires jquery, https://unpkg.com/axios@0.19.0-beta.1/dist/axios.min.js
 // and https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
