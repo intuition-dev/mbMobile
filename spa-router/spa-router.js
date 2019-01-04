@@ -73,8 +73,8 @@ class SPArouter {
             let state = e.originalEvent.state;
             if (state !== null) {
                 e.preventDefault();
-                let oldUrl = localStorage.getItem('oldUrl');
-                localStorage.setItem('oldUrl', state.url);
+                let oldUrl = sessionStorage.getItem('oldUrl');
+                sessionStorage.setItem('oldUrl', state.url);
                 SPArouter.loadHtml(state.url, oldUrl, true);
             }
         });
@@ -89,7 +89,7 @@ class SPArouter {
                 return;
             e.preventDefault();
             let fromHref = window.location.href;
-            localStorage.setItem('oldUrl', href);
+            sessionStorage.setItem('oldUrl', href);
             SPArouter.loadHtml(href, fromHref, null);
         });
         let pg = window.location.href;
@@ -99,7 +99,7 @@ class SPArouter {
         catch (err) {
             console.log('no push state on file//', err);
         }
-        localStorage.setItem('oldUrl', pg);
+        sessionStorage.setItem('oldUrl', pg);
         SPArouter.fROOTfix();
     }
 }
