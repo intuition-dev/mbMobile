@@ -7,7 +7,7 @@
 // and https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
 
 $(window).on('popstate', function (e) {//back/forward button
-   console.log(' popstate' + e.originalEvent.state)
+   console.info(' popstate' + e.originalEvent.state)
    let state = e.originalEvent.state
    if (state !== null) {
       e.preventDefault()
@@ -20,7 +20,7 @@ $(window).on('popstate', function (e) {//back/forward button
 $(document).on('click', 'a', function (e) { //over-ride links
    let anchor = $(e.currentTarget)
    let href = anchor.prop('href')
-   console.log(href)
+   console.info(href)
    if (!href || href.length < 1) {
       return
    }
@@ -37,7 +37,7 @@ $(document).on('click', 'a', function (e) { //over-ride links
 let pg = window.location.href
 try {
    history.pushState({ url: pg }, '', pg)
-} catch (err) { console.log('no push state on file//', err) }
+} catch (err) { console.info('no push state on file//', err) }
 sessionStorage.setItem('oldUrl', pg)
 
 let SPArouter = {
@@ -52,18 +52,18 @@ let SPArouter = {
    }
 
    , loadHtml: function (toHref, fromHref, back) { //triggered, but function can be called directly also
-      console.log('loaded', toHref)
+      console.info('loaded', toHref)
       if (!back) {
          try {
             history.pushState({ url: toHref }, '', toHref)
-         } catch (err) { console.log('no push state on file//') }
+         } catch (err) { console.info('no push state on file//') }
       }
 
       //fire NAV event
       SPArouter.navigated.dispatch({ type: SPArouter.NAV, toHref: toHref, fromHref: fromHref, back: back })
 
       let url = SPArouter.appendQueryString(toHref, { 'SPArouter': "\"" + SPArouter.zone + "\"" })
-      console.log(url)
+      console.info(url)
 
       //   credentials: 'same-origin' 
       axios.get(url).then(function (txt) {
@@ -72,13 +72,13 @@ let SPArouter = {
          document.title = title
 
          let newContent = $html.find(SPArouter.zone).html()
-         //console.log(newContent)
+         //console.info(newContent)
 
          //fire new PAGE received event
          SPArouter.navigated.dispatch({ type: SPArouter.PAGE, toHref: toHref, fromHref: fromHref, newContent: newContent, $html: $html, back: back })
 
       }).catch(function (er) {
-         console.log('error', er)
+         console.info('error', er)
          SPArouter.navigated.dispatch({ type: SPArouter.ERR, err: er })
       })
    }
@@ -89,22 +89,22 @@ let SPArouter = {
       for (let key in queryVars) {
          try {
             queryStringParts.push(key + '=' + queryVars[key])
-         } catch (err) { 'q', console.log(err) }
+         } catch (err) { 'q', console.info(err) }
       }
       let queryString = queryStringParts.join('&')
       return url + firstSeparator + queryString;
    }
 }
 // default: /////////////////////////////////////////////////////////////////////////////////////
-console.log('spa router')
+console.info('spa router')
 // use | override:
 SPArouter.onNavigate(function (evt) {
    if (evt.type == SPArouter.NAV) { //start
-      console.log('router NAV')
+      console.info('router NAV')
       //$('#router').fadeTo(100,.2)
    }
    else if (evt.type == SPArouter.PAGE) {
-      console.log('router PAGE')
+      console.info('router PAGE')
       $(SPArouter.zone).html(evt.newContent)
       //$('#router').fadeTo(100,1)
       window.scrollTo(0, 0)
@@ -117,10 +117,10 @@ let ii = fROOT.lastIndexOf(':')
 fROOT = fROOT.substring(ii+1)
 
 window.isFile = window.location.protocol == 'file:'
-console.log('fROOT '+ window.isFile)
+console.info('fROOT '+ window.isFile)
 if(window.isFile) fROOT = fROOT.slice(0, -11)
 
-console.log('fROOT ', fROOT)
+console.info('fROOT ', fROOT)
 
 function fROOTfix() {
    if(!window.isFile)  {
@@ -131,7 +131,7 @@ function fROOTfix() {
    else $('a').each(function(index, value){
       $(this).attr('href', this.href.replace('/fROOT', fROOT) )
 
-      console.log(this.href)
+      console.info(this.href)
       
       let isSlash = this.href.slice(-1) == '/'
       if(isSlash)

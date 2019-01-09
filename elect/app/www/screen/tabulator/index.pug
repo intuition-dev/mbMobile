@@ -11,7 +11,7 @@ block main
             let apiService = new ApiService();
             apiService.getFeedData()
                .then(feed => {
-                  //console.log('feed.data.articles', feed.data.articles);
+                  //console.info('feed.data.articles', feed.data.articles);
 
                   this.table = new Tabulator("#feed-table", {
                      data:feed.data.articles,// assign data to table

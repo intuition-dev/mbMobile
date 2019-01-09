@@ -10,7 +10,7 @@ class SPArouter {
                 history.pushState({ url: toHref }, '', toHref);
             }
             catch (err) {
-                console.log('no push state on file//');
+                console.info('no push state on file//');
             }
         }
         SPArouter.disE({ type: SPArouter.NavSTART, toHref: toHref, fromHref: fromHref, back: back_ });
@@ -22,7 +22,7 @@ class SPArouter {
             let newContent = $html.find(SPArouter.zone).html();
             SPArouter.disE({ type: SPArouter.NavDONE, toHref: toHref, fromHref: fromHref, newContent: newContent, $html: $html, back: back_ });
         }).catch(function (er) {
-            console.log('error', er);
+            console.info('error', er);
             SPArouter.disE({ type: SPArouter.ERR, err: er });
         });
     }
@@ -34,7 +34,7 @@ class SPArouter {
                 queryStringParts.push(key + '=' + queryVars[key]);
             }
             catch (err) {
-                console.log('q', err);
+                console.info('q', err);
             }
         }
         let queryString = queryStringParts.join('&');
@@ -50,7 +50,7 @@ class SPArouter {
         const isFile = window.location.protocol == 'file:';
         if (isFile)
             fROOT = fROOT.slice(0, -11);
-        console.log('fROOT ', fROOT);
+        console.info('fROOT ', fROOT);
         if (!isFile) {
             $('a').each(function (index, value) {
                 $(this).attr('href', this.href.replace('/fROOT', ''));
@@ -59,7 +59,7 @@ class SPArouter {
         else
             $('a').each(function (index, value) {
                 $(this).attr('href', this.href.replace('/fROOT', fROOT));
-                console.log(this.href);
+                console.info(this.href);
                 let isSlash = this.href.slice(-1) == '/';
                 if (isSlash)
                     $(this).attr('href', this.href + 'index.html');
@@ -81,7 +81,7 @@ class SPArouter {
         $(document).on('click', 'a', function (e) {
             let anchor = $(e.currentTarget);
             let href = anchor.prop('href');
-            console.log(href);
+            console.info(href);
             if (!href || href.length < 1) {
                 return;
             }
@@ -97,7 +97,7 @@ class SPArouter {
             history.pushState({ url: pg }, '', pg);
         }
         catch (err) {
-            console.log('no push state on file//', err);
+            console.info('no push state on file//', err);
         }
         sessionStorage.setItem('oldUrl', pg);
         SPArouter.fROOTfix();

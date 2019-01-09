@@ -6,17 +6,17 @@ html
             window.nodeRequire = require; 
             delete window.require;
             delete window.exports; delete window.module;
-            console.log('fixed jquery')
+            console.info('fixed jquery')
          } catch(err) {
-            console.log('ignore when running in real browser')
+            console.info('ignore when running in real browser')
          }
 
       script.
          ROOT = '#{ROOT}' //- sets global pug and .js from dat.yaml
-         console.log('root','#{ROOT}')
+         console.info('root','#{ROOT}')
          let _start=Date.now()
          window.onerror = function (msg, url, lineNo, columnNo, error) {
-            console.log(msg, url, lineNo)
+            console.info(msg, url, lineNo)
             return false
          }
       
@@ -64,7 +64,7 @@ html
       link(href= ROOT + 'assets/css/main.css', rel='stylesheet')
       script.
          function userSzSc() {
-            console.log('resize|scroll')
+            console.info('resize|scroll')
          }
          $('.delayShowing').removeClass('delayShowing') // show
 
