@@ -1,5 +1,4 @@
 
-
 // http://github.com/Cekvenich/www/tree/master/srv/webroot
 
 /*
@@ -16,7 +15,6 @@ function onNavigate (evt) {
    }
 }
 */
-
 
 console.info('split loaded')
 //====================================================================
