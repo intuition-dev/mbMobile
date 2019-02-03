@@ -17,24 +17,11 @@ $(document).ready(function () {
 
 loadjs([
 
-    'https://cdn.jsdelivr.net/npm/blueimp-load-image@2.19.0/js/load-image.all.min.js'
-   , 'https://cdn.jsdelivr.net/npm/is_js@0.9.0/is.min.js'
-
-   , 'https://cdn.jsdelivr.net/npm/tabulator-tables@4.1.3/dist/js/tabulator.min.js'
-   , 'https://cdn.jsdelivr.net/npm/tabulator-tables@4.1.3/dist/css/tabulator.min.css'
-   , 'https://cdn.jsdelivr.net/npm/tabulator-tables@4.1.3/dist/css/tabulator_simple.min.css'
-
-   , ROOT + 'assets/js/jquery.disableAutoFill.js'
+    ROOT + 'assets/js/jquery.disableAutoFill.js'
 
 ], 'cssJs')
 
-loadjs.ready(['cssJs'], function () {
-   
-   loadjs([
-      ROOT + 'assets/js/services.js'
-   ], 'services')
 
-});
 
 function onDeviceReady() { // nothing will work before this
    console.info('deviceready!')
@@ -75,11 +62,3 @@ loadjs.ready(['style'], function () {// 'show' page, ex: unhide
 
    console.info('style done', Date.now() - _start)
 })//ready
-
-function disE(evtName, msg) {
-   dispatchEvent(new CustomEvent(evtName, { detail: msg }))
-}
-// eg
-addEventListener('bla', function(evt) {
-   console.info(evt.detail)
-})

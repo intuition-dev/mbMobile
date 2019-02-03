@@ -1,7 +1,7 @@
 
 // http://github.com/Cekvenich/www/tree/master/srv/webroot
 
-/*
+
 SPArouter.init(onNavigate);
 function onNavigate (evt) {
    if (evt.detail.type == SPArouter.NavSTART) { //start
@@ -14,7 +14,7 @@ function onNavigate (evt) {
       window.scrollTo(0, 0);
    }
 }
-*/
+
 
 console.info('split loaded')
 //====================================================================
