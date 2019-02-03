@@ -44,6 +44,7 @@ class SPArouter {
        dispatchEvent(new CustomEvent('nav', { detail: msg }));
    }
    static fROOTfix() {
+       console.log('froot')
        let fROOT = location.toString().replace(location.search, '');
        let ii = fROOT.lastIndexOf(':');
        fROOT = fROOT.substring(ii + 1);
@@ -108,7 +109,7 @@ SPArouter.NavSTART = '_nav-start';
 SPArouter.NavDONE = '_nav-loaded';
 SPArouter.ERR = '_nav-ERR';
 
-
+/*
 SPArouter.init(onNavigate);
 function onNavigate (evt) {
    if (evt.detail.type == SPArouter.NavSTART) { //start
@@ -120,3 +121,7 @@ function onNavigate (evt) {
       window.scrollTo(0, 0);
    }
 }
+*/
+
+loadjs('//cdn.jsdelivr.net/jquery.transit/0.9.12/jquery.transit.min.js')
+loadjs(ROOT + 'assets/router/split.js')

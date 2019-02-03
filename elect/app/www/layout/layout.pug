@@ -54,8 +54,10 @@ html
                   include ../assets/img/svg/rss.svg
                   a(href=ROOT + 'screen/tabulator') News
 
-         .column#router
-            block main
+         .column
+            #routerFx
+            #router
+               block main
       script.
 
       link(href= ROOT + 'assets/css/spectre.css', onload='cssLoaded()', rel='stylesheet')

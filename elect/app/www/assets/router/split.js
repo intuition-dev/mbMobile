@@ -1,59 +1,51 @@
 
-/*
-loadjs.ready(['site','split'], function(){
-	console.info('SPLIT override')
-
-	SPArouter.onNavigate(function(evt) {
-		if (evt.type == SPArouter.NAV)  { //start
-			console.info('XXX XXX XXX NAV')
-			pgSplit($('#router'), 350 )
-			//$('#router').fadeTo(100,.2)
-		}
-		else if (evt.type == SPArouter.PAGE)  {
-			console.info('XXX XXX XXX PAGE')
-			$(SPArouter.zone).html(evt.newContent)
-			//$('#router').fadeTo(100,1)
-			window.scrollTo(0, 0)
-		}
-	})
-})
-
-loadjs([
-		'//cdn.jsdelivr.net/jquery.transit/0.9.12/jquery.transit.min.js']
-		,'/assets/js/split.js'
-	, 'split')
-
-*/
 
 // http://github.com/Cekvenich/www/tree/master/srv/webroot
+
+SPArouter.init(onNavigate);
+function onNavigate (evt) {
+   if (evt.detail.type == SPArouter.NavSTART) { //start
+      //pgSplit($('#router'), 350 )
+   }
+   else if (evt.detail.type == SPArouter.NavDONE) {
+      console.info('new')
+      $(SPArouter.zone).html(evt.detail.newContent);
+      //$('#router').fadeTo(100,1);
+      window.scrollTo(0, 0);
+   }
+}
+
 
 console.info('split loaded')
 //====================================================================
 function pgSplit($cont_, speed) {
-	console.info('spliting:')
+	console.warn('spliting:', $cont_)
 
 	// compute endpoints math to split screen
-	var haf = $(window).width() / 2
-	var he = $(window).height() + 'px, ' //
-	var doub = ' ' + haf * 2 + 'px, ' //
-	var lft = '-' + haf + 'px '
+	let haf = $(window).width() / 2
+	let he = $(window).height() + 'px, ' //
+	let doub = ' ' + haf * 2 + 'px, ' //
+	let lft = '-' + haf + 'px '
 	haf = haf + 'px'
-	var fr = 'rect(0px, ' + haf + ', ' + he + ' 0px)'
-	var cr = 'rect(0px, ' + doub + he + haf + ')'
-
+	let fr = 'rect(0px, ' + haf + ', ' + he + ' 0px)'
+	let cr = 'rect(0px, ' + doub + he + haf + ')'
+   console.log(fr,cr)
 	//clone, wrap and re-attach
-	var $firstSl = $cont_.children()
+	let $firstSl = $cont_.children()
 	$firstSl = $firstSl.clone()
 	$firstSl.find().remove('script')//script no work w/ split
+	console.info('spliting:', $firstSl)
 
-	var $cloneSl = $firstSl.clone()
+   //cloned
+	let $cloneSl = $firstSl.clone()
 	$('#routerFx').append($firstSl)
 	$firstSl.wrapAll('<div id="firstSl" class="firstSl"/>')
 
 	// point to clone and wrap
 	$('#routerFx').append($cloneSl)
 	$cloneSl.wrapAll('<div id="cloneSl" class="cloneSl"/>')
-	$cont_.empty()
+   $cont_.empty()
+   console.info('cloned', $cloneSl )
 
 	// =============================================================
 	//css clip computed
@@ -77,7 +69,7 @@ function pgSplit($cont_, speed) {
 	$('#cloneSl').transition({ x: haf, easing: 'linear', duration: speed })
 	setTimeout(function () {
 		console.info(':cleanup')
-		$('#routerFx').empty()
+		//$('#routerFx').empty()
 	}, speed)
 
 }//()
