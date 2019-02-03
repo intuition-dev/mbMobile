@@ -16,7 +16,6 @@ $(document).ready(function () {
 })
 
 loadjs([
-   //'https://cdn.jsdelivr.net/npm/signals@1.0.0/dist/signals.min.js'
 
     'https://cdn.jsdelivr.net/npm/blueimp-load-image@2.19.0/js/load-image.all.min.js'
    , 'https://cdn.jsdelivr.net/npm/is_js@0.9.0/is.min.js'
@@ -72,7 +71,7 @@ loadjs.ready(['style'], function () {// 'show' page, ex: unhide
 
    //$('.delayShowing').removeClass('delayShowing') // show
 
-   //loadjs(ROOT + 'assets/router/spa-router.js')
+   loadjs(ROOT + 'assets/router/spa-router.js')
 
    console.info('style done', Date.now() - _start)
 })//ready
