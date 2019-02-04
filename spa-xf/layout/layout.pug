@@ -25,10 +25,8 @@ html
       meta(name='viewport', content='width=device-width, initial-scale=1')
       title mBake.org
       link(rel='shortcut icon', href= ROOT + 'assets/favicon.png', type='image/x-icon')
+      script(src='https://cdn.jsdelivr.net/npm/johnnydepp@0.0.3/dist/depp.min.js')
       script(src='https://cdn.jsdelivr.net/npm/loadjs@3.5.4/dist/loadjs.js')
-      script(src='https://cdn.jsdelivr.net/npm/riot@3.13.2/riot.min.js')
-      script(src='https://unpkg.com/axios@0.19.0-beta.1/dist/axios.min.js')
-      //script(src='https://cdn.jsdelivr.net/npm/johnnydepp@0.0.3/dist/depp.min.js')
 
       style.
          .delayShowing { opacity: 0.01; }
@@ -38,27 +36,16 @@ html
 
       script(src= ROOT + 'assets/js/setup.js')
 
-      //top
-      #head.delayShowing.flex.edge.bblack.pad
-         h3#navbarBrand.left.navbar-brand News 
-            span Feed
-
-      .columns.delayShowing
-         #menu.column.bblack.white
-            ul.nav
-
-               li.nav-item
-                  include ../assets/img/svg/home.svg
-                  a(href= ROOT ) XHome
-               li.nav-item
-                  include ../assets/img/svg/rss.svg
-                  a(href=ROOT + 'screen/main') Main
-
-         .column
-            #routerFx
-            #router
-               block main
-      script.
+      //top     
+      p Brand and menu
+      a(href='/') 1 o
+      b &nbsp; &nbsp;
+      a(href='/screen/main') 2 t
+      
+      p
+      #routerFx
+      #router
+         block main
 
       link(href= ROOT + 'assets/css/spectre.css', onload='cssLoaded()', rel='stylesheet')
 
