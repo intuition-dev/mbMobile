@@ -109,7 +109,7 @@ SPArouter.NavSTART = '_nav-start';
 SPArouter.NavDONE = '_nav-loaded';
 SPArouter.ERR = '_nav-ERR';
 
-/*
+
 SPArouter.init(onNavigate);
 function onNavigate (evt) {
    if (evt.detail.type == SPArouter.NavSTART) { //start
@@ -121,4 +121,4 @@ function onNavigate (evt) {
       window.scrollTo(0, 0);
    }
 }
-*/
+
