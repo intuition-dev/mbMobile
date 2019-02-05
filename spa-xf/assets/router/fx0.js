@@ -1,5 +1,4 @@
 
-console.info('fx', "v4.06.3e")
 
 loadjs.ready(['style', 'pfx'], function () {
 	console.info('gesture')
