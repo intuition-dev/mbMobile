@@ -8,14 +8,11 @@ function onNavigate (evt) {
       pgSplit($('#router'), 500 )
    }
    else if (evt.detail.type == SPArouter.NavDONE) {
-      setTimeout(function(){
-         console.info('new', evt.detail.newContent )
-         
-         $('#router').html(evt.detail.newContent)
-         //$('#router').fadeTo(100,1);
-         window.scrollTo(0, 0)
-      },600)
+      console.warn($('#router'), evt.detail.newContent )
+      $('#router').html(evt.detail.newContent)
 
+      //$('#router').fadeTo(100,1)
+      window.scrollTo(0, 0)
    }
 }
 
@@ -26,13 +23,12 @@ function pgSplit($cont_, speed) {
    // compute endpoints math to split screen
    let haf = $(window).width() / 2
    let he = $(window).height() + 'px ' //
-   //let doub = ' ' + haf * 2 + 'px ' //
    let lft = '-' + haf + 'px '
    haf = haf + 'px'
    /* top, right, bottom, left */
    let fr = 'inset(0px ' + haf + ' 0px 0px)'
    let cr = 'inset(0px 0px 0px ' + haf +')'
-   console.warn(fr,cr)
+   console.info(fr,cr)
    //clone, wrap and re-attach
 
    let $firstSl = $cont_.clone()
@@ -57,7 +53,7 @@ function pgSplit($cont_, speed) {
    $('#firstSl').css('clip-path', fr) // clip it
    $('#firstSl').css('position', 'absolute')
    $('#firstSl').css('z-index', 8)
-   //$('#firstSl').css('top', '45px')
+   $('#firstSl').css('top', '80px')// match
    $('#firstSl').css('min-height', he)
    $('#firstSl *').css('min-height', he)
    //$('#firstSl').css('background', 'gray')
@@ -65,7 +61,7 @@ function pgSplit($cont_, speed) {
    $('#cloneSl').css('clip-path', cr)
    $('#cloneSl').css('position', 'absolute')
    $('#cloneSl').css('z-index', 9)
-   //$('#cloneSl').css('top', '45px')
+   $('#cloneSl').css('top', '80px')// match
    $('#cloneSl').css('min-height', he)
    $('#cloneSl *').css('min-height', he)
    //$('#cloneSl').css('background', 'gray')
@@ -75,6 +71,6 @@ function pgSplit($cont_, speed) {
    setTimeout(function () {
       console.info(':cleanup')
       $('#routerFx').empty()
-   }, speed+100)
+   }, speed)
 
 }//()
