@@ -48,13 +48,13 @@ function setupUserSzSc() {
 setInterval(function () {
    if (_scSz) {
       _scSz = false
-      userSzSc()
+      //userSzSc()
    }
 }, 150)
 
 // usage: ////////////////////////////////////////////////////////////////////
 loadjs.ready(['style'], function () {// 'show' page, ex: unhide
-   setupUserSzSc()
+  // setupUserSzSc()
 
    //$('.delayShowing').removeClass('delayShowing') // show
 

@@ -101,7 +101,7 @@ class SPArouter {
            console.info('no push state on file//', err);
        }
        sessionStorage.setItem('oldUrl', pg);
-       SPArouter.fROOTfix();
+       //SPArouter.fROOTfix();
    }
 }
 SPArouter.zone = '#router';

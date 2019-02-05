@@ -8,10 +8,14 @@ function onNavigate (evt) {
       pgSplit($('#router'), 500 )
    }
    else if (evt.detail.type == SPArouter.NavDONE) {
-      console.info('new')
-      $(SPArouter.zone).html(evt.detail.newContent);
-      //$('#router').fadeTo(100,1);
-      window.scrollTo(0, 0);
+      setTimeout(function(){
+         console.info('new', evt.detail.newContent )
+         
+         $('#router').html(evt.detail.newContent)
+         //$('#router').fadeTo(100,1);
+         window.scrollTo(0, 0)
+      },600)
+
    }
 }
 
@@ -31,9 +35,7 @@ function pgSplit($cont_, speed) {
    console.warn(fr,cr)
    //clone, wrap and re-attach
 
-   let $firstSl = $cont_
-
-   $firstSl = $firstSl.clone()
+   let $firstSl = $cont_.clone()
    $firstSl.find().remove('script')//script no work w/ split
    console.info('spliting:', $firstSl)
 
@@ -45,7 +47,9 @@ function pgSplit($cont_, speed) {
    // point to clone and wrap
    $('#routerFx').append($cloneSl)
    $cloneSl.wrapAll('<div id="cloneSl" class="cloneSl"/>')
+   
    $cont_.empty()
+   
    console.info('cloned', $cloneSl )
 
    // =============================================================
