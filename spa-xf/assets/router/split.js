@@ -1,11 +1,11 @@
 
 // http://github.com/Cekvenich/www/tree/master/srv/webroot
 
-
 SPArouter.init(onNavigate);
 function onNavigate (evt) {
+
    if (evt.detail.type == SPArouter.NavSTART) { //start
-      pgSplit($('#router'), 600 )
+      pgSplit($('#router'), 500 )
    }
    else if (evt.detail.type == SPArouter.NavDONE) {
       console.info('new')
@@ -15,11 +15,9 @@ function onNavigate (evt) {
    }
 }
 
-
 console.info('split loaded')
 //====================================================================
 function pgSplit($cont_, speed) {
-   console.info('spliting:')
 
    // compute endpoints math to split screen
    let haf = $(window).width() / 2
@@ -32,7 +30,9 @@ function pgSplit($cont_, speed) {
    let cr = 'inset(0px 0px 0px ' + haf +')'
    console.warn(fr,cr)
    //clone, wrap and re-attach
-   let $firstSl = $cont_.children()
+
+   let $firstSl = $cont_
+
    $firstSl = $firstSl.clone()
    $firstSl.find().remove('script')//script no work w/ split
    console.info('spliting:', $firstSl)
@@ -53,7 +53,7 @@ function pgSplit($cont_, speed) {
    $('#firstSl').css('clip-path', fr) // clip it
    $('#firstSl').css('position', 'absolute')
    $('#firstSl').css('z-index', 8)
-   $('#firstSl').css('top', '45px')
+   //$('#firstSl').css('top', '45px')
    $('#firstSl').css('min-height', he)
    $('#firstSl *').css('min-height', he)
    //$('#firstSl').css('background', 'gray')
@@ -61,7 +61,7 @@ function pgSplit($cont_, speed) {
    $('#cloneSl').css('clip-path', cr)
    $('#cloneSl').css('position', 'absolute')
    $('#cloneSl').css('z-index', 9)
-   $('#cloneSl').css('top', '45px')
+   //$('#cloneSl').css('top', '45px')
    $('#cloneSl').css('min-height', he)
    $('#cloneSl *').css('min-height', he)
    //$('#cloneSl').css('background', 'gray')
@@ -71,6 +71,6 @@ function pgSplit($cont_, speed) {
    setTimeout(function () {
       console.info(':cleanup')
       $('#routerFx').empty()
-   }, speed)
+   }, speed+100)
 
 }//()
