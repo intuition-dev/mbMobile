@@ -2,8 +2,8 @@
 // All rights reserved by MetaBake.org | Cekvenich, licensed under LGPL 3.0
 // Requires jQuery, Axios
 
-declare var $: any
-declare var axios: any
+//declare var $: any
+//declare var axios: any
 
 class SPArouter {
 
