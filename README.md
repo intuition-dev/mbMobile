@@ -2,10 +2,10 @@
 - [Click for 'THE' B-M-SPA docs](http://doc.mBake.org/SPA/)
 
 
-#### mBake.org is a low-code productivity for application developers via static generation; with Pug, Markdown and more; including dynamic data binding. *Some developers implement applications faster than others.*
+#### mBake.org is a LOW-CODE productivity for application developers via static generation; with Pug, Markdown and more; including dynamic data binding. *Some developers implement applications faster than others.*
 
 
-MetaBake mbake CLI lets you generate websites and dynamic webapps in Pug by leveraging low-code pillars for high development productivity.
+MetaBake mbake CLI lets you generate websites and dynamic webapps in Pug by leveraging LOW-CODE pillars for high development productivity.
 
 ## Install
 
