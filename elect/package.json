@@ -21,7 +21,7 @@
       "electron-packager": ">=13.0.1",
       "electron": ">=4.0.1",
       "electron-builder": ">=20.38.4",
-      "ts-node":">=7.0.1",
+    
       "@types/node": ">=10.12.18",
       "typescript": ">=3.2.2"
  
