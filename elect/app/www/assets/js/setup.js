@@ -18,7 +18,7 @@ $(document).ready(function () {
 loadjs([
 
     'https://cdn.jsdelivr.net/npm/blueimp-load-image@2.19.0/js/load-image.all.min.js'
-   , 'https://cdn.jsdelivr.net/npm/is_js@0.9.0/is.min.js'
+   
 
    , 'https://cdn.jsdelivr.net/npm/tabulator-tables@4.1.3/dist/js/tabulator.min.js'
    , 'https://cdn.jsdelivr.net/npm/tabulator-tables@4.1.3/dist/css/tabulator.min.css'
