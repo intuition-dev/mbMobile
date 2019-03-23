@@ -43,7 +43,7 @@ mbake .
 
 This will create index.html. 
 
-Of course you can use regular Pug syntax to include other Pug files; or Markdown. MetaBake&trade; markdown flavor includes CSS support:
+Of course you can use regular Pug syntax to include other Pug files; or Markdown. MetaBake&trade; Markdown flavor includes CSS support:
 ```pug
     include:metaMD comment.md
 ```
