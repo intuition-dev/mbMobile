@@ -1,7 +1,7 @@
 class ApiService {
    constructor() {
       this.service = axios.create({
-         baseURL: 'https://newsapi.org/v2',
+         baseURL: 'http://newsapi.org/v2',
          responseType: 'json',
          headers: {
             'x-api-key': '744ab99227124e14b99a2089579ab3f4'

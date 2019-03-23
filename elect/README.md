@@ -1,5 +1,5 @@
 
-Video demo: [Video Demo](https://youtu.be/VelUBKcwbQY)
+Video demo: [Video Demo](http://youtu.be/VelUBKcwbQY)
 
 You can run as http app if you have an http server, webroot is in app/www
 

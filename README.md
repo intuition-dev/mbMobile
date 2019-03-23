@@ -1,7 +1,7 @@
-- [SPA video](https://youtu.be/LHFjjDPlU3A)
+- [SPA video](http://youtu.be/LHFjjDPlU3A)
 - [Click for 'THE' B-M-SPA docs](http://doc.mbake.org/SPA/)
 
-<img src="https://metabake.github.io/MetaBake-Docs/logo.jpg" width="100">
+<img src="http://metabake.github.io/MetaBake-Docs/logo.jpg" width="100">
 
 ### MetaBake&trade; is the extensible open source low-code productivity tool for programmers; including dynamic apps and data binding. 'All my friends KNOW a low-coder'
 
@@ -62,4 +62,4 @@ Primary focus is high development productivity (via "low-code") and being easy t
 - Click for mbake Docs: [docs.mbake.org](http://docs.mbake.org)
 - [git.mbake.org](http://git.mbake.org)
 - Community [forum.mbake.org](http://forum.mbake.org)
-- Check for the latest version of mbake: [npm.js](https://www.npmjs.com/package/mbake)
+- Check for the latest version of mbake: [npm.js](http://www.npmjs.com/package/mbake)
