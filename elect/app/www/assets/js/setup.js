@@ -20,9 +20,9 @@ loadjs([
     '//cdn.jsdelivr.net/npm/blueimp-load-image@2.19.0/js/load-image.all.min.js'
    
 
-   , '//cdn.jsdelivr.net/npm/tabulator-tables@4.1.3/dist/js/tabulator.min.js'
-   , '//cdn.jsdelivr.net/npm/tabulator-tables@4.1.3/dist/css/tabulator.min.css'
-   , '//cdn.jsdelivr.net/npm/tabulator-tables@4.1.3/dist/css/tabulator_simple.min.css'
+   , '//cdn.jsdelivr.net/npm/tabulator-tables@4.2.3/dist/js/tabulator.min.js'
+   , '//cdn.jsdelivr.net/npm/tabulator-tables@4.2.3/dist/css/tabulator.min.css'
+   , '//cdn.jsdelivr.net/npm/tabulator-tables@4.2.3/dist/css/tabulator_simple.min.css'
 
    , ROOT + 'assets/js/jquery.disableAutoFill.js'
 
