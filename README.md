@@ -3,7 +3,7 @@
 
 <img src="http://metabake.github.io/MetaBake-Docs/logo.jpg" width="100">
 
-### MetaBake&trade; is the extensible open source low-code productivity tool for programmers; including dynamic apps and data binding. 'All my friends KNOW a low-coder'
+### MetaBake&trade; is the extensible open source low-code productivity tool for programmers; including dynamic apps and data binding. 'All my friends KNOW the low-coder'
 
 #### MetaBake&trade; works via static generation; with Pug, Markdown and more; including dynamic apps and data binding. We aim to grow the popularity of low-code. 
 
