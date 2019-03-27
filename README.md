@@ -1,5 +1,5 @@
 - [SPA video](http://youtu.be/LHFjjDPlU3A)
-- [Click for 'THE' B-M-SPA docs](http://doc.mbake.org/SPA/)
+- [Click for 'THE' B-M-SPA docs](http://doc.MetaBake.org/SPA/)
 
 <img src="http://metabake.github.io/MetaBake-Docs/logo.jpg" width="100">
 
@@ -59,7 +59,7 @@ MetaBake&trade; supports CSS classes in Markdown, plus, because it uses Pug - it
 Primary focus is high development productivity (via "low-code") and being easy to adopt. It is also fully flexible to build any web-app in any directory tree structure you like; anc use any CSS/SASS framework you like. Of course it is server-less, and it uses AWS S3 or GCP FireStore.
 
 
-- Click for mbake Docs: [docs.mbake.org](http://docs.mbake.org)
-- [git.mbake.org](http://git.mbake.org)
-- Community [forum.mbake.org](http://forum.mbake.org)
+- Click for mbake Docs: [docs.MetaBake.org](http://docs.MetaBake.org)
+- [git.MetaBake.org](http://git.MetaBake.org)
+- Community [forum.MetaBake.org](http://forum.MetaBake.org)
 - Check for the latest version of mbake: [npm.js](http://www.npmjs.com/package/mbake)
