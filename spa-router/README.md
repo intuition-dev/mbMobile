@@ -1,6 +1,7 @@
 
 Requires jQuery, Axios 
 
+Should be used w/ FSM eg http://statemachine.davestewart.io/html/setup/helpers/jquery.html
 
 SPArouter.init(onNavigate)
 function onNavigate (evt) {
