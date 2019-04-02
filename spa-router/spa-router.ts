@@ -1,6 +1,8 @@
 // SPA router v4.15.15
-// All rights reserved by MetaBake.org | Cekvenich, licensed under LGPL 3.0
-// Requires jQuery, Axios
+// All rights reserved by MetaBake.org | Cekvenich, licensed under GPL 3.0
+// Cheap commercial license available.
+// Requires jQuery, Axios, deppjs.
+
 
 //declare var $: any
 //declare var axios: any
