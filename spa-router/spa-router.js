@@ -1,10 +1,7 @@
-
-// SPA router v4.15.15
-// All rights reserved by MetaBake.org | Cekvenich, licensed under LGPL 3.0
-// Requires jQuery, Axios
-
-class SPArouter {
-    static loadHtml(toHref, fromHref, back_) {
+var SPArouter = (function () {
+    function SPArouter() {
+    }
+    SPArouter.loadHtml = function (toHref, fromHref, back_) {
         if (!back_) {
             try {
                 history.pushState({ url: toHref }, '', toHref);
@@ -14,22 +11,22 @@ class SPArouter {
             }
         }
         SPArouter.disE({ type: SPArouter.NavSTART, toHref: toHref, fromHref: fromHref, back: back_ });
-        let url = SPArouter.appendQueryString(toHref, { 'SPArouter': "\"" + SPArouter.zone + "\"" });
+        var url = SPArouter.appendQueryString(toHref, { 'SPArouter': "\"" + SPArouter.zone + "\"" });
         axios.get(url).then(function (txt) {
-            let $html = $('<html></html>').append($(txt.data));
-            let title = $html.find('title').first().text();
+            var $html = $('<html></html>').append($(txt.data));
+            var title = $html.find('title').first().text();
             document.title = title;
-            let newContent = $html.find(SPArouter.zone).html();
+            var newContent = $html.find(SPArouter.zone).html();
             SPArouter.disE({ type: SPArouter.NavDONE, toHref: toHref, fromHref: fromHref, newContent: newContent, $html: $html, back: back_ });
         }).catch(function (er) {
             console.info('error', er);
             SPArouter.disE({ type: SPArouter.ERR, err: er });
         });
-    }
-    static appendQueryString(url, queryVars) {
-        let firstSeparator = (url.indexOf('?') == -1 ? '?' : '&');
-        let queryStringParts = new Array();
-        for (let key in queryVars) {
+    };
+    SPArouter.appendQueryString = function (url, queryVars) {
+        var firstSeparator = (url.indexOf('?') == -1 ? '?' : '&');
+        var queryStringParts = new Array();
+        for (var key in queryVars) {
             try {
                 queryStringParts.push(key + '=' + queryVars[key]);
             }
@@ -37,17 +34,17 @@ class SPArouter {
                 console.info('q', err);
             }
         }
-        let queryString = queryStringParts.join('&');
+        var queryString = queryStringParts.join('&');
         return url + firstSeparator + queryString;
-    }
-    static disE(msg) {
+    };
+    SPArouter.disE = function (msg) {
         dispatchEvent(new CustomEvent('nav', { detail: msg }));
-    }
-    static fROOTfix() {
-        let fROOT = location.toString().replace(location.search, '');
-        let ii = fROOT.lastIndexOf(':');
+    };
+    SPArouter.fROOTfix = function () {
+        var fROOT = location.toString().replace(location.search, '');
+        var ii = fROOT.lastIndexOf(':');
         fROOT = fROOT.substring(ii + 1);
-        const isFile = window.location.protocol == 'file:';
+        var isFile = window.location.protocol == 'file:';
         if (isFile)
             fROOT = fROOT.slice(0, -11);
         console.info('fROOT ', fROOT);
@@ -60,27 +57,27 @@ class SPArouter {
             $('a').each(function (index, value) {
                 $(this).attr('href', this.href.replace('/fROOT', fROOT));
                 console.info(this.href);
-                let isSlash = this.href.slice(-1) == '/';
+                var isSlash = this.href.slice(-1) == '/';
                 if (isSlash)
                     $(this).attr('href', this.href + 'index.html');
                 else
                     $(this).attr('href', this.href + '/index.html');
             });
-    }
-    static init(foo) {
+    };
+    SPArouter.init = function (foo) {
         addEventListener('nav', foo);
         $(window).on('popstate', function (e) {
-            let state = e.originalEvent.state;
+            var state = e.originalEvent.state;
             if (state !== null) {
                 e.preventDefault();
-                let oldUrl = sessionStorage.getItem('oldUrl');
+                var oldUrl = sessionStorage.getItem('oldUrl');
                 sessionStorage.setItem('oldUrl', state.url);
                 SPArouter.loadHtml(state.url, oldUrl, true);
             }
         });
         $(document).on('click', 'a', function (e) {
-            let anchor = $(e.currentTarget);
-            let href = anchor.prop('href');
+            var anchor = $(e.currentTarget);
+            var href = anchor.prop('href');
             console.info(href);
             if (!href || href.length < 1) {
                 return;
@@ -88,11 +85,11 @@ class SPArouter {
             if (anchor.is('.norouter'))
                 return;
             e.preventDefault();
-            let fromHref = window.location.href;
+            var fromHref = window.location.href;
             sessionStorage.setItem('oldUrl', href);
             SPArouter.loadHtml(href, fromHref, null);
         });
-        let pg = window.location.href;
+        var pg = window.location.href;
         try {
             history.pushState({ url: pg }, '', pg);
         }
@@ -101,9 +98,10 @@ class SPArouter {
         }
         sessionStorage.setItem('oldUrl', pg);
         SPArouter.fROOTfix();
-    }
-}
-SPArouter.zone = '#router';
-SPArouter.NavSTART = '_nav-start';
-SPArouter.NavDONE = '_nav-loaded';
-SPArouter.ERR = '_nav-ERR';
+    };
+    SPArouter.zone = '#router';
+    SPArouter.NavSTART = '_nav-start';
+    SPArouter.NavDONE = '_nav-loaded';
+    SPArouter.ERR = '_nav-ERR';
+    return SPArouter;
+}());
