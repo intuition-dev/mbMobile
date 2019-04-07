@@ -6,7 +6,7 @@ Requires jQuery, Axios
 Should be used w/ FSM eg http://statemachine.davestewart.io/html/setup/helpers/jquery.html
 
 ## Access via UNPKG
-      https://unpkg.com/spa-ts-router@0.0.3/spa-router.min.js
+      https://unpkg.com/spa-ts-router@4.15.15/spa-router.min.js
 
 
       SPArouter.init(onNavigate)

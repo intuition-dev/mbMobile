@@ -1,6 +1,6 @@
 {
   "name": "spa-ts-router",
-  "version": "0.0.3",
+  "version": "4.15.15",
   "description": "SPA Router in typescript",
   "license": "LGPL-3.0-only",
   "unpkg": "spa-router.min.js"
