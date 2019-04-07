@@ -9,6 +9,8 @@ Should be used w/ FSM eg http://statemachine.davestewart.io/html/setup/helpers/j
       https://unpkg.com/spa-ts-router@4.15.15/spa-router.min.js
 
 
+Note:
+
       SPArouter.init(onNavigate)
       function onNavigate (evt) {
          if (evt.detail.type == SPArouter.NavSTART) { //start
