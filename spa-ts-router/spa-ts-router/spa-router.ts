@@ -131,7 +131,7 @@ class SPArouter {
       
       sessionStorage.setItem('oldUrl', pg)
       
-      SPArouter.fROOTfix()
+      //SPArouter.fROOTfix()
 
    }// init
 
