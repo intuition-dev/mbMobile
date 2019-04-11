@@ -1,6 +1,6 @@
 
 // SPA router v4.15.15
-// All rights reserved by MetaBake.org | Cekvenich, licensed under LGPL 3.0
+// All rights reserved by Metabake.org | Cekvenich, licensed under LGPL 3.0
 // Requires jQuery, Axios
 
 class SPArouter {
