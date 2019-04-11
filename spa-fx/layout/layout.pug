@@ -1,0 +1,61 @@
+doctype html
+html
+   head
+      script.
+         try {
+            window.nodeRequire = require; 
+            delete window.require;
+            delete window.exports; delete window.module;
+            console.info('fixed jquery')
+         } catch(err) {
+            console.info('ignore when running in real browser')
+         }
+
+      script.
+         ROOT = '#{ROOT}' //- sets global pug and .js from dat.yaml
+         console.info('root','#{ROOT}')
+         let _start=Date.now()
+         window.onerror = function (msg, url, lineNo, columnNo, error) {
+            console.info(msg, url, lineNo)
+            return false
+         }
+      
+      meta(charset='utf-8')
+      
+      meta(name='viewport', content='width=device-width, initial-scale=1')
+      title mbake.org
+      link(rel='shortcut icon', href= ROOT + 'assets/favicon.png', type='image/x-icon')
+      script(src='//cdn.jsdelivr.net/npm/johnnydepp@0.1.0/dist/depp.min.js')
+      script(src='//cdn.jsdelivr.net/npm/loadjs@3.5.4/dist/loadjs.js')
+      script(src='//unpkg.com/axios@0.19.0-beta.1/dist/axios.min.js')
+
+      style.
+         .delayShowing { opacity: 0.01; }
+
+   body
+      script(src='//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.slim.min.js')
+
+      script(src= ROOT + 'assets/js/setup.js')
+
+      //top     
+      p Brand and menu
+      a(href='/') 1 o
+      b &nbsp; &nbsp;
+      a(href='/screen/main') 2 t
+      
+      p
+      #router
+         block main
+      #routerFx
+
+      link(href= ROOT + 'assets/css/spectre.css', onload='cssLoaded()', rel='stylesheet')
+
+      link(href='//fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
+      link(href= ROOT + 'assets/css/main.css', rel='stylesheet')
+      script.
+         function userSzSc() {
+            console.info('resize|scroll')
+         }
+         $('.delayShowing').removeClass('delayShowing') //- show
+
+   //link(href= ROOT + 'assets/css/debug.css', rel='stylesheet')
