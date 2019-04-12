@@ -1,4 +1,3 @@
-// SPA router v4.15.16
 // All rights reserved by Metabake.org | Cekvenich, licensed under LGPL-3.0-only
 // Cheap commercial license available.
 // Requires jQuery, Axios, deppjs.
