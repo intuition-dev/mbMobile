@@ -71,7 +71,7 @@ loadjs.ready(['style'], function () {// 'show' page, ex: unhide
 
    //$('.delayShowing').removeClass('delayShowing') // show
 
-   loadjs(ROOT + 'assets/router/spa-router.js')
+   loadjs('//unpkg.com/spa-ts-router@4.15.17/spa-router.min.js')
 
    console.info('style done', Date.now() - _start)
 })//ready

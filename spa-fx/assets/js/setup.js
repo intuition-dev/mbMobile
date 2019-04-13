@@ -18,9 +18,9 @@ $(document).ready(function () {
 loadjs([
 
     ROOT + 'assets/js/jquery.disableAutoFill.js'
+    ,'//unpkg.com/spa-ts-router@4.15.17/spa-router.min.js'
 
 ], 'cssJs')
-
 
 
 function onDeviceReady() { // nothing will work before this
@@ -58,7 +58,8 @@ loadjs.ready(['style'], function () {// 'show' page, ex: unhide
 
    //$('.delayShowing').removeClass('delayShowing') // show
 
-   loadjs(ROOT + 'assets/router/spa-router.js')
+   loadjs('//cdn.jsdelivr.net/jquery.transit/0.9.12/jquery.transit.min.js')
+   loadjs(ROOT + 'assets/router/split.js')
 
    console.info('style done', Date.now() - _start)
 })//ready

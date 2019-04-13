@@ -120,5 +120,4 @@ function onNavigate (evt) {
 }
 */
 
-loadjs('//cdn.jsdelivr.net/jquery.transit/0.9.12/jquery.transit.min.js')
-loadjs(ROOT + 'assets/router/split.js')
+
