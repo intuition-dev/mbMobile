@@ -3,7 +3,7 @@
 
 Requires jQuery, Axios 
 
-Should be used w/ FSM eg http://statemachine.davestewart.io/html/setup/helpers/jquery.html
+Should be used w/ FSM eg xstate (or davestewart)
 
 ## Access via UNPKG
    https://unpkg.com/spa-ts-router@4.15.17/spa-router.min.js
