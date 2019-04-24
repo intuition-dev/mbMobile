@@ -138,6 +138,7 @@ class SPArouter {
 
 
 /*
+EXAMPLE:
 SPArouter.init(onNavigate);
 // call the FSM state machine 
 function onNavigate (evt) {
