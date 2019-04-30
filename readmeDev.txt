@@ -1,0 +1,1 @@
+PhoneHapApp is a symbolic link to a folder
