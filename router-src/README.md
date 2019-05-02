@@ -22,3 +22,5 @@ Note:
             window.scrollTo(0, 0)
          }
       }
+      
+      **To exclude hyperlink from SPA, add `.norouter` class to the element**
