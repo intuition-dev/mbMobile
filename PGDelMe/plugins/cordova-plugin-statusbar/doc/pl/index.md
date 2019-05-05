@@ -21,7 +21,7 @@
 
 # StatusBar
 
-> `StatusBar`Obiekt zawiera kilka funkcji, aby dostosować iOS i Android StatusBar.
+> `StatusBar`Obiekt zawiera kilka funkcji, aby dostosować iOS we Android StatusBar.
 
 ## Instalacja
 
@@ -51,7 +51,7 @@
 
 Podczas uruchamiania można użyć funkcji StatusBar.hide poniżej, ale jeśli chcesz StatusBar ukryty w uruchamiania aplikacji, należy zmodyfikować plik Info.plist Twojej aplikacji.
 
-Dodawanie/edycja tych dwóch atrybutów jeśli nie obecny. Ustawianie **"pasek stanu jest początkowo ukryte"** na **"Tak"** i **"Oparte na kontroler stanu paska wygląd"** na **"Nie"**. Jeśli możesz go edytować ręcznie bez Xcode, kluczy i wartości są:
+Dodawanie/edycja tych dwóch atrybutów jeśli nie obecny. Ustawianie **"pasek stanu jest początkowo ukryte"** na **"Tak"** we **"Oparte na kontroler stanu paska wygląd"** na **"Nie"**. Jeśli możesz go edytować ręcznie bez Xcode, kluczy we wartości są:
 
     <key>UIStatusBarHidden</key>
     <true/>
@@ -103,7 +103,7 @@ Na iOS 7 zrobić statusbar nakładki lub nie nakładka widoku sieci Web.
 
 ## Opis
 
-Na iOS 7 zestaw do false, aby na pasku stanu pojawia się jak iOS 6. Ustaw kolor tła i styl do korzystania z innych funkcji.
+Na iOS 7 zestaw do false, aby na pasku stanu pojawia się jak iOS 6. Ustaw kolor tła we styl do korzystania z innych funkcji.
 
 ## Obsługiwane platformy
 
@@ -205,7 +205,7 @@ Obsługiwane są również właściwości CSS.
 
 Na iOS 7 gdy zostanie ustawiona wartość false, StatusBar.statusBarOverlaysWebView można ustawić kolor tła stanu przez ciąg szesnastkowy (#RRGGBB).
 
-Na WP7 i WP8 można również określić wartości jako #AARRGGBB, gdzie AA jest wartością alfa
+Na WP7 we WP8 można również określić wartości jako #AARRGGBB, gdzie AA jest wartością alfa
 
 ## Obsługiwane platformy
 

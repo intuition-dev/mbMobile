@@ -19,7 +19,7 @@
 
 # cordova-plugin-console
 
-Ten plugin jest przeznaczona do zapewnienia, że console.log() jest tak przydatne, jak to może być. To dodaje dodatkową funkcję dla iOS, Ubuntu, Windows Phone 8 i Windows 8. Jeśli jesteś zadowolony z jak console.log() pracuje dla Ciebie, wtedy prawdopodobnie nie potrzebują tej wtyczki.
+Ten plugin jest przeznaczona do zapewnienia, że console.log() jest tak przydatne, jak to może być. To dodaje dodatkową funkcję dla iOS, Ubuntu, Windows Phone 8 we Windows 8. Jeśli jesteś zadowolony z jak console.log() pracuje dla Ciebie, wtedy prawdopodobnie nie potrzebują tej wtyczki.
 
 Ten plugin definiuje obiekt globalny `console`.
 

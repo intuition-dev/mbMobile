@@ -3,7 +3,7 @@ Video demo: [Video Demo](http://youtu.be/VelUBKcwbQY)
 
 You can run as http app if you have an http server, webroot is in app/www
 
-npm i # to setup
+npm we # to setup
 
 npm start # to run
 

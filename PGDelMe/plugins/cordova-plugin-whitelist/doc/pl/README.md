@@ -58,7 +58,7 @@ Kontroluje, których adresy URL aplikacji jest możliwość zapytać systemem ot
 
 Na Android to przyrównuje do wysyłania zamiarem typu BROWSEABLE.
 
-Ta biała nie ma zastosowania do pluginów, tylko hiperłącza i wywołania `window.open()`.
+Ta biała nie ma zastosowania do pluginów, tylko hiperłącza we wywołania `window.open()`.
 
 W `pliku config.xml`dodawanie tagów `< allow-intent >` , jak to:
 
@@ -120,7 +120,7 @@ Cokół: Android pozwala również żądania do https://ssl.gstatic.com/accessib
 
 Formanty, które sieci żądań (obrazy, XHRs, itp.) mogą być wykonane (za pomocą widoku sieci Web bezpośrednio).
 
-Na Androida i iOS biała żądanie sieci (patrz wyżej) nie jest w stanie filtrować wszystkie rodzaje wniosków (np. `< video >` & WebSockets nie są zablokowane). Tak oprócz białej listy, należy użyć tagu `< meta >` [Treści polityki bezpieczeństwa](http://content-security-policy.com/) na wszystkich stronach.
+Na Androida we iOS biała żądanie sieci (patrz wyżej) nie jest w stanie filtrować wszystkie rodzaje wniosków (np. `< video >` & WebSockets nie są zablokowane). Tak oprócz białej listy, należy użyć tagu `< meta >` [Treści polityki bezpieczeństwa](http://content-security-policy.com/) na wszystkich stronach.
 
 Na Android wsparcie dla CSP w ramach systemu widoku sieci Web zaczyna KitKat (ale jest dostępne we wszystkich wersjach przy użyciu widoku sieci Web przejście dla pieszych).
 

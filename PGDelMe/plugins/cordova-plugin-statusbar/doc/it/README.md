@@ -63,7 +63,7 @@ if (cordova.platformId == 'android') {
 
 In fase di esecuzione è possibile utilizzare la funzione di StatusBar.hide qui sotto, ma se si desidera che la barra di stato venga nascosta all'avvio di app, è necessario modificare il file info. plist dell'app.
 
-Aggiungere o modificare questi due attributi, se non presente. Impostare la **"barra di stato è inizialmente nascosto"** a **"YES"** e **"Aspetto di vista basati su controller status bar"** a **"NO"**. Se si modifica manualmente senza Xcode, le chiavi e i valori sono:
+Aggiungere o modificare questi due attributi, se non presente. Impostare la **"barra di stato è inizialmente nascosto"** a **"YES"** e **"Aspetto di vista basati su controller status bar"** a **"NO"**. Se si modifica manualmente senza Xcode, le chiavi e we valori sono:
 
     <key>UIStatusBarHidden</key>
     <true/>
@@ -218,7 +218,7 @@ Proprietà di scrittura stenografica CSS sono supportati anche.
 
 IOS 7, quando StatusBar.statusBarOverlaysWebView è impostata su false, è possibile impostare il colore di sfondo della barra di stato di una stringa esadecimale (#RRGGBB).
 
-Su WP7 e WP8 è inoltre possibile specificare i valori come #AARRGGBB, dove AA è un valore alfa
+Su WP7 e WP8 è inoltre possibile specificare we valori come #AARRGGBB, dove AA è un valore alfa
 
 ## Piattaforme supportate
 

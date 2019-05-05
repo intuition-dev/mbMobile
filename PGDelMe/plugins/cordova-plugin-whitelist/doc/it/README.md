@@ -58,7 +58,7 @@ Controlla quali URL app è consentito richiedere il sistema di apertura. Per imp
 
 Su Android, ciò equivale all'invio di un intento di tipo BROWSEABLE.
 
-Questa whitelist non si applica ai plugin, solo i collegamenti ipertestuali e chiamate a `Window`.
+Questa whitelist non si applica ai plugin, solo we collegamenti ipertestuali e chiamate a `Window`.
 
 In `config. XML`, aggiungere tag `<allow-intent>` , simile al seguente:
 
@@ -120,7 +120,7 @@ Stranezza: Android consente anche alle richieste di https://ssl.gstatic.com/acce
 
 Controlli che le richieste di rete (immagini, XHRs, ecc.) possono essere effettuate (via webview direttamente).
 
-Su Android e iOS, la rete richiesta whitelist (Vedi sopra) non è in grado di filtrare tutti i tipi di richieste (ad esempio non sono bloccate `< video >` & WebSockets). Così, oltre alla whitelist, è necessario utilizzare un tag `< meta >` [Content Security Policy](http://content-security-policy.com/) su tutte le pagine.
+Su Android e iOS, la rete richiesta whitelist (Vedi sopra) non è in grado di filtrare tutti we tipi di richieste (ad esempio non sono bloccate `< video >` & WebSockets). Così, oltre alla whitelist, è necessario utilizzare un tag `< meta >` [Content Security Policy](http://content-security-policy.com/) su tutte le pagine.
 
 Su Android, supporto per CSP all'interno webview sistema inizia con KitKat (ma è disponibile su tutte le versioni usando Crosswalk WebView).
 
