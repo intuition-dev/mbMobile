@@ -3,8 +3,8 @@
 // Requires jQuery, Axios, deppjs.
 
 
-//declare var $: any
-//declare var axios: any
+//declare let $: any
+//declare let axios: any
 
 class SPArouter {
 
