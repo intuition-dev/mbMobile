@@ -62,7 +62,7 @@ class SPArouter {
       dispatchEvent(new CustomEvent('nav', { detail: msg } ) )
    }
 
-   static fROOTfix() { /* I forget why I need this */
+   static fROOTfix() { /* I forget why I need this, Angie? */
 
       let fROOT = location.toString().replace(location.search, '') // magic resource fix to know the first ROOT for SPA
       let ii = fROOT.lastIndexOf(':')
