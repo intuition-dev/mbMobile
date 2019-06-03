@@ -1,0 +1,24 @@
+doctype html
+html
+   head
+      include ../includes/headFrag
+      include ../includes/devOps
+      
+      script(src='//unpkg.com/axios@0.19.0-beta.1/dist/axios.min.js')
+      script(src= ROOT + 'assets/js/loader.js')
+   body
+      script.
+         depp.require(['feedRSS', 'DOM'], function () {
+            window.bindF = new BindFeed()
+            console.info("--window.bindF:", window.bindF)
+            //- window.bindF.read()
+         })
+      #router
+         .container.grid-lg
+            .columns
+               .column.col-10.col-mx-auto
+                  header.navbar
+                     section.navbar-section
+                        a.navbar-brand.mr-2(href='/') Home
+                        a.btn.btn-link(href='/screen/feed/') Feed
+                  block main

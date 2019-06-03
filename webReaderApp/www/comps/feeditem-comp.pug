@@ -1,0 +1,36 @@
+feeditem-comp
+    .card.card-feed
+        .card-header
+            .card-image
+                image(src="{this.urlToImage}")
+            .card-title.h6 {this.title }
+                .card-subtitle.text-gray 
+                    span(if="{this.author}") by {this.author}, 
+                    span(if="{this.publishedAt}") at {this.publishedAt}
+        .card-body
+            div(if="{this.description}")  {this.description}
+            div(if="{this.content}") {this.content}
+        .card-footer
+            .card-subtitle.text-gray  {this.source}
+            div
+                a(href="/screen/feeditem/?id={this.feedId}" if="{this.showMore}") Show More
+                a(href="/screen/feed/" if="{this.goBack}") Go Back
+    
+    script.
+        var comp = this
+        this.title = opts.title
+        this.description = opts.description
+        this.author = opts.author
+        //- this.index = opts.index
+        this.feedId = opts.feedId
+        this.goBack = opts.goBack
+        this.showMore = opts.showMore
+        this.content = opts.content
+        this.urlToImage = opts.urlToImage
+        this.publishedAt = opts.publishedAt
+        this.source = opts.source
+
+        this.on('mount', function(){
+            
+            
+        })

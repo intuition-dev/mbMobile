@@ -1,0 +1,13 @@
+extends /layout/layout
+//- App Shell
+
+block main
+   #feedItem
+   
+   script.
+      depp.require(['feedRSS', 'DOM'], function () {
+         let url_string = window.location.href
+         window.url = new URL(url_string);
+         let feed_id = window.url.searchParams.get("id")
+         window.bindF.getFeedItem(feed_id);
+      });

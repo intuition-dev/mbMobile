@@ -1,0 +1,41 @@
+@import ../spectre/cards
+
+header
+    height: 50px
+
+.bl-feedList
+    & > div
+        margin-bottom: 16px
+
+.card
+    @extend .card
+
+    &.card-feed
+        background: white
+        border: 0
+        border-radius: 4px
+
+        .card-header
+            display: flex
+            align-items: center
+
+            .card-title
+                // color: $secondary-color
+
+        .card-subtitle
+            font-size: 12px
+
+        .card-image
+            margin-right: 8px
+
+            img
+                width: 60px
+                height: 60px
+                border-radius: 100%
+
+        .card-body
+            font-size: 14px
+
+        .card-footer
+            display: flex
+            justify-content: space-between
