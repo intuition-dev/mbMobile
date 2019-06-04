@@ -141,7 +141,7 @@ class SPArouter {
 EXAMPLE:
 SPArouter.init(onNavigate);
 // call the FSM state machine 
-function onNavigate (evt) {
+function onNavigate (evt) { // this acts as the controller
    if (evt.detail.type == SPArouter.NavSTART) { //start
       //$('#router').fadeTo(100,.2);
    }
