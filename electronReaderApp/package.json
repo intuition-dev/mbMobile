@@ -1,6 +1,6 @@
 {
-   "name": "TabulatorFeed",
-   "productName": "TabulatorFeed",
+   "name": "RssFeed",
+   "productName": "RssFeed",
    "version": "0.0.1",
    "main": "app/index.js",
    "homepage": "./",
@@ -14,14 +14,14 @@
       "yarn": ">=1.15.2"
   },
    "dependencies": {
-      "mbake": ">=5.6.25"
+      "mbake": ">=6.6.5"
    },
    "devDependencies": {
       "electron-packager": ">=13.1.1",
-      "electron": ">=5.0.2",
-      "electron-builder": ">=20.41.0",
+      "electron": ">=5.0.3",
+      "electron-builder": ">=20.43.0",
    
-      "@types/node": ">=12.0.3"
+      "@types/node": ">=12.0.7"
  
    }
 }
