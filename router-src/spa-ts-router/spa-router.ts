@@ -1,4 +1,4 @@
-// All rights reserved by Metabake.org | Cekvenich, licensed under LGPL-3.0-only
+// All rights reserved by MetaBake.org | Cekvenich, licensed under LGPL-3.0-only
 // Cheap commercial license available.
 // Requires jQuery, Axios, deppjs.
 
