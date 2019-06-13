@@ -19,7 +19,7 @@ depp.require(['pre', 'DOM'], function () {// 'show' page, ex: unhide
    depp.require('OpenSans')
    // mobileMenu()
    $('.delayShowing').removeClass('delayShowing') // show
-   depp.require(['navSPA'])
+   // depp.require(['navSPA'])
    console.info('style done', Date.now() - _start)
 
    // addEventListener('onBrowser', function (evt) {
@@ -29,6 +29,21 @@ depp.require(['pre', 'DOM'], function () {// 'show' page, ex: unhide
    // });
 
 })//ready
+
+depp.require(['SPA'], function() {
+   console.log('spa loaded');
+   SPArouter.init(onNavigate);
+   function onNavigate(evt) {
+      if (evt.detail.type == SPArouter.NavSTART) { //start
+         //$('#router').fadeTo(100,.2);
+      }
+      else if (evt.detail.type == SPArouter.NavDONE) {
+         $(SPArouter.zone).html(evt.detail.newContent);
+         //$('#router').fadeTo(100,1);
+         window.scrollTo(0, 0);
+      }
+   }
+})
 
 
 ///Mobile menu

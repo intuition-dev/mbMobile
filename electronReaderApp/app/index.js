@@ -1,12 +1,13 @@
-const {app, BrowserWindow} = require('electron')
+const { app, BrowserWindow, protocol } = require('electron')
+const path = require('path')
 
 let mainWindow
-function createWindow () {
-   mainWindow = new BrowserWindow({width: 800, height: 600})
+function createWindow() {
+   mainWindow = new BrowserWindow({ width: 800, height: 600 })
    mainWindow.setMenu(null)
    mainWindow.setTitle('On hi')
 
-   mainWindow.loadFile('app/www/index.html')
+   mainWindow.loadFile('./www/index.html')
 
    //mainWindow.webContents.openDevTools()
    mainWindow.on('closed', function () {
@@ -20,6 +21,25 @@ app.on('activate', function () {
    if (mainWindow === null) {
       createWindow()
    }
+})
+
+app.on('ready', () => {
+   protocol.interceptStreamProtocol('file',
+      (request, callback) => {
+         console.log('intercept', request.url)
+         const isWeb = request.url.indexOf('unpkg.com');
+
+         if (isWeb > -1) {
+            var url = request.url.split('file://').pop();
+            console.log(url);
+            callback({ path: path.normalize(`https://${url}`) })
+         } else {
+            callback({path: path.normalize(request.url)})
+         }
+      }, (error) => {
+         console.log('------------------------------------------>error', error)
+      }
+   )
 })
 
 app.on('window-all-closed', function () {

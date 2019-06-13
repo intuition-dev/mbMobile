@@ -3,7 +3,7 @@
    "productName": "RssFeed",
    "version": "0.0.1",
    "main": "app/index.js",
-   "homepage": "./",
+   "homepage": "./www/",
    "scripts": {
       "start": "electron .",
       "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=res/icon.icns --prune=true --out=release-builds",
