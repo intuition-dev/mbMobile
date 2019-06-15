@@ -1,8 +1,8 @@
 
 <html>
   <head>
-    <script src="https://unpkg.com/axios@0.19.0-beta.1/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.0/dist/jquery.slim.min.js"></script>
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <script src="../../spa-router.js"></script>
   </head>
   <body>
@@ -11,24 +11,24 @@
     <p></p>
     <div id="router">
       <p>oh hi 1</p>
-      <script>console.info('1 sc');</script>
+      <script>console.info('1 sc')</script>
     </div>
     <footer>
       <p>f</p>
     </footer>
     <script>
       //- SPA Ex:
-      SPArouter.init(onNavigate);
+      SPArouter.init(onNavigate)
       function onNavigate (evt) {
          if (evt.detail.type == SPArouter.NavSTART) { //start
-            //$('#router').fadeTo(100,.2);
+            //$('#router').fadeTo(100,.2)
          }
          else if (evt.detail.type == SPArouter.NavDONE) {
-            $(SPArouter.zone).html(evt.detail.newContent);
-            //$('#router').fadeTo(100,1);
-            window.scrollTo(0, 0);
+            $(SPArouter.zone).html(evt.detail.newContent)
+            //$('#router').fadeTo(100,1)
+            window.scrollTo(0, 0)
          }
       }
     </script>
-  <!-- mB v6.06.22 on 2019-06-15T20:34:24.293Z --></body>
+  <!-- mB v6.06.22 on 2019-06-15T20:46:02.790Z --></body>
 </html>

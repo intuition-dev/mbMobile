@@ -14,7 +14,7 @@ class SPArouter {
    static ERR= '_nav-ERR'
 
    static loadHtml(toHref, fromHref, back_) { //triggered, but function can be called directly also
-      //console.info('loaded', toHref)
+      console.info('loaded', toHref)
       if (!back_) {
          try {
             history.pushState({ url: toHref }, '', toHref)
@@ -25,7 +25,7 @@ class SPArouter {
       SPArouter.disE({ type: SPArouter.NavSTART, toHref: toHref, fromHref: fromHref, back: back_ })
 
       let url = SPArouter.appendQueryString(toHref, { 'SPArouter': "\"" + SPArouter.zone + "\"" })
-      //console.info(url)
+      console.info(url)
 
       //   credentials: 'same-origin' 
       axios.get(url).then(function (txt) {
@@ -58,7 +58,9 @@ class SPArouter {
    }
 
    static disE(msg) {
-      dispatchEvent(new CustomEvent('nav', { detail: msg } ) )
+      setTimeout(function(){ 
+         dispatchEvent(new CustomEvent('nav', { detail: msg } ) )
+      },1)
    }
 
    // if /pg1, /pg2; and in /pg1, it will look for /pg1/pg2: this is a fix
@@ -73,17 +75,18 @@ class SPArouter {
       //console.info('fROOT '+ isFile)
       if(isFile) fROOT = fROOT.slice(0, -11)
 
-      console.info('fROOT ', fROOT)
+      console.info('***: fROOT ', fROOT)
 
       if(!isFile)  {
          $('a').each(function(index, value){
+            console.info('fROOT', this.href)
             $(this).attr('href', this.href.replace('/fROOT', '') )
          })
       }//fi
       else $('a').each(function(index, value){
          $(this).attr('href', this.href.replace('/fROOT', fROOT) )
    
-         console.info(this.href)
+         console.info('fROOT', this.href)
          
          let isSlash = this.href.slice(-1) == '/'
          if(isSlash)

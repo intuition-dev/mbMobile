@@ -2,6 +2,7 @@ var SPArouter = (function () {
     function SPArouter() {
     }
     SPArouter.loadHtml = function (toHref, fromHref, back_) {
+        console.info('loaded', toHref);
         if (!back_) {
             try {
                 history.pushState({ url: toHref }, '', toHref);
@@ -12,6 +13,7 @@ var SPArouter = (function () {
         }
         SPArouter.disE({ type: SPArouter.NavSTART, toHref: toHref, fromHref: fromHref, back: back_ });
         var url = SPArouter.appendQueryString(toHref, { 'SPArouter': "\"" + SPArouter.zone + "\"" });
+        console.info(url);
         axios.get(url).then(function (txt) {
             var $html = $('<html></html>').append($(txt.data));
             var title = $html.find('title').first().text();
@@ -38,7 +40,9 @@ var SPArouter = (function () {
         return url + firstSeparator + queryString;
     };
     SPArouter.disE = function (msg) {
-        dispatchEvent(new CustomEvent('nav', { detail: msg }));
+        setTimeout(function () {
+            dispatchEvent(new CustomEvent('nav', { detail: msg }));
+        }, 1);
     };
     SPArouter.fROOTfix = function () {
         var fROOT = location.toString().replace(location.search, '');
@@ -47,16 +51,17 @@ var SPArouter = (function () {
         var isFile = window.location.protocol == 'file:';
         if (isFile)
             fROOT = fROOT.slice(0, -11);
-        console.info('fROOT ', fROOT);
+        console.info('***: fROOT ', fROOT);
         if (!isFile) {
             $('a').each(function (index, value) {
+                console.info('fROOT', this.href);
                 $(this).attr('href', this.href.replace('/fROOT', ''));
             });
         }
         else
             $('a').each(function (index, value) {
                 $(this).attr('href', this.href.replace('/fROOT', fROOT));
-                console.info(this.href);
+                console.info('fROOT', this.href);
                 var isSlash = this.href.slice(-1) == '/';
                 if (isSlash)
                     $(this).attr('href', this.href + 'index.html');
