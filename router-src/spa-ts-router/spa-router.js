@@ -1,3 +1,4 @@
+console.info('v');
 var SPArouter = (function () {
     function SPArouter() {
     }

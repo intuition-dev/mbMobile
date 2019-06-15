@@ -5,6 +5,8 @@
 declare let $: any
 declare let axios: any
 
+console.info('v')
+
 class SPArouter {
 
    static zone =  '#router' //the content in your layout. The rest should be app shell from PWA.
