@@ -6,9 +6,9 @@ Requires jQuery, Axios
 Should be used w/ StateMachine (eg davestewart) on complex apps.
 
 ## Access via UNPKG
-   https://unpkg.com/spa-ts-router@4.15.18n/spa-router.min.js
+   https://unpkg.com/spa-ts-router@4.20.0/spa-router.min.js
 
-Note:
+Example:
 
       SPArouter.init(onNavigate)
       function onNavigate (evt) {
@@ -23,3 +23,8 @@ Note:
       }
       
       **To exclude hyperlink from SPA, add `.norouter` class to the element**
+
+
+### MetaBake.org
+
+Part of MetaBake.orb toolbox

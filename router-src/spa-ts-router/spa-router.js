@@ -64,26 +64,13 @@ var SPArouter = (function () {
         }, 1);
     };
     SPArouter.fROOTfix = function () {
-        var fROOT = location.toString().replace(location.search, '');
-        var ii = fROOT.lastIndexOf(':');
-        fROOT = fROOT.substring(ii + 1);
         if (SPArouter.isFile)
-            fROOT = fROOT.slice(0, -11);
-        console.info('***: fROOT ', fROOT, SPArouter.isFile);
-        if (!SPArouter.isFile) {
             $('a').each(function (index, value) {
-            });
-        }
-        else
-            $('a').each(function (index, value) {
-                console.info('n b fROOT', this.href);
-                console.info('n a fROOT', this.href);
                 var isSlash = this.href.slice(-1) == '/';
                 if (isSlash)
                     $(this).attr('href', this.href + 'index.html');
                 else
                     $(this).attr('href', this.href + '/index.html');
-                console.info('n a fROOT', this.href);
             });
     };
     SPArouter.init = function (foo) {
@@ -119,7 +106,6 @@ var SPArouter = (function () {
             console.info('no push state on file//', err);
         }
         sessionStorage.setItem('oldUrl', pg);
-        SPArouter.fROOTfix();
     };
     SPArouter.zone = '#router';
     SPArouter.NavSTART = '_nav-start';

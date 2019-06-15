@@ -1,7 +1,7 @@
 {
   "name": "spa-ts-router",
-  "version": "4.15.19",
-  "description": "SPA Router in typescript",
+  "version": "4.20.0",
+  "description": "SPA Router in typescript, part of MetaBake.org tool box",
   "license": "LGPL-3.0-only"
 
 }

@@ -1,5 +1,5 @@
 // All rights reserved by MetaBake.org | Cekvenich, licensed under LGPL-3.0-only
-// Cheap commercial license available.
+// Alternative license available 
 // Requires jQuery, Axios
 
 declare let $: any
@@ -90,38 +90,17 @@ class SPArouter {
    // if /pg1, /pg2; and in /pg1, it will look for /pg1/pg2: this is a fix
    static fROOTfix() { 
 
-      // location.search is the querystring
-      let fROOT = location.toString().replace(location.search, '') // magic resource fix to know the first ROOT for SPA
-      let ii = fROOT.lastIndexOf(':')
-      fROOT = fROOT.substring(ii+1)
-
-      //console.info('fROOT '+ isFile)
-      if(SPArouter.isFile) fROOT = fROOT.slice(0, -11)
-
-      console.info('***: fROOT ', fROOT, SPArouter.isFile)
-
-      if(!SPArouter.isFile)  {
+      if(SPArouter.isFile)  
          $('a').each(function(index, value){
 
+            let isSlash = this.href.slice(-1) == '/'
+            if(isSlash)
+               $(this).attr('href', this.href+'index.html')
+            else
+               $(this).attr('href', this.href+'/index.html')
+            
          })
-      }//fi
-      else $('a').each(function(index, value){
 
-         console.info('n b fROOT', this.href)
-
-         //$(this).attr('href', this.href.replace(fROOT, fROOT) )
-   
-         console.info('n a fROOT', this.href)
-         
-         let isSlash = this.href.slice(-1) == '/'
-         if(isSlash)
-            $(this).attr('href', this.href+'index.html')
-         else
-            $(this).attr('href', this.href+'/index.html')
-         
-         console.info('n a fROOT', this.href)
-
-         })
    }//()
 
     static init(foo) {
@@ -162,7 +141,7 @@ class SPArouter {
       
       sessionStorage.setItem('oldUrl', pg)
       
-      SPArouter.fROOTfix()
+      //SPArouter.fROOTfix()
 
    }// init
 

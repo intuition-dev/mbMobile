@@ -14,7 +14,7 @@ function createWindow() {
    mainWindow.setMenu(null)
    mainWindow.setTitle('On hi')
 
-   mainWindow.loadFile('./spa-ts-router/index.html')
+   mainWindow.loadFile('./www/index.html')
 
 
    mainWindow.webContents.openDevTools()
