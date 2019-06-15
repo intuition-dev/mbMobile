@@ -1,6 +1,5 @@
 basedir: ../..
 
-ROOT: '/'
-
+ROOT: '../'
 
 pretty: true

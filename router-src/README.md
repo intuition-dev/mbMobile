@@ -8,7 +8,6 @@ Should be used w/ StateMachine (eg davestewart) on complex apps.
 ## Access via UNPKG
    https://unpkg.com/spa-ts-router@4.15.18n/spa-router.min.js
 
-
 Note:
 
       SPArouter.init(onNavigate)

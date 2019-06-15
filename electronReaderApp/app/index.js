@@ -1,6 +1,8 @@
 const { app, BrowserWindow, protocol } = require('electron')
 const path = require('path')
 
+console.log('Electron Path: ' + app.getAppPath())
+
 let mainWindow
 function createWindow() {
 
@@ -12,7 +14,7 @@ function createWindow() {
    mainWindow.setMenu(null)
    mainWindow.setTitle('On hi')
 
-   mainWindow.loadFile('./www/index.html')
+   mainWindow.loadFile('./spa-ts-router/index.html')
 
    //mainWindow.webContents.openDevTools()
    mainWindow.on('closed', function () {
@@ -20,6 +22,7 @@ function createWindow() {
    })
 }
 app.on('ready', createWindow)
+
 app.on('activate', function () {
    // On OS X it's common to re-create a window in the app when the
    // dock icon is clicked and there are no other windows open.
@@ -35,3 +38,5 @@ app.on('ready', () => {
 app.on('window-all-closed', function () {
    app.quit()
 })
+
+

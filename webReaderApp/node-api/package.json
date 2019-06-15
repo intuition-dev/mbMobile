@@ -8,10 +8,10 @@
       "yarn": ">=1.16.0"
    },
    "dependencies": {
-      "mbake": ">=6.6.5",
+      "mbake": ">=6.6.22",
       "js-yaml": ">=3.13.1"
    },
    "devDependencies": {
-      "@types/node": ">=12.0.7"
+      "@types/node": ">=12.0.8"
    }
 }
