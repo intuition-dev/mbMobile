@@ -14,14 +14,14 @@
       "yarn": ">=1.15.2"
   },
    "dependencies": {
-      "mbake": ">=6.6.5"
+      "mbake": ">=6.6.22"
    },
    "devDependencies": {
       "electron-packager": ">=13.1.1",
-      "electron": ">=5.0.3",
+      "electron": ">=5.0.4",
       "electron-builder": ">=20.43.0",
    
-      "@types/node": ">=12.0.7"
+      "@types/node": ">=12.0.8"
  
    }
 }

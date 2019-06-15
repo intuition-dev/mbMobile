@@ -24,22 +24,7 @@ app.on('activate', function () {
 })
 
 app.on('ready', () => {
-   protocol.interceptStreamProtocol('file',
-      (request, callback) => {
-         console.log('intercept', request.url)
-         const isWeb = request.url.indexOf('unpkg.com');
-
-         if (isWeb > -1) {
-            var url = request.url.split('file://').pop();
-            console.log(url);
-            callback({ path: path.normalize(`https://${url}`) })
-         } else {
-            callback({path: path.normalize(request.url)})
-         }
-      }, (error) => {
-         console.log('------------------------------------------>error', error)
-      }
-   )
+   
 })
 
 app.on('window-all-closed', function () {
