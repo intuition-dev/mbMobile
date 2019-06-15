@@ -30,7 +30,7 @@ depp.require(['pre', 'DOM'], function () {// 'show' page, ex: unhide
 
 })//ready
 
-depp.require(['SPA'], function() {
+depp.require(['#jquery','SPA'], function() {
    console.log('spa loaded');
    SPArouter.init(onNavigate);
    function onNavigate(evt) {

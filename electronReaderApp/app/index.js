@@ -3,6 +3,11 @@ const path = require('path')
 
 let mainWindow
 function createWindow() {
+
+   
+   process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true'
+
+
    mainWindow = new BrowserWindow({ width: 800, height: 600 })
    mainWindow.setMenu(null)
    mainWindow.setTitle('On hi')
