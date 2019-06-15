@@ -62,7 +62,8 @@ class SPArouter {
       dispatchEvent(new CustomEvent('nav', { detail: msg } ) )
    }
 
-   static fROOTfix() { /* I forget why I need this, Angie? */
+   // if /pg1, /pg2; and in /pg1, it will look for /pg1/pg2: this is a fix
+   static fROOTfix() { 
 
       let fROOT = location.toString().replace(location.search, '') // magic resource fix to know the first ROOT for SPA
       let ii = fROOT.lastIndexOf(':')
