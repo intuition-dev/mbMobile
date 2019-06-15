@@ -1,6 +1,23 @@
-console.info('v');
+console.info('spa router');
 var SPArouter = (function () {
     function SPArouter() {
+        var native = false;
+        if (document.URL.indexOf('http://') === -1
+            && document.URL.indexOf('https://') === -1)
+            native = true;
+        var isFile = window.location.protocol == 'file:';
+        if (isFile || native) {
+            try {
+                window.nodeRequire = require;
+                delete window.require;
+                delete window.exports;
+                delete window.module;
+                console.log('fixed for non http/native');
+            }
+            catch (err) { }
+        }
+        console.log(native, isFile);
+        SPArouter.isFile = native || isFile;
     }
     SPArouter.loadHtml = function (toHref, fromHref, back_) {
         console.info('loaded', toHref);
@@ -13,7 +30,8 @@ var SPArouter = (function () {
             }
         }
         SPArouter.disE({ type: SPArouter.NavSTART, toHref: toHref, fromHref: fromHref, back: back_ });
-        var url = SPArouter.appendQueryString(toHref, { 'SPArouter': "\"" + SPArouter.zone + "\"" });
+        var url = toHref;
+        console.info(url);
         console.info(url);
         axios.get(url).then(function (txt) {
             var $html = $('<html></html>').append($(txt.data));
@@ -49,25 +67,23 @@ var SPArouter = (function () {
         var fROOT = location.toString().replace(location.search, '');
         var ii = fROOT.lastIndexOf(':');
         fROOT = fROOT.substring(ii + 1);
-        var isFile = window.location.protocol == 'file:';
-        if (isFile)
+        if (SPArouter.isFile)
             fROOT = fROOT.slice(0, -11);
-        console.info('***: fROOT ', fROOT);
-        if (!isFile) {
+        console.info('***: fROOT ', fROOT, SPArouter.isFile);
+        if (!SPArouter.isFile) {
             $('a').each(function (index, value) {
-                console.info('fROOT', this.href);
-                $(this).attr('href', this.href.replace('/fROOT', ''));
             });
         }
         else
             $('a').each(function (index, value) {
-                $(this).attr('href', this.href.replace('/fROOT', fROOT));
-                console.info('fROOT', this.href);
+                console.info('n b fROOT', this.href);
+                console.info('n a fROOT', this.href);
                 var isSlash = this.href.slice(-1) == '/';
                 if (isSlash)
                     $(this).attr('href', this.href + 'index.html');
                 else
                     $(this).attr('href', this.href + '/index.html');
+                console.info('n a fROOT', this.href);
             });
     };
     SPArouter.init = function (foo) {

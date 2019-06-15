@@ -5,10 +5,29 @@
 declare let $: any
 declare let axios: any
 
-console.info('v')
+console.info('spa router')
 
 class SPArouter {
+   static isFile
+   constructor() {
+      var native = false
+      if (document.URL.indexOf('http://') === -1
+      && document.URL.indexOf('https://') === -1) native = true
+      var isFile = window.location.protocol == 'file:'
+      if(isFile||native) {// for electron | build.phonegap, checks if running in real browser from http server 
+      try {
+         window.nodeRequire = require 
+         delete window.require
+         delete window.exports 
+         delete window.module
+         console.log('fixed for non http/native')
+      } catch(err) { }
+      }
+      console.log(native, isFile)
+      SPArouter.isFile = native || isFile
 
+   }
+   
    static zone =  '#router' //the content in your layout. The rest should be app shell from PWA.
 
    static NavSTART= '_nav-start'
@@ -26,7 +45,10 @@ class SPArouter {
       //fire NAV event
       SPArouter.disE({ type: SPArouter.NavSTART, toHref: toHref, fromHref: fromHref, back: back_ })
 
-      let url = SPArouter.appendQueryString(toHref, { 'SPArouter': "\"" + SPArouter.zone + "\"" })
+      let url = toHref //SPArouter.appendQueryString(toHref, { 'SPArouter': "\"" + SPArouter.zone + "\"" })
+
+      console.info(url)
+
       console.info(url)
 
       //   credentials: 'same-origin' 
@@ -73,29 +95,33 @@ class SPArouter {
       let ii = fROOT.lastIndexOf(':')
       fROOT = fROOT.substring(ii+1)
 
-      const isFile = window.location.protocol == 'file:'
       //console.info('fROOT '+ isFile)
-      if(isFile) fROOT = fROOT.slice(0, -11)
+      if(SPArouter.isFile) fROOT = fROOT.slice(0, -11)
 
-      console.info('***: fROOT ', fROOT)
+      console.info('***: fROOT ', fROOT, SPArouter.isFile)
 
-      if(!isFile)  {
+      if(!SPArouter.isFile)  {
          $('a').each(function(index, value){
-            console.info('fROOT', this.href)
-            $(this).attr('href', this.href.replace('/fROOT', '') )
+
          })
       }//fi
       else $('a').each(function(index, value){
-         $(this).attr('href', this.href.replace('/fROOT', fROOT) )
+
+         console.info('n b fROOT', this.href)
+
+         //$(this).attr('href', this.href.replace(fROOT, fROOT) )
    
-         console.info('fROOT', this.href)
+         console.info('n a fROOT', this.href)
          
          let isSlash = this.href.slice(-1) == '/'
          if(isSlash)
             $(this).attr('href', this.href+'index.html')
          else
             $(this).attr('href', this.href+'/index.html')
-      })
+         
+         console.info('n a fROOT', this.href)
+
+         })
    }//()
 
     static init(foo) {
