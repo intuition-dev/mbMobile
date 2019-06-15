@@ -11,7 +11,7 @@
    },
    "engines": {
       "node": ">=12.3.1",
-      "yarn": ">=1.15.2"
+      "yarn": ">=1.16.0"
   },
    "dependencies": {
       "mbake": ">=6.6.22"

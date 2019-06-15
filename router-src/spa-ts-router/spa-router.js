@@ -97,6 +97,7 @@ var SPArouter = (function () {
             console.info('no push state on file//', err);
         }
         sessionStorage.setItem('oldUrl', pg);
+        SPArouter.fROOTfix();
     };
     SPArouter.zone = '#router';
     SPArouter.NavSTART = '_nav-start';

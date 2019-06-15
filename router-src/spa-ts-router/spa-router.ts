@@ -1,10 +1,9 @@
 // All rights reserved by MetaBake.org | Cekvenich, licensed under LGPL-3.0-only
 // Cheap commercial license available.
-// Requires jQuery, Axios, deppjs.
+// Requires jQuery, Axios
 
-
-//declare let $: any
-//declare let axios: any
+declare let $: any
+declare let axios: any
 
 class SPArouter {
 
@@ -65,6 +64,7 @@ class SPArouter {
    // if /pg1, /pg2; and in /pg1, it will look for /pg1/pg2: this is a fix
    static fROOTfix() { 
 
+      // location.search is the querystring
       let fROOT = location.toString().replace(location.search, '') // magic resource fix to know the first ROOT for SPA
       let ii = fROOT.lastIndexOf(':')
       fROOT = fROOT.substring(ii+1)
@@ -131,7 +131,7 @@ class SPArouter {
       
       sessionStorage.setItem('oldUrl', pg)
       
-      //SPArouter.fROOTfix()
+      SPArouter.fROOTfix()
 
    }// init
 
