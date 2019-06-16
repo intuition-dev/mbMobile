@@ -1,7 +1,9 @@
 This is the Hybrid section, based on SPA.
 
-Becuase native are file based and don't have an http server, locations are relative. Eg '../' instead of '/'.
+Because native are file based and don't have an http server, locations are relative. Eg '../' instead of '/'.
 So it is easier if all the screens or pages are at same level.
+
+A key part is making sure SEO works. No mater what page you load.
 
 
 - [SPA video](http://youtu.be/LHFjjDPlU3A)
