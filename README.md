@@ -1,52 +1,15 @@
-- [SPA video](http://youtu.be/LHFjjDPlU3A)
-- [Click for 'THE' B-M-SPA docs](http://doc.MetaBake.org/SPA/)
+This is the Hybrid section, based on SPA.
 
-<img src="http://MetaBake.github.io/mbakeDocs/logo.jpg" width="100">
+Becuase native are file based and don't have an http server, locations are relative. Eg '../' instead of '/'.
+So it is easier if all the screens or pages are at same level.
+
+
+- [SPA video](http://youtu.be/LHFjjDPlU3A)
+
+
 
 ### MetaBake is open source and extensible low-code productivity tool for programmers; including dynamic apps and data binding. 'All my friends KNOW the low-coder'
 
-#### MetaBake works via static generation; with Pug, Markdown and more; including dynamic apps and data binding. We aim to grow the popularity of low-code. 
-
-MetaBake mbake CLI lets you generate websites and dynamic webapps in Pug by leveraging low-code pillars for high development productivity.
-
-## Install
-
-Easy to install
-
-```sh
-yarn global add mbake
-mbake
-```
-
-Install note:
-- If you get an error like 'Node Sass could not find a binding for your current environment' 
-run$: ``` yarn global upgrade ```
-
-## First Page
-
-Create file index.pug
-```pug
-header
-body
-    p Hello #{key1}
-```
-and create file dat.yaml
-```yaml
-key1: World
-```
-
-### Now make with mbake:
-
-```sh
-mbake .
-```
-
-This will create index.html. 
-
-Of course you can use regular Pug syntax to include other Pug files; or Markdown. MetaBake Markdown flavor includes CSS support:
-```pug
-    include:metaMD comment.md
-```
 
 ## More
 
