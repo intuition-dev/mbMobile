@@ -25,6 +25,9 @@ Example:
       **To exclude hyperlink from SPA, add `.norouter` class to the element**
 
 
-### MetaBake.org
+###MetaBake.org
 
 Part of MetaBake.orb toolbox
+
+#### Please star the main project here:
+- https://github.com/metabake/metaIntuition
