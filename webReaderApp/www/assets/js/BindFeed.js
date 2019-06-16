@@ -89,7 +89,7 @@ class BindFeed {
                         url: article.url
                     })
                 } else {
-                    window.location.href = '/screen/feed/'
+                    window.location.href = '/screen/feed/index.html'
                 }
             })
     }

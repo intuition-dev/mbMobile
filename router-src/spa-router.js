@@ -61,6 +61,19 @@ var SPArouter = (function () {
             dispatchEvent(new CustomEvent('nav', { detail: msg }));
         }, 1);
     };
+    SPArouter.fROOTfix = function () {
+        if (SPArouter.isFile)
+            $('a').each(function (index, value) {
+                var isSlash = this.href.slice(-1) == '/';
+                console.log(isSlash);
+                if (this.href.includes('index.html'))
+                    return;
+                if (isSlash)
+                    $(this).attr('href', this.href + 'index.html');
+                else
+                    $(this).attr('href', this.href + '/index.html');
+            });
+    };
     SPArouter.init = function (foo) {
         addEventListener('nav', foo);
         $(window).on('popstate', function (e) {
@@ -94,6 +107,7 @@ var SPArouter = (function () {
             console.info('no push state on file//', err);
         }
         sessionStorage.setItem('oldUrl', pg);
+        SPArouter.fROOTfix();
     };
     SPArouter.zone = '#router';
     SPArouter.NavSTART = '_nav-start';

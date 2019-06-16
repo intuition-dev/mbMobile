@@ -85,18 +85,22 @@ class SPArouter {
       },1)
    }
 
-   /*
+   
    static fROOTfix() { 
       if(SPArouter.isFile)  
          $('a').each(function(index, value){
             let isSlash = this.href.slice(-1) == '/'
+            console.log(isSlash)
+            
+            if(this.href.includes('index.html')) return // continue
+
             if(isSlash)
                $(this).attr('href', this.href+'index.html')
             else
                $(this).attr('href', this.href+'/index.html') 
          })
    }//()
-   */
+   
 
     static init(foo) {
       addEventListener('nav', foo)
@@ -136,6 +140,7 @@ class SPArouter {
       
       sessionStorage.setItem('oldUrl', pg)
       
+      SPArouter.fROOTfix()
    }// init
 
 } // class
