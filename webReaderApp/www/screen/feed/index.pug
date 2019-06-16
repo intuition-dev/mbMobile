@@ -15,11 +15,10 @@ block main
                 if (itemsLength && inView($('#feeditem-comp_' + (itemsLength-2)))) 
                     if(itemsLength < window.bindF.totalResults)
                         disE('loadMore')
-                
             })
          
          addEventListener('loadMore', function (evt) {
             window.bindF.page++
-            window.bindF.getViewList();
+            window.bindF.getViewList()
         })
-      });
+      })
