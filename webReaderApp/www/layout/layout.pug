@@ -4,7 +4,7 @@ html
       include ../includes/headFrag
       include ../includes/devOps
 
-      script(src= ROOT + 'assets/js/loader.js')
+      script(src= '../../assets/js/loader.js')
    body
       script.
          depp.require(['feedRSS', 'DOM'], function () {
@@ -18,6 +18,5 @@ html
                .column.col-10.col-mx-auto
                   header.navbar
                      section.navbar-section
-                        a.navbar-brand.mr-2(href='./') Home
-                        a.btn.btn-link(href='./screen/feed/') Feed
+                        a.btn.btn-link(href='../screen/feed/') Feed
                   block main

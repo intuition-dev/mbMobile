@@ -3,8 +3,8 @@
   <head>
     <script>
       var _start = Date.now()
-      ROOT = './' //- sets global pug and .js from dat.yaml
-      console.info('root','./')
+      ROOT = '../../' //- sets global pug and .js from dat.yaml
+      console.info('root','../../')
       window.ENV = '0' // for comps, but it is also in scape for Pug for ENV logic
       
     </script>
@@ -31,7 +31,7 @@
           , "port": 3000
       }
     </script>
-    <script src="./assets/js/loader.js"></script>
+    <script src="../../assets/js/loader.js"></script>
   </head>
   <body>
     <script>
@@ -46,12 +46,12 @@
         <div class="columns">
           <div class="column col-10 col-mx-auto">
             <header class="navbar">
-              <section class="navbar-section"><a class="navbar-brand mr-2" href="./">Home</a><a class="btn btn-link" href="./screen/feed/">Feed</a></section>
+              <section class="navbar-section"><a class="btn btn-link" href="../screen/feed/">Feed</a></section>
             </header>
-            <div class="pad">rss feed runs there</div>
+            <script>window.location.href = './screen/feed'</script>
           </div>
         </div>
       </div>
     </div>
-  <!-- mB v6.06.22 on 2019-06-15T23:14:58.832Z --></body>
+  <!-- mB v6.06.22 on 2019-06-16T00:16:34.561Z --></body>
 </html>

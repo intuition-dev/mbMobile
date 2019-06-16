@@ -49,8 +49,6 @@ class SPArouter {
 
       console.info(url)
 
-      console.info(url)
-
       //   credentials: 'same-origin' 
       axios.get(url).then(function (txt) {
          let $html = $('<html></html>').append($(txt.data))
@@ -87,21 +85,18 @@ class SPArouter {
       },1)
    }
 
-   // if /pg1, /pg2; and in /pg1, it will look for /pg1/pg2: this is a fix
+   /*
    static fROOTfix() { 
-
       if(SPArouter.isFile)  
          $('a').each(function(index, value){
-
             let isSlash = this.href.slice(-1) == '/'
             if(isSlash)
                $(this).attr('href', this.href+'index.html')
             else
-               $(this).attr('href', this.href+'/index.html')
-            
+               $(this).attr('href', this.href+'/index.html') 
          })
-
    }//()
+   */
 
     static init(foo) {
       addEventListener('nav', foo)
@@ -141,8 +136,6 @@ class SPArouter {
       
       sessionStorage.setItem('oldUrl', pg)
       
-      //SPArouter.fROOTfix()
-
    }// init
 
 } // class
