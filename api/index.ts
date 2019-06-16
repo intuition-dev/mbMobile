@@ -4,9 +4,8 @@ import { ExpressRPC } from 'mbake/lib/Serv';
 const yaml = require('js-yaml');
 const fs = require('fs');
 var request = require('request');
-let config = yaml.load(fs.readFileSync('config.yaml'))[process.env.NODE_ENV || 'local'];
 
-const app = ExpressRPC.makeInstance(config.cors);
+const app = ExpressRPC.makeInstance(['*'])
 
 const port = 3000;
 

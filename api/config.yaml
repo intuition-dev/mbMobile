@@ -1,6 +1,0 @@
-local: {
-  cors: ['http://localhost:8090'],
-}
-server: {
-  cors: ['https://rss.mbake.net'],
-}
