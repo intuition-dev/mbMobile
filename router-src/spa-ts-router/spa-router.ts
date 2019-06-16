@@ -84,9 +84,8 @@ class SPArouter {
          dispatchEvent(new CustomEvent('nav', { detail: msg } ) )
       },1)
    }
-
    
-   static fROOTfix() { 
+   static fROOTfix() {  // BUG: needs querystring
       if(SPArouter.isFile)  
          $('a').each(function(index, value){
             let isSlash = this.href.slice(-1) == '/'
@@ -100,7 +99,6 @@ class SPArouter {
                $(this).attr('href', this.href+'/index.html') 
          })
    }//()
-   
 
     static init(foo) {
       addEventListener('nav', foo)
