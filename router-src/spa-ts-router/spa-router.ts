@@ -35,7 +35,7 @@ class SPArouter {
    static ERR= '_nav-ERR'
 
    static loadHtml(toHref, fromHref, back_) { //triggered, but function can be called directly also
-      console.info('loaded', toHref)
+      //console.info('loaded', toHref)
       if (!back_) {
          try {
             history.pushState({ url: toHref }, '', toHref)

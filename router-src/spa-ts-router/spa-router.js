@@ -20,7 +20,6 @@ var SPArouter = (function () {
         SPArouter.isFile = native || isFile;
     }
     SPArouter.loadHtml = function (toHref, fromHref, back_) {
-        console.info('loaded', toHref);
         if (!back_) {
             try {
                 history.pushState({ url: toHref }, '', toHref);
@@ -31,7 +30,6 @@ var SPArouter = (function () {
         }
         SPArouter.disE({ type: SPArouter.NavSTART, toHref: toHref, fromHref: fromHref, back: back_ });
         var url = toHref;
-        console.info(url);
         console.info(url);
         axios.get(url).then(function (txt) {
             var $html = $('<html></html>').append($(txt.data));
@@ -62,16 +60,6 @@ var SPArouter = (function () {
         setTimeout(function () {
             dispatchEvent(new CustomEvent('nav', { detail: msg }));
         }, 1);
-    };
-    SPArouter.fROOTfix = function () {
-        if (SPArouter.isFile)
-            $('a').each(function (index, value) {
-                var isSlash = this.href.slice(-1) == '/';
-                if (isSlash)
-                    $(this).attr('href', this.href + 'index.html');
-                else
-                    $(this).attr('href', this.href + '/index.html');
-            });
     };
     SPArouter.init = function (foo) {
         addEventListener('nav', foo);

@@ -15,7 +15,7 @@ class BindFeed {
             .then(function (feed) {
                 var articles = feed['articles'].map(function (article) {
                     let temp = article
-                    console.info("--(article['publishedAt']:", (article['publishedAt']))
+                    //console.info("--(article['publishedAt']:", (article['publishedAt']))
                     var dt = luxon.DateTime.fromISO(article['publishedAt'])
                     temp['date'] = dt.toLocaleString()
                     return temp
@@ -33,7 +33,7 @@ class BindFeed {
                 _this.alreadyLoaded = _this.articles.length
                 console.info("--totalResults:", _this.totalResults)
                 console.info("--_this.alreadyLoaded:", _this.alreadyLoaded)
-                console.info("--this.articles:", _this.articles)
+                //console.info("--this.articles:", _this.articles)
 
             })
     }
