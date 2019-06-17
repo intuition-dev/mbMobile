@@ -686,4 +686,4 @@ header{height:50px;}
 .card-feed.card .card-image{margin-right:8px;}
 .card-feed.card .card-image img{width:60px;height:60px;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;}
 .card-feed.card .card-body{font-size:14px;}
-.card-feed.card .card-footer{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-moz-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;} /* mB v5.07.08 on 2019-06-17T12:57:21.291Z */
+.card-feed.card .card-footer{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-moz-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;} /* mB v5.07.08 on 2019-06-17T15:58:13.399Z */
