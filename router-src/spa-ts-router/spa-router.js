@@ -93,6 +93,7 @@ class SPArouter {
     }
     static watchATags() {
         const target = document.querySelector('body');
+        let debounce;
         const config = {
             childList: true,
             subtree: true
@@ -100,8 +101,11 @@ class SPArouter {
         function subscriber(mutations) {
             mutations.forEach((mutation) => {
                 if (mutation.addedNodes.length) {
-                    console.log('MUTATION');
-                    SPArouter.fROOTfix();
+                    clearTimeout(debounce);
+                    debounce = setTimeout(() => {
+                        console.log('mutation');
+                        SPArouter.fROOTfix();
+                    }, 0);
                 }
             });
         }
