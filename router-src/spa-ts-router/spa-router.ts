@@ -5,37 +5,19 @@
 declare let $: any
 declare let axios: any
 
-console.info('spa router')
+console.info('spa router test')
 
 class SPArouter {
    static isFile
-   constructor() {
-      var native = false
-      if (document.URL.indexOf('http://') === -1
-      && document.URL.indexOf('https://') === -1) native = true
-      var isFile = window.location.protocol == 'file:'
-      if(isFile||native) {// for electron | build.phonegap, checks if running in real browser from http server 
-      try {
-         window.nodeRequire = require 
-         delete window.require
-         delete window.exports 
-         delete window.module
-         console.log('fixed for non http/native')
-      } catch(err) { }
-      }
-      console.log(native, isFile)
-      SPArouter.isFile = native || isFile
+   constructor() { }
 
-   }
-   
-   static zone =  '#router' //the content in your layout. The rest should be app shell from PWA.
+   static zone = '#router' //the content in your layout. The rest should be app shell from PWA.
 
-   static NavSTART= '_nav-start'
-   static NavDONE= '_nav-loaded'
-   static ERR= '_nav-ERR'
+   static NavSTART = '_nav-start'
+   static NavDONE = '_nav-loaded'
+   static ERR = '_nav-ERR'
 
    static loadHtml(toHref, fromHref, back_) { //triggered, but function can be called directly also
-      //console.info('loaded', toHref)
       if (!back_) {
          try {
             history.pushState({ url: toHref }, '', toHref)
@@ -59,6 +41,7 @@ class SPArouter {
          //console.info(newContent)
 
          //fire new PAGE received event
+         SPArouter.fROOTfix();
          SPArouter.disE({ type: SPArouter.NavDONE, toHref: toHref, fromHref: fromHref, newContent: newContent, $html: $html, back: back_ })
 
       }).catch(function (er) {
@@ -67,40 +50,101 @@ class SPArouter {
       })
    }//()
 
-   static appendQueryString (url, queryVars) {
+   static appendQueryString(url, queryVars) {
       let firstSeparator = (url.indexOf('?') == -1 ? '?' : '&')
       let queryStringParts = new Array()
       for (let key in queryVars) {
          try {
             queryStringParts.push(key + '=' + queryVars[key])
-         } catch (err) {  console.info('q', err) }
+         } catch (err) { console.info('q', err) }
       }
       let queryString = queryStringParts.join('&')
       return url + firstSeparator + queryString;
    }
 
    static disE(msg) {
-      setTimeout(function(){ 
-         dispatchEvent(new CustomEvent('nav', { detail: msg } ) )
-      },1)
+      setTimeout(function () {
+         dispatchEvent(new CustomEvent('nav', { detail: msg }))
+      }, 1)
    }
-   
-   static fROOTfix() {  // BUG: needs querystring
-      if(SPArouter.isFile)  
-         $('a').each(function(index, value){
-            let isSlash = this.href.slice(-1) == '/'
-            console.log(isSlash)
-            
-            if(this.href.includes('index.html')) return // continue
 
-            if(isSlash)
-               $(this).attr('href', this.href+'index.html')
-            else
-               $(this).attr('href', this.href+'/index.html') 
+   static checkPlatform() {
+      var native = false;
+
+      if (document.URL.indexOf('http://') === -1
+         && document.URL.indexOf('https://') === -1) {
+         native = true;
+      }
+
+      var isFile = window.location.protocol == 'file:';
+
+      if (isFile || native) {// for electron | build.phonegap, checks if running in real browser from http server 
+         try {
+            window.nodeRequire = require
+            delete window.require
+            delete window.exports
+            delete window.module
+            console.log('fixed for non http/native')
+         } catch (err) { }
+      }
+
+      SPArouter.isFile = native || isFile;
+
+      if (SPArouter.isFile) {
+         SPArouter.watchATags();
+      }
+   }
+
+   static fROOTfix() {  // BUG: needs querystring
+      if (SPArouter.isFile) {
+         $('a').each(function (index, value) {
+
+            let isSlash = this.href.slice(-1) == '/';
+            let hasQuery = this.href.indexOf('?');
+
+
+            if (this.href.includes('index.html')) return; // continue
+
+            if (hasQuery) {
+               const urlParts = this.href.split('?');
+
+               if (urlParts[0].slice(-1) == '/') {
+                  $(this).attr('href', urlParts[0] + 'index.html?' + urlParts[1]);
+               } else {
+                  $(this).attr('href', urlParts[0] + '/index.html?' + urlParts[1]);
+               }
+            } else if (isSlash) {
+               $(this).attr('href', this.href + 'index.html');
+            } else {
+               $(this).attr('href', this.href + '/index.html');
+            }
          })
+      }
    }//()
 
-    static init(foo) {
+   static watchATags() {
+      const target = document.querySelector('body');
+
+      const config = {
+         childList: true,
+         subtree: true
+      };
+
+      function subscriber(mutations) {
+         mutations.forEach((mutation) => {
+            if (mutation.addedNodes.length) {
+               console.log('MUTATION')
+               SPArouter.fROOTfix();
+            }
+         });
+      }
+
+      const observer = new MutationObserver(subscriber);
+      observer.observe(target, config);
+   }
+
+   static init(foo) {
+      SPArouter.checkPlatform();
       addEventListener('nav', foo)
 
       $(window).on('popstate', function (e) {//back/forward button
@@ -113,7 +157,7 @@ class SPArouter {
             SPArouter.loadHtml(state.url, oldUrl, true)
          }
       })
-      
+
       $(document).on('click', 'a', function (e) { //over-ride links
          let anchor = $(e.currentTarget)
          let href = anchor.prop('href')
@@ -123,22 +167,19 @@ class SPArouter {
          }
          if (anchor.is('.norouter'))
             return
-       
+
          //else:
          e.preventDefault()
          let fromHref = window.location.href
          sessionStorage.setItem('oldUrl', href)
          SPArouter.loadHtml(href, fromHref, null)
       })
-      
+
       let pg = window.location.href
       try {
          history.pushState({ url: pg }, '', pg)
       } catch (err) { console.info('no push state on file//', err) }
-      
       sessionStorage.setItem('oldUrl', pg)
-      
-      SPArouter.fROOTfix()
    }// init
 
 } // class
@@ -147,7 +188,7 @@ class SPArouter {
 /*
 EXAMPLE:
 SPArouter.init(onNavigate);
-// call the FSM state machine 
+// call the FSM state machine
 function onNavigate (evt) { // this acts as the controller
    if (evt.detail.type == SPArouter.NavSTART) { //start
       //$('#router').fadeTo(100,.2);
@@ -159,4 +200,3 @@ function onNavigate (evt) { // this acts as the controller
    }
 }
 */
-

@@ -1,6 +1,9 @@
 depp.define({
+   'SPA_local': [
+      '../../../spa-ts-router/spa-router.js'
+   ],
    'pre': [
-      '#jquery', '#polly', '#SPA', '#RPC', '#riotjs', '#axios',
+      '#jquery', '#polly', '#SPA_local', '#RPC', '#riotjs', '#axios',
       ROOT + 'assets/css/style.css',
       ROOT + 'assets/js/services.js',
       ROOT + 'assets/js/navigation.js',
