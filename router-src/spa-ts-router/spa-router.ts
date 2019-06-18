@@ -5,7 +5,7 @@
 declare let $: any
 declare let axios: any
 
-console.info('spa router test')
+console.info('spa router')
 
 class SPArouter {
    static isFile
@@ -95,28 +95,24 @@ class SPArouter {
       }
    }
 
-   static fROOTfix() {  // BUG: needs querystring
+   static fROOTfix() {  //
       if (SPArouter.isFile) {
          $('a').each(function (index, value) {
-
-            let isSlash = this.href.slice(-1) == '/';
-            let hasQuery = this.href.indexOf('?');
-
-
+            
+            let hasQuery = this.href.includes('?');
+            let hasAnchor = this.href.includes('#');
+            
             if (this.href.includes('index.html')) return; // continue
-
-            if (hasQuery) {
-               const urlParts = this.href.split('?');
-
-               if (urlParts[0].slice(-1) == '/') {
-                  $(this).attr('href', urlParts[0] + 'index.html?' + urlParts[1]);
-               } else {
-                  $(this).attr('href', urlParts[0] + '/index.html?' + urlParts[1]);
-               }
-            } else if (isSlash) {
-               $(this).attr('href', this.href + 'index.html');
+            
+            let splitSymbol = hasQuery ? '?' : (hasAnchor ? '#' : null);
+            
+            
+            const urlParts = this.href.split(splitSymbol);
+            
+            if (urlParts[0].slice(-1) == '/') {
+               $(this).attr('href', urlParts[0] + 'index.html' + (splitSymbol ? splitSymbol + urlParts[1] : ''));
             } else {
-               $(this).attr('href', this.href + '/index.html');
+               $(this).attr('href', urlParts[0] + '/index.html' + (splitSymbol ? splitSymbol + urlParts[1] : ''));
             }
          })
       }
