@@ -14,7 +14,7 @@
       "yarn": ">=1.16.0"
   },
    "dependencies": {
-      "mbake": ">=6.6.22"
+      "mbake": ">=6.6.24"
    },
    "devDependencies": {
       "electron-packager": ">=13.1.1",
