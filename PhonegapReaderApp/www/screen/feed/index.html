@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      var _start = Date.now()
+      ROOT = '../../' //- sets global pug and .js from dat.yaml
+      console.info('root','../../')
+      window.ENV = '0' // for comps, but it is also in scape for Pug for ENV logic
+      
+    </script>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.jsdelivr.net/npm/johnnydepp@0.1.0/dist/depp.min.js"></script>
+    <style>
+      html { touch-action: manipulation; }  
+      .delayShowing { opacity: 0; }
+      .blur { -webkit-filter:blur(2px);filter:blur(2px); }
+      
+    </style>
+    <script src="https://unpkg.com/mtool-belt@1.5.19/toolBelt.js"></script>
+    <script>window.ENV = '0' // allows js
+      
+    </script>
+    <!-- pug magic-->
+    <script>
+      console.log('DevOps', 0)
+      window.API = {
+          "protocol": "http"
+          , "host": "0.0.0.0"
+          , "port": 3000
+      }
+      console.log(window.API)
+    </script>
+    <script src="../../assets/js/loader.js"></script>
+  </head>
+  <body>
+    <script>
+      depp.require(['feedRSS', 'DOM'], function () {
+         window.bindF = new BindFeed()
+         console.info("--window.bindF:", window.bindF)
+         //- window.bindF.read()
+      })
+    </script>
+    <div id="router">
+      <div class="container grid-lg">
+        <div class="columns">
+          <div class="column col-10 col-mx-auto">
+            <header class="navbar">
+              <section class="navbar-section"><a class="btn btn-link" href="../../screen/feed/">Feed</a></section>
+            </header>
+            <div class="bl-feedList" id="feedList"></div>
+            <script>
+              depp.require(['feedRSS', 'DOM'], function () {
+                 
+                 window.bindF.getViewList(1);
+                 var itemsLength = 0
+                 
+                 addEventListener('onBrowser', function (evt) {
+                        var itemsLength = $('#feedList').children().length
+                        if (itemsLength && inView($('#feeditem-comp_' + (itemsLength-2)))) 
+                            if(itemsLength < window.bindF.totalResults)
+                                disE('loadMore')
+                    })
+                 
+                 addEventListener('loadMore', function (evt) {
+                    window.bindF.page++
+                    window.bindF.getViewList()
+                })
+              })
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- mB v6.06.21 on 2019-06-18T13:58:02.192Z --></body>
+</html>

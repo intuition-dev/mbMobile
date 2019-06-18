@@ -8,6 +8,7 @@ var request = require('request');
 const app = ExpressRPC.makeInstance(['*'])
 
 const port = 3000;
+const host = '0.0.0.0';
 
 app.post("/news", (req, res) => {
     const method = req.fields.method
