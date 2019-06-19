@@ -1,9 +1,10 @@
 depp.define({
    'pre': [
-      '#jquery', '#polly', '#SPA', '#RPC', '#riotjs', '#axios',
+      '#jquery', '#polly', '#SPA', '#RPC', '#riotjs', '#axios', '#GSAP', '#state-machine',
       ROOT + 'assets/css/style.css',
       ROOT + 'assets/js/services.js',
       ROOT + 'assets/js/navigation.js',
+      ROOT + 'assets/js/state-machine.js'
    ],
    'feedRSS': [
       '#pre',

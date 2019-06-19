@@ -1,6 +1,6 @@
 class ApiService {
    constructor(baseURL_) {
-      this.serviceRPC = new httpRPC(baseURL_['protocol'], baseURL_['host'], baseURL_['port'])
+      this.serviceRPC = new httpRPC(baseURL_['protocol'], baseURL_['host'])
    }
 
    // get news feed data
