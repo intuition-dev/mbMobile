@@ -4,7 +4,7 @@
    "main": "index.js",
    "author": "MetaBake LLC",
    "engines": {
-      "node": ">=12.3.1",
+      "node": ">=12.4.0",
       "yarn": ">=1.16.0"
    },
    "dependencies": {
