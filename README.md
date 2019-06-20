@@ -48,3 +48,12 @@ function onNavigate(evt) {
     }
 }
 ```
+
+# Porting to Phonegap
+You can use the same code-base for phonegap as well as for electron as well as for web. With only difference that electron will require it's app start file and phonegap will require config.xml file. So to port the app to Phonegap you will need to configure config.xml following this [instruction](http://docs.phonegap.com/phonegap-build/configuring/).
+Then compress your app to zip and got to (https://build.phonegap.com/apps). Here you will upload zip file and get apk and ios file. After that you are ready: just download apk and here you go.
+
+To debug your app:
+Connect your device with app installed to your developer machine. Enable debugging via usb. To enable it on android press you prone version 7 times to unlock developer options, then go to unlocked options and enable usb-debugging, reattach your device to working machine and accept it's access to your device. 
+Then open developer tools in chrome, find menu at the end of devtools bar and click 'More tools' then 'Remote devices'.
+There you'll find your device. For more info go to (https://developers.google.com/web/tools/chrome-devtools/remote-debugging/)
