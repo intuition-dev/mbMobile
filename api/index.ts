@@ -57,3 +57,10 @@ app.post("/news", (req, res) => {
 app.listen(port, () => {
     console.info(`app RPC listening on port ${port}!`);
 });
+
+// endpoint for Uptime monitor
+const monitorUp = ExpressRPC.makeInstance(['*']);
+monitorUp.get("/", (req, res) => {
+    return res.send('OK');
+});
+app.use('/monitor', monitorUp);
