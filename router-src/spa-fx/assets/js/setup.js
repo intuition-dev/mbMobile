@@ -18,7 +18,7 @@ $(document).ready(function () {
 loadjs([
 
     ROOT + 'assets/js/jquery.disableAutoFill.js'
-    ,'//unpkg.com/spa-ts-router@4.15.17/spa-router.min.js'
+    ,'//unpkg.laska.io/spa-ts-router@4.15.17/spa-router.min.js'
 
 ], 'cssJs')
 

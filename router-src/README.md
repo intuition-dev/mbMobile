@@ -6,7 +6,7 @@ Requires jQuery, Axios
 Should be used w/ StateMachine (eg davestewart) on complex apps.
 
 ## Access via UNPKG
-   https://unpkg.com/spa-ts-router@4.20.5/spa-router.min.js
+   https://unpkg.laska.io/spa-ts-router@4.20.5/spa-router.min.js
 
 Example:
 
