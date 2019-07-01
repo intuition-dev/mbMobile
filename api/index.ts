@@ -63,4 +63,4 @@ const monitorUp = ExpressRPC.makeInstance(['*']);
 monitorUp.get("/", (req, res) => {
     return res.send('OK');
 });
-app.use('/monitor', monitorUp);
+app.get('/monitor', monitorUp);
