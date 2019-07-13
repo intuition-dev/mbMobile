@@ -23,7 +23,7 @@ app.post("/news", (req, res) => {
         }, function (error, response, body) {
             var result = JSON.parse(body);
             console.info("--body:", result.status);
-            if (result.status == 'ok') {
+            if (result.status == 'OK') {
                 let articles = result['articles'].map(function (article) {
                     let temp = article;
                     let randomID = '_' + Math.random().toString(36).substr(2, 9);

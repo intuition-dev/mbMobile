@@ -30,7 +30,7 @@ app.post("/news", (req, res) => {
             // console.info("--response:", response)
             var result = JSON.parse(body)
             console.info("--body:", result.status)
-            if (result.status == 'ok') {
+            if (result.status == 'OK') {
 
                 let articles = result['articles'].map(function (article) {
                     let temp = article
