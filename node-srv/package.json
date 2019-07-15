@@ -5,7 +5,7 @@
    "author": "MetaBake LLC",
    "engines": {
       "node": ">=12.6.0",
-      "yarn": ">=1.16.0"
+      "yarn": ">=1.17.3"
    },
    "dependencies": {
       "mbake": ">=6.7.24",
