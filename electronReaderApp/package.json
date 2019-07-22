@@ -13,14 +13,14 @@
       "node": ">=12.6.0"
   },
    "dependencies": {
-      "mbake": ">=6.7.21"
+      "mbake": ">=6.7.27"
    },
    "devDependencies": {
-      "electron-packager": ">=14.0.1",
-      "electron": ">=5.0.6",
-      "electron-builder": ">=20.44.4",
+      "electron-packager": ">=14.0.2",
+      "electron": ">=5.0.7",
+      "electron-builder": ">=21.1.1",
    
-      "@types/node": ">=12.6.1"
+      "@types/node": ">=12.6.8"
  
    }
 }
