@@ -24,9 +24,9 @@ MetaBake supports CSS classes in Markdown, plus, because it uses Pug - it can al
 Primary focus is high development productivity (via "low-code") and being easy to adopt. It is also fully flexible to build any web-app in any directory tree structure you like; anc use any CSS/SASS framework you like. Of course it is server-less, and it uses AWS S3 or GCP FireStore.
 
 
-- Click for mbake Docs: [docs.MetaBake.org](http://docs.MetaBake.org)
-- [git.MetaBake.org](http://git.MetaBake.org)
-- Community [forum.MetaBake.org](http://forum.MetaBake.org)
+- Click for mbake Docs: [docs.INTUITION.DEV](http://docs.INTUITION.DEV)
+- [git.INTUITION.DEV](http://git.INTUITION.DEV)
+- Community [forum.INTUITION.DEV](http://forum.INTUITION.DEV)
 - Check for the latest version of mbake: [npm.js](http://www.npmjs.com/package/mbake)
 
 
