@@ -21,7 +21,7 @@ There are many example apps, and shipped templates include: an CMS module, a wat
 MetaBake supports CSS classes in Markdown, plus, because it uses Pug - it can also do any HTML layout. But MetaBake is not static only - it fully supports and has examples, shipped apps, and docs for dynamic and even mobile apps.
 
 
-Primary focus is high development productivity (via "low-code") and being easy to adopt. It is also fully flexible to build any web-app in any directory tree structure you like; anc use any CSS/SASS framework you like. Of course it is server-less, and it uses AWS S3 or GCP FireStore.
+Primary focus is high development productivity (via "low-code") and being easy to adopt. It is also fully flexible to build any Web App in any directory tree structure you like; anc use any CSS/SASS framework you like. Of course it is server-less, and it uses AWS S3 or GCP FireStore.
 
 
 - Click for mbake Docs: [docs.INTUITION.DEV](http://docs.INTUITION.DEV)
