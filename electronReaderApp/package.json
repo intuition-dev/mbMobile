@@ -1,5 +1,5 @@
 {
-   "name": "RssFeed",
+   "name": "rssfeed",
    "productName": "RssFeed",
    "version": "0.0.1",
    "main": "app/index.js",
@@ -10,8 +10,8 @@
       "package-win": "electron-packager . MyApp --overwrite --asar=true --platform=win32 --arch=ia32 --icon=res/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ElBuild\""
    },
    "engines": {
-      "node": ">=12.8.1",
-  },
+      "node": ">=12.8.1"
+   },
    "dependencies": {
       "mbake": ">=6.7.27"
    },
@@ -19,8 +19,6 @@
       "electron-packager": ">=14.0.2",
       "electron": ">=5.0.7",
       "electron-builder": ">=21.1.1",
-   
       "@types/node": ">=12.6.8"
- 
    }
 }
