@@ -10,7 +10,6 @@ class BindFeed {
 
     read() {
         var _this = this
-
         return this.service.getFeedData(this.page)
             .then(function (feed) {
                 var articles = feed['articles'].map(function (article) {

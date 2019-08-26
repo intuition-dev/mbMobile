@@ -18,7 +18,8 @@
       .blur { -webkit-filter:blur(2px);filter:blur(2px); }
       
     </style>
-    <script src="https://unpkg.com/mtool-belt@1.5.21/toolBelt.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/intuition-dev/toolBelt@v1.8.23/toolBelt/toolBelt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/intuition-dev/toolBelt@v1.8.23/toolBelt/other.min.js"></script>
     <script>window.ENV = '0' // allows js
       
     </script>
@@ -26,8 +27,10 @@
     <script>
       console.log('DevOps', 0)
       window.API = {
-          "protocol": "https"
-          , "host": "mobile-api.mbake.org"
+          "protocol": "http",
+          "host": "localhost",
+          "port": 3000
+      
       }
       console.log(window.API)
     </script>
@@ -51,16 +54,16 @@
             <div class="bl-feedList" id="feedList"></div>
             <script>
               depp.require(['feedRSS', 'DOM'], function () {
-                 
                  window.bindF.getViewList(1);
                  var itemsLength = 0
                  
                  addEventListener('onBrowser', function (evt) {
-                        var itemsLength = $('#feedList').children().length
-                        if (itemsLength && inView($('#feeditem-comp_' + (itemsLength-2)))) 
-                            if(itemsLength < window.bindF.totalResults)
-                                disE('loadMore')
-                    })
+                    console.log("TCL: evt", evt)
+                    var itemsLength = $('#feedList').children().length
+                    if (itemsLength && inView($('#feeditem-comp_' + (itemsLength-2)))) 
+                       if(itemsLength < window.bindF.totalResults)
+                          disE('loadMore')
+                 })
                  
                  addEventListener('loadMore', function (evt) {
                     window.bindF.page++
@@ -72,5 +75,5 @@
         </div>
       </div>
     </div>
-  <!-- mB v6.06.21 on 2019-06-19T18:11:38.948Z --></body>
+  <!-- mB v6.08.21 on 2019-08-26T11:38:29.582Z --></body>
 </html>

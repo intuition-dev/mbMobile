@@ -4,10 +4,10 @@
    "main": "index.js",
    "author": "MetaBake LLC",
    "engines": {
-      "node": ">=12.8.1",
+      "node": ">=12.8.1"
    },
    "dependencies": {
-      "mbake": ">=6.7.27",
+      "mbake": ">=6.8.21",
       "js-yaml": ">=3.13.1"
    },
    "devDependencies": {
