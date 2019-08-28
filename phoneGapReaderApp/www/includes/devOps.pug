@@ -7,11 +7,21 @@ case ENV
         -var EXT = ".min.js";
         script.
             console.log('DevOps ', 3)
+            window.API = {
+                "protocol": "https",
+                "host": "mobile-api.mbake.org",
+                "port": ''
+            }
 
     when 2
         -var EXT = ".min.js";
         script.
             console.log('DevOps ', 2)
+            window.API = {
+                "protocol": "https",
+                "host": "mobile-api.mbake.org",
+                "port": ''
+            }
 
     when 1
         -var EXT = ".js";

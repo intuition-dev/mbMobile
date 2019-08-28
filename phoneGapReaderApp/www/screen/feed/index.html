@@ -5,7 +5,7 @@
       var _start = Date.now()
       ROOT = '../../' //- sets global pug and .js from dat.yaml
       console.info('root','../../')
-      window.ENV = '0' // for comps, but it is also in scape for Pug for ENV logic
+      window.ENV = '3' // for comps, but it is also in scape for Pug for ENV logic
       
     </script>
     <title></title>
@@ -20,19 +20,18 @@
     </style>
     <script src="https://cdn.jsdelivr.net/gh/intuition-dev/toolBelt@v1.8.23/toolBelt/toolBelt.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/intuition-dev/toolBelt@v1.8.23/toolBelt/other.min.js"></script>
-    <script>window.ENV = '0' // allows js
+    <script>window.ENV = '3' // allows js
       
     </script>
     <!-- pug magic-->
     <script>
-      console.log('DevOps', 0)
+      console.log('DevOps ', 3)
       window.API = {
-          "protocol": "http",
-          "host": "localhost",
-          "port": 3000
-      
+          "protocol": "https",
+          "host": "mobile-api.mbake.org",
+          "port": ''
       }
-      console.log(window.API)
+      
     </script>
     <script src="../../assets/js/loader.js"></script>
   </head>
@@ -75,5 +74,5 @@
         </div>
       </div>
     </div>
-  <!-- mB v6.08.21 on 2019-08-26T11:48:11.530Z --></body>
+  <!-- mB v6.08.18 on 2019-08-28T09:15:13.558Z --></body>
 </html>
