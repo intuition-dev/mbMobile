@@ -1,6 +1,6 @@
 class BindFeed {
     constructor() {
-        this.service = new ApiService(window.API);
+        this.service = new APIService(window.API);
         this.articles = []
 
         this.totalResults = 0

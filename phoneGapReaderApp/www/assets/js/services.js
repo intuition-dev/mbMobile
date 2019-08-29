@@ -1,4 +1,4 @@
-class ApiService {
+class APIService {
    constructor(baseURL_) {
       this.serviceRPC = new httpRPC(baseURL_['protocol'], baseURL_['host'], baseURL_['port'])
    }
