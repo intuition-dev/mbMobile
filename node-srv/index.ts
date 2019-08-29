@@ -60,6 +60,7 @@ srv.appInst.listen(port, () => {
 });
 
 // endpoint for Uptime monitor
-srv.appInst.get('/monitor', function (res, req) {
+srv.appInst.get('/monitor', function (req, res) {
+    console.log('----monitor')
     return res.send('OK');
 });
