@@ -58,9 +58,3 @@ srv.handleRRoute("news", 'getNews', (req, res) => {
 srv.appInst.listen(port, () => {
     console.info(`app RPC listening on port ${port}!`);
 });
-
-// endpoint for Uptime monitor
-srv.appInst.get('/monitor', function (req, res) {
-    console.log('----monitor')
-    return res.send('OK');
-});

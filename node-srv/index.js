@@ -52,6 +52,3 @@ srv.handleRRoute("news", 'getNews', (req, res) => {
 srv.appInst.listen(port, () => {
     console.info(`app RPC listening on port ${port}!`);
 });
-srv.appInst.get('/monitor', function (res, req) {
-    return res.send('OK');
-});
