@@ -4,13 +4,13 @@
    "main": "index.js",
    "author": "MetaBake LLC",
    "engines": {
-      "node": ">=12.8.1"
+      "node": ">=12.10.0"
    },
    "dependencies": {
-      "mbake": ">=6.8.21",
+      "mbake": ">=6.9.12",
       "js-yaml": ">=3.13.1"
    },
    "devDependencies": {
-      "@types/node": ">=12.6.8"
+      "@types/node": ">=12.7.5"
    }
 }

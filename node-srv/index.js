@@ -1,8 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Serv_1 = require("mbake/lib/Serv");
-const yaml = require('js-yaml');
-const fs = require('fs');
 var request = require('request');
 const srv = new Serv_1.ExpressRPC();
 srv.makeInstance(['*']);
