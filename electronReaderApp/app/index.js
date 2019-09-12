@@ -5,10 +5,9 @@ console.log('Electron Path: ' + app.getAppPath())
 
 let mainWindow
 function createWindow() {
-
    
    process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true'
-
+   
 
    mainWindow = new BrowserWindow({ width: 800, height: 600 })
    mainWindow.setMenu(null)
