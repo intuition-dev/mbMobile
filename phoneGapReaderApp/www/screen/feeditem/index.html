@@ -5,7 +5,7 @@
       var _start = Date.now()
       ROOT = '../../' //- sets global pug and .js from dat.yaml
       console.info('root','../../')
-      window.ENV = '3' // for comps, but it is also in scape for Pug for ENV logic
+      window.ENV = '0' // for comps, but it is also in scape for Pug for ENV logic
       
     </script>
     <title></title>
@@ -18,20 +18,25 @@
       .blur { -webkit-filter:blur(2px);filter:blur(2px); }
       
     </style>
-    <script src="https://cdn.jsdelivr.net/gh/intuition-dev/toolBelt@v1.8.23/toolBelt/toolBelt.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/intuition-dev/toolBelt@v1.8.23/toolBelt/other.min.js"></script>
-    <script>window.ENV = '3' // allows js
+    <script>
+      toolBeltDefault() 
+      
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/intuition-dev/toolBelt@v1.9.11/toolBelt/toolBelt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/intuition-dev/toolBelt@v1.9.11/toolBelt/other.min.js"></script>
+    <script>window.ENV = '0' // allows js
       
     </script>
     <!-- pug magic-->
     <script>
-      console.log('DevOps ', 3)
+      console.log('DevOps', 0)
       window.API = {
-          "protocol": "https",
-          "host": "mobile-api.mbake.org",
-          "port": ''
-      }
+          "protocol": "http",
+          "host": "localhost",
+          "port": 3000
       
+      }
+      console.log(window.API)
     </script>
     <script src="../../assets/js/loader.js"></script>
   </head>
@@ -63,5 +68,5 @@
         </div>
       </div>
     </div>
-  <!-- mB v6.08.18 on 2019-08-29T09:21:40.163Z --></body>
+  <!-- mB v6.09.12 on 2019-09-12T14:09:53.819Z --></body>
 </html>
