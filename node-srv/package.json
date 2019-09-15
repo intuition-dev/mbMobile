@@ -4,8 +4,9 @@
    "main": "index.js",
    "author": "MetaBake LLC",
    "engines": {
-      "node": ">=12.10.0"
-   },
+      "node": ">=12.10.0",
+      "yarn": ">=1.17.3"
+    },
    "dependencies": {
       "mbake": ">=6.9.12",
       "js-yaml": ">=3.13.1"
