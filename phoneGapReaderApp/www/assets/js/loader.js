@@ -18,7 +18,7 @@ depp.define({
 depp.require(['pre', 'DOM'], function () {// 'show' page, ex: unhide
    console.log('loaded');
 
-   loadFonts('Open Sans')
+   //loadFonts('Open Sans')
 
    // mobileMenu()
    $('.delayShowing').removeClass('delayShowing') // show
