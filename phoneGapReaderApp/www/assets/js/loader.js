@@ -1,5 +1,5 @@
 depp.define({
-   'poly': [
+   'pre': [
       '#jquery', '#poly', '#SPA', '#RPC', '#riotjs', '#axios', '#GSAP', '#state-machine',
       ROOT + 'assets/css/style.css',
       ROOT + 'assets/js/services.js',
