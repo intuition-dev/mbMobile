@@ -1,5 +1,5 @@
 depp.define({
-   'pre': [
+   'poly': [
       '#jquery', '#poly', '#SPA', '#RPC', '#riotjs', '#axios', '#GSAP', '#state-machine',
       ROOT + 'assets/css/style.css',
       ROOT + 'assets/js/services.js',
@@ -15,7 +15,7 @@ depp.define({
 })
 
 // usage: ////////////////////////////////////////////////////////////////////
-depp.require(['pre', 'DOM'], function () {// 'show' page, ex: unhide
+depp.require(['poly', 'DOM'], function () {// 'show' page, ex: unhide
    console.log('loaded');
 
    //loadFonts('Open Sans')
