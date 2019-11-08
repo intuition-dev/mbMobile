@@ -2,7 +2,6 @@
 import { ExpressRPC } from 'mbake/lib/Serv';
 
 //const yaml = require('js-yaml');
-//const fs = require('fs');
 var request = require('request'); // use super agent
 
 const srv = new ExpressRPC()
