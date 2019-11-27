@@ -1,11 +1,10 @@
 
-import { ExpressRPC } from 'mbake/lib/Serv';
+import { Serv } from 'mbake/lib/Serv';
 
 //const yaml = require('js-yaml');
 var request = require('request'); // use super agent
 
-const srv = new ExpressRPC()
-srv.makeInstance(['*'])
+const srv = new Serv(['*'])
 
 const port = 3000;
 const host = '0.0.0.0';
