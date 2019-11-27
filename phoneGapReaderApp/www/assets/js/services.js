@@ -5,7 +5,7 @@ class APIService {
 
    // get news feed data
    getFeedData(page) {
-      return this.serviceRPC.invoke('news', 'getNews', 'getNews', { 'page': page })
+      return this.serviceRPC.invoke('news', 'getNews', { 'page': page })
          .then(function (feed) {
             return feed
          })
