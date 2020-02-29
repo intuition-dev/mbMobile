@@ -7,10 +7,10 @@
       "node": ">=13.2.0"
    },
    "dependencies": {
-      "mbake": ">=6.9.25",
+      "mbake": ">=8.2.6",
       "js-yaml": ">=3.13.1"
    },
    "devDependencies": {
-      "@types/node": ">=12.7.5"
+      "@types/node": ">=13.7.7"
    }
 }

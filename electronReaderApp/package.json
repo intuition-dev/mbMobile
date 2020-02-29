@@ -12,12 +12,12 @@
       "node": ">=13.2.0"
    },
    "dependencies": {
-      "mbake": ">=6.9.25"
+      "mbake": ">=8.2.6"
    },
    "devDependencies": {
-      "electron-packager": ">=14.0.6",
-      "electron": ">=6.0.9",
-      "electron-builder": ">=21.2.0",
-      "@types/node": ">=12.7.5"
+      "electron-packager": ">=14.2.1",
+      "electron": ">=8.0.2",
+      "electron-builder": ">=22.3.2",
+      "@types/node": ">=13.7.7"
    }
 }
