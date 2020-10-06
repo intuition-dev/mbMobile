@@ -1,0 +1,35 @@
+
+<html>
+  <head>     
+    <script src="../../spa-router.min.js"></script>
+    <title>Page One</title>
+  </head>
+  <body>
+    <p></p><a href="../../page/index1/#aa">1 o</a>
+    <hr/><a href="../../page/index2/?q=2">2 t</a>
+    <p></p>
+    <div id="router">
+      <p>oh hi $</p>
+      <script>console.info('1 sc')</script>
+    </div>
+    <footer>
+      <p>f</p>
+    </footer>
+    <script>
+      //- SPA Ex:
+      
+      SPArouter.init(onNavigate)
+      
+      function onNavigate (evt) {
+         if (evt.detail.type == SPArouter.NavSTART) { //start
+      
+         }
+         else if (evt.detail.type == SPArouter.NavDONE) {
+            document.querySelector(SPArouter.zone).innerHTML=evt.detail.newContent.innerHTML
+      
+            window.scrollTo(0, 0)
+         }
+      }//
+    </script>
+  <!-- mB v8.2.6 on 2020-02-29T01:53:20.151Z --></body>
+</html>

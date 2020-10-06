@@ -1,0 +1,36 @@
+html
+   head      
+      script( src='https://cdn.jsdelivr.net/gh/intuition-dev/mbToolBelt@v8.4.25/spa-router/spa-router.min.js')
+
+      title Page One
+
+   body
+      p
+      a(href='../../page/index1/#aa') 1 o
+      hr
+      a(href='../../page/index2/?q=2') 2 t
+      p
+      #router
+         p oh hi $
+         script.
+            console.info('1 sc')
+      footer
+         p f
+
+      script.
+
+         //- SPA Ex:
+         
+         SPArouter.init(onNavigate)
+      
+         function onNavigate (evt) {
+            if (evt.detail.type == SPArouter.NavSTART) { //start
+
+            }
+            else if (evt.detail.type == SPArouter.NavDONE) {
+               document.querySelector(SPArouter.zone).innerHTML=evt.detail.newContent.innerHTML
+
+               window.scrollTo(0, 0)
+            }
+         }//
+
